@@ -1,6 +1,9 @@
+from fastapi import FastAPI, HTTPException
 import requests
 import time
-import json
+
+# Initialize FastAPI app
+app = FastAPI()
 
 # API Credentials
 AUTH_URL = "https://03830.cxtsoftware.net/CxtWebService/CXTWCF.svc/v2/Authentication/InetUser"
@@ -12,34 +15,31 @@ CREDENTIALS = {
     "password": "cbadistribution1"
 }
 
-# Global variable to store the token
+# Global token storage
 TOKEN = None
-
 
 def authenticate():
     """Fetches a new authentication token."""
     global TOKEN
-    print("🔐 Authenticating...")
-    
     headers = {
         "Content-Type": "application/json",
         "Accept": "application/json"
     }
-    
     response = requests.post(AUTH_URL, json=CREDENTIALS, headers=headers)
-    
+
     if response.status_code == 200:
         TOKEN = response.json().get("token")
-        print(f"✅ New Token Obtained: {TOKEN}")
+        return TOKEN
     else:
-        print(f"❌ Authentication Failed! Status Code: {response.status_code}")
-        print(f"Response: {response.text}")
-        exit()
+        raise HTTPException(status_code=response.status_code, detail="Authentication failed")
 
 
 def fetch_parcel_summaries():
     """Fetches parcel summaries using the latest token."""
     global TOKEN
+
+    if not TOKEN:
+        authenticate()
 
     headers = {
         "Content-Type": "application/json",
@@ -58,34 +58,26 @@ def fetch_parcel_summaries():
         "sortDirection": "ASCENDING"
     }
 
-    print("\n📦 Fetching Parcel Summaries...")
-    print(f"🔄 Request Sent: {API_URL}")
-    print(f"📩 Headers Sent: {json.dumps(headers, indent=4)}")
-
     response = requests.post(API_URL, headers=headers, params=params)
 
     if response.status_code == 200:
-        data = response.json()
-        print("\n✅ Success! Parcel Data Received:")
-        print(json.dumps(data, indent=4))  # Pretty-print JSON response
-        return data
-
+        return response.json()
     elif response.status_code == 401:
-        print("\n🔄 Token might have expired. Re-authenticating...")
-        authenticate()  # Get a new token
-        return fetch_parcel_summaries()  # Retry the request with a new token
-
+        TOKEN = authenticate()  # Refresh token and retry
+        return fetch_parcel_summaries()
     elif response.status_code == 429:
-        print("\n⚠️ Rate limit hit! Waiting 5 seconds before retrying...")
-        time.sleep(5)
-        return fetch_parcel_summaries()  # Retry with the same token
-
+        time.sleep(5)  # Handle rate limit
+        return fetch_parcel_summaries()
     else:
-        print(f"\n❌ Request Failed! Status Code: {response.status_code}")
-        print(f"Response: {response.text}")
-        return None
+        raise HTTPException(status_code=response.status_code, detail=response.text)
 
 
-if __name__ == "__main__":
-    authenticate()  # Get initial token
-    fetch_parcel_summaries()  # Fetch parcel data
+@app.get("/parcels")
+def get_parcel_data():
+    """API endpoint to fetch parcel summaries"""
+    return fetch_parcel_summaries()
+
+
+@app.get("/")
+def root():
+    return {"message": "Welcome to Parcel API 🚀"}
