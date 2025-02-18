@@ -1,0 +1,5 @@
+2025-02-13 14:13:13,485 - DEBUG - Debug: Test message
+2025-02-13 14:13:13,486 - INFO - Info: Test message
+2025-02-13 14:13:13,486 - WARNING - Warning: Test message
+2025-02-13 14:13:13,486 - ERROR - Error: Test message
+2025-02-13 14:13:13,486 - CRITICAL - Critical: Test message

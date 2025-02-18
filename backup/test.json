@@ -1,0 +1,2513 @@
+{
+    "parcelSummaries": [
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215053",
+    "id": 116393764,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739393175253,
+    "formattedTime": "3:46 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "15:46",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "I AM ON TOP OF THE WORLD"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "ROSLYN, Post Office",
+    "address1": "1391 Old Northern Blvd",
+    "address2": "",
+    "city": "Roslyn",
+    "state": "NY",
+    "zip": "11576",
+    "plus4": ""
+    },
+    "pod": "eric"
+    },
+    {
+    "isEditable": false,
+    "barcode": "9M",
+    "id": 116761414,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739392999497,
+    "formattedTime": "3:43 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "15:43",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "ROSLYN, Post Office",
+    "address1": "1391 Old Northern Blvd",
+    "address2": "",
+    "city": "Roslyn",
+    "state": "NY",
+    "zip": "11576",
+    "plus4": ""
+    },
+    "pod": "eric"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215054",
+    "id": 116393765,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739392948470,
+    "formattedTime": "3:42 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "15:42",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "ROSLYN, Post Office",
+    "address1": "1391 Old Northern Blvd",
+    "address2": "",
+    "city": "Roslyn",
+    "state": "NY",
+    "zip": "11576",
+    "plus4": ""
+    },
+    "pod": "eric"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722216003",
+    "id": 116393755,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739392084937,
+    "formattedTime": "3:28 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "15:28",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "GREENVALE, Post Office",
+    "address1": "37 Northern Blvd",
+    "address2": "",
+    "city": "Greenvale",
+    "state": "NY",
+    "zip": "11548",
+    "plus4": ""
+    },
+    "pod": "rah"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220045",
+    "id": 116393834,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739390741167,
+    "formattedTime": "3:05 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "15:05",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "PATCHOGUE, Post Office",
+    "address1": "170 E Main St",
+    "address2": "",
+    "city": "Patchogue",
+    "state": "NY",
+    "zip": "11772",
+    "plus4": ""
+    },
+    "pod": "Keith"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215026",
+    "id": 116393792,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739390732327,
+    "formattedTime": "3:05 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "15:05",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "GLEN HEAD, Post Office",
+    "address1": "240 Glen Head Rd",
+    "address2": "#Ste 1",
+    "city": "Glen Head",
+    "state": "NY",
+    "zip": "11545",
+    "plus4": ""
+    },
+    "pod": "hong"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220043",
+    "id": 116393832,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739390503003,
+    "formattedTime": "3:01 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "15:01",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "PATCHOGUE, Post Office",
+    "address1": "170 E Main St",
+    "address2": "",
+    "city": "Patchogue",
+    "state": "NY",
+    "zip": "11772",
+    "plus4": ""
+    },
+    "pod": "Keith"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220046",
+    "id": 116393835,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739390407000,
+    "formattedTime": "3:00 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "15:00",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "PATCHOGUE, Post Office",
+    "address1": "170 E Main St",
+    "address2": "",
+    "city": "Patchogue",
+    "state": "NY",
+    "zip": "11772",
+    "plus4": ""
+    },
+    "pod": "Keith"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220042",
+    "id": 116393831,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739390262403,
+    "formattedTime": "2:57 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "14:57",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "PATCHOGUE, Post Office",
+    "address1": "170 E Main St",
+    "address2": "",
+    "city": "Patchogue",
+    "state": "NY",
+    "zip": "11772",
+    "plus4": ""
+    },
+    "pod": "Keith"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220044",
+    "id": 116393833,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739390066993,
+    "formattedTime": "2:54 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "14:54",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "PATCHOGUE, Post Office",
+    "address1": "170 E Main St",
+    "address2": "",
+    "city": "Patchogue",
+    "state": "NY",
+    "zip": "11772",
+    "plus4": ""
+    },
+    "pod": "Keith"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215056",
+    "id": 116393762,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739389684143,
+    "formattedTime": "2:48 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "14:48",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "SEA CLIFF, Post Office",
+    "address1": "200 Sea Cliff Ave",
+    "address2": "",
+    "city": "Sea Cliff",
+    "state": "NY",
+    "zip": "11579",
+    "plus4": ""
+    },
+    "pod": "clair"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220008",
+    "id": 116393869,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739388594547,
+    "formattedTime": "2:29 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "14:29",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "BLUE POINT, Post Office",
+    "address1": "141 Montauk Hwy",
+    "address2": "",
+    "city": "Blue Point",
+    "state": "NY",
+    "zip": "11715",
+    "plus4": ""
+    },
+    "pod": "Chris"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215025",
+    "id": 116393793,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739388316407,
+    "formattedTime": "2:25 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "14:25",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "GLEN COVE, Post Office",
+    "address1": "2 Glen Cove Ave",
+    "address2": "",
+    "city": "Glen Cove",
+    "state": "NY",
+    "zip": "11542",
+    "plus4": ""
+    },
+    "pod": "Andrea"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215058",
+    "id": 116393760,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739387532537,
+    "formattedTime": "2:12 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "14:12",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "BAYPORT, Post Office",
+    "address1": "850 Montauk Hwy",
+    "address2": "",
+    "city": "Bayport",
+    "state": "NY",
+    "zip": "11705",
+    "plus4": ""
+    },
+    "pod": "darch"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215041",
+    "id": 116393777,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739386419263,
+    "formattedTime": "1:53 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "13:53",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "LOCUST VALLEY, Post Office",
+    "address1": "115 Forest Ave",
+    "address2": "",
+    "city": "Locust Valley",
+    "state": "NY",
+    "zip": "11560",
+    "plus4": ""
+    },
+    "pod": "james"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220051",
+    "id": 116393826,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739385951327,
+    "formattedTime": "1:45 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "13:45",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "SAYVILLE, Post Office",
+    "address1": "130 Greene Ave",
+    "address2": "",
+    "city": "Sayville",
+    "state": "NY",
+    "zip": "11782",
+    "plus4": ""
+    },
+    "pod": "kindel"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722221001",
+    "id": 116393820,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739385451393,
+    "formattedTime": "1:37 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "13:37",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "MILL NECK, Post Office",
+    "address1": "32 Frost Mill Rd",
+    "address2": "",
+    "city": "Mill Neck",
+    "state": "NY",
+    "zip": "11765",
+    "plus4": ""
+    },
+    "pod": "Rachel"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220037",
+    "id": 116393840,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739384730133,
+    "formattedTime": "1:25 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "13:25",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "MEDFORD, Post Office",
+    "address1": "1905 NY-112",
+    "address2": "",
+    "city": "Medford",
+    "state": "NY",
+    "zip": "11763",
+    "plus4": ""
+    },
+    "pod": "patric"
+    },
+    {
+    "isEditable": false,
+    "barcode": "899>9!38 9118\"22220037",
+    "id": 116751906,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739384720923,
+    "formattedTime": "1:25 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "13:25",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "MEDFORD, Post Office",
+    "address1": "1905 NY-112",
+    "address2": "",
+    "city": "Medford",
+    "state": "NY",
+    "zip": "11763",
+    "plus4": ""
+    },
+    "pod": "patric"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220005",
+    "id": 116393872,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739384419237,
+    "formattedTime": "1:20 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "13:20",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "BAYVILLE, Post Office",
+    "address1": "251 Bayville Ave",
+    "address2": "",
+    "city": "Bayville",
+    "state": "NY",
+    "zip": "11709",
+    "plus4": ""
+    },
+    "pod": "Larry"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220055",
+    "id": 116393822,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739384224037,
+    "formattedTime": "1:17 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "13:17",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "WEST SAYVILLE, Post Office",
+    "address1": "12 Washington Ave",
+    "address2": "",
+    "city": "West Sayville",
+    "state": "NY",
+    "zip": "11796",
+    "plus4": ""
+    },
+    "pod": "homer"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220018",
+    "id": 116393859,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739383866393,
+    "formattedTime": "1:11 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "13:11",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "FARMINGVILLE, Post Office",
+    "address1": "500 Horseblock Road",
+    "address2": "",
+    "city": "Farmingville",
+    "state": "NY",
+    "zip": "11738",
+    "plus4": ""
+    },
+    "pod": "ray"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220041",
+    "id": 116393836,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739383310457,
+    "formattedTime": "1:01 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "13:01",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "OYSTER BAY, Post Office",
+    "address1": "1 Shore Ave",
+    "address2": "",
+    "city": "Oyster Bay",
+    "state": "NY",
+    "zip": "11771",
+    "plus4": ""
+    },
+    "pod": "jhon"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220017",
+    "id": 116393860,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739382323867,
+    "formattedTime": "12:45 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "12:45",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "EAST NORWICH, Post Office",
+    "address1": "1001 Oyster Bay Rd",
+    "address2": "",
+    "city": "East Norwich",
+    "state": "NY",
+    "zip": "11732",
+    "plus4": ""
+    },
+    "pod": "tom"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220040",
+    "id": 116393837,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739381911957,
+    "formattedTime": "12:38 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "12:38",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "OAKDALE, Post Office",
+    "address1": "927 Montauk Hwy",
+    "address2": "",
+    "city": "Oakdale",
+    "state": "NY",
+    "zip": "11769",
+    "plus4": ""
+    },
+    "pod": "jovanni"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220023",
+    "id": 116747669,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739381595453,
+    "formattedTime": "12:33 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "12:33",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "HUNTINGTON STATION, Post Office",
+    "address1": "888 E Jericho Turnpike",
+    "address2": "",
+    "city": "Huntington Station",
+    "state": "NY",
+    "zip": "11746",
+    "plus4": ""
+    },
+    "pod": "jerry"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220054",
+    "id": 116393824,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739381477493,
+    "formattedTime": "12:31 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "12:31",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "SYOSSET, Post Office",
+    "address1": "40 Queens St",
+    "address2": "",
+    "city": "Syosset",
+    "state": "NY",
+    "zip": "11791",
+    "plus4": ""
+    },
+    "pod": "rob"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220053",
+    "id": 116393823,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739381458013,
+    "formattedTime": "12:30 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "12:30",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "SYOSSET, Post Office",
+    "address1": "40 Queens St",
+    "address2": "",
+    "city": "Syosset",
+    "state": "NY",
+    "zip": "11791",
+    "plus4": ""
+    },
+    "pod": "rob"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220009",
+    "id": 116393868,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739380364393,
+    "formattedTime": "12:12 PM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "12:12",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "BOHEMIA, Post Office",
+    "address1": "200 Orville Dr",
+    "address2": "",
+    "city": "Bohemia",
+    "state": "NY",
+    "zip": "11716",
+    "plus4": ""
+    },
+    "pod": "Chris"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220031",
+    "id": 116745044,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739379232140,
+    "formattedTime": "11:53 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:53",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "HICKSVILLE, Post Office",
+    "address1": "185 W John St",
+    "address2": "",
+    "city": "Hicksville",
+    "state": "NY",
+    "zip": "11801",
+    "plus4": ""
+    },
+    "pod": "bryan"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220029",
+    "id": 116745051,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739379230123,
+    "formattedTime": "11:53 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:53",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "HICKSVILLE, Post Office",
+    "address1": "185 W John St",
+    "address2": "",
+    "city": "Hicksville",
+    "state": "NY",
+    "zip": "11801",
+    "plus4": ""
+    },
+    "pod": "bryan"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220030",
+    "id": 116745059,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739379228307,
+    "formattedTime": "11:53 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:53",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "HICKSVILLE, Post Office",
+    "address1": "185 W John St",
+    "address2": "",
+    "city": "Hicksville",
+    "state": "NY",
+    "zip": "11801",
+    "plus4": ""
+    },
+    "pod": "bryan"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220032",
+    "id": 116745063,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739379226260,
+    "formattedTime": "11:53 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:53",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "HICKSVILLE, Post Office",
+    "address1": "185 W John St",
+    "address2": "",
+    "city": "Hicksville",
+    "state": "NY",
+    "zip": "11801",
+    "plus4": ""
+    },
+    "pod": "bryan"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215036",
+    "id": 116393782,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739379193417,
+    "formattedTime": "11:53 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:53",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "EAST MEADOW, Post Office",
+    "address1": "446 E Meadow Ave",
+    "address2": "",
+    "city": "East Meadow",
+    "state": "NY",
+    "zip": "11554",
+    "plus4": ""
+    },
+    "pod": "merry"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215035",
+    "id": 116393781,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739379181853,
+    "formattedTime": "11:53 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:53",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "EAST MEADOW, Post Office",
+    "address1": "446 E Meadow Ave",
+    "address2": "",
+    "city": "East Meadow",
+    "state": "NY",
+    "zip": "11554",
+    "plus4": ""
+    },
+    "pod": "merry"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215037",
+    "id": 116393783,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739379173390,
+    "formattedTime": "11:52 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:52",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "EAST MEADOW, Post Office",
+    "address1": "446 E Meadow Ave",
+    "address2": "",
+    "city": "East Meadow",
+    "state": "NY",
+    "zip": "11554",
+    "plus4": ""
+    },
+    "pod": "merry"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215045",
+    "id": 116393774,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739378340740,
+    "formattedTime": "11:39 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:39",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "LYNBROOK, Post Office",
+    "address1": "100 Broadway",
+    "address2": "",
+    "city": "Lynbrook",
+    "state": "NY",
+    "zip": "11563",
+    "plus4": ""
+    },
+    "pod": "tandica"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215044",
+    "id": 116393773,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739378335467,
+    "formattedTime": "11:38 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:38",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "LYNBROOK, Post Office",
+    "address1": "100 Broadway",
+    "address2": "",
+    "city": "Lynbrook",
+    "state": "NY",
+    "zip": "11563",
+    "plus4": ""
+    },
+    "pod": "tandica"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220039",
+    "id": 116393838,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739377955093,
+    "formattedTime": "11:32 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:32",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "NESCONSET, Post Office",
+    "address1": "226 Smithtown Blvd",
+    "address2": "",
+    "city": "Nesconset",
+    "state": "NY",
+    "zip": "11767",
+    "plus4": ""
+    },
+    "pod": "ramon"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220002",
+    "id": 116393875,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739377598670,
+    "formattedTime": "11:26 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:26",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "VALLEY STREAM, Post Office",
+    "address1": "111 S Franklin Ave",
+    "address2": "",
+    "city": "Valley Stream",
+    "state": "NY",
+    "zip": "11580",
+    "plus4": ""
+    },
+    "pod": "britney kennet"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220004",
+    "id": 116393877,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739377593363,
+    "formattedTime": "11:26 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:26",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "VALLEY STREAM, Post Office",
+    "address1": "111 S Franklin Ave",
+    "address2": "",
+    "city": "Valley Stream",
+    "state": "NY",
+    "zip": "11580",
+    "plus4": ""
+    },
+    "pod": "britney kennet"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220001",
+    "id": 116393874,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739377531963,
+    "formattedTime": "11:25 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:25",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "VALLEY STREAM, Post Office",
+    "address1": "111 S Franklin Ave",
+    "address2": "",
+    "city": "Valley Stream",
+    "state": "NY",
+    "zip": "11580",
+    "plus4": ""
+    },
+    "pod": "britney kennet"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220003",
+    "id": 116393876,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739377527637,
+    "formattedTime": "11:25 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:25",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "VALLEY STREAM, Post Office",
+    "address1": "111 S Franklin Ave",
+    "address2": "",
+    "city": "Valley Stream",
+    "state": "NY",
+    "zip": "11580",
+    "plus4": ""
+    },
+    "pod": "britney kennet"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215047",
+    "id": 116393769,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739377078230,
+    "formattedTime": "11:17 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:17",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "ROCKVILLE CENTRE, Post Office",
+    "address1": "250 Merrick Rd",
+    "address2": "",
+    "city": "Rockville Centre",
+    "state": "NY",
+    "zip": "11570",
+    "plus4": ""
+    },
+    "pod": "Tom"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215049",
+    "id": 116393771,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739377075963,
+    "formattedTime": "11:17 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:17",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "ROCKVILLE CENTRE, Post Office",
+    "address1": "250 Merrick Rd",
+    "address2": "",
+    "city": "Rockville Centre",
+    "state": "NY",
+    "zip": "11570",
+    "plus4": ""
+    },
+    "pod": "Tom"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215048",
+    "id": 116393770,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739377072933,
+    "formattedTime": "11:17 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:17",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "ROCKVILLE CENTRE, Post Office",
+    "address1": "250 Merrick Rd",
+    "address2": "",
+    "city": "Rockville Centre",
+    "state": "NY",
+    "zip": "11570",
+    "plus4": ""
+    },
+    "pod": "Tom"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215031",
+    "id": 116393790,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739376952417,
+    "formattedTime": "11:15 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:15",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "HEMPSTEAD, Post Office",
+    "address1": "200 Fulton Ave",
+    "address2": "",
+    "city": "Hempstead",
+    "state": "NY",
+    "zip": "11550",
+    "plus4": ""
+    },
+    "pod": "anton"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215032",
+    "id": 116393791,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739376946720,
+    "formattedTime": "11:15 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:15",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "HEMPSTEAD, Post Office",
+    "address1": "200 Fulton Ave",
+    "address2": "",
+    "city": "Hempstead",
+    "state": "NY",
+    "zip": "11550",
+    "plus4": ""
+    },
+    "pod": "anton"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215029",
+    "id": 116393788,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739376945117,
+    "formattedTime": "11:15 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:15",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "HEMPSTEAD, Post Office",
+    "address1": "200 Fulton Ave",
+    "address2": "",
+    "city": "Hempstead",
+    "state": "NY",
+    "zip": "11550",
+    "plus4": ""
+    },
+    "pod": "anton"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215030",
+    "id": 116393789,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739376939450,
+    "formattedTime": "11:15 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:15",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "HEMPSTEAD, Post Office",
+    "address1": "200 Fulton Ave",
+    "address2": "",
+    "city": "Hempstead",
+    "state": "NY",
+    "zip": "11550",
+    "plus4": ""
+    },
+    "pod": "anton"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215028",
+    "id": 116393787,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739376935583,
+    "formattedTime": "11:15 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:15",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "HEMPSTEAD, Post Office",
+    "address1": "200 Fulton Ave",
+    "address2": "",
+    "city": "Hempstead",
+    "state": "NY",
+    "zip": "11550",
+    "plus4": ""
+    },
+    "pod": "anton"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215027",
+    "id": 116393786,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739376929153,
+    "formattedTime": "11:15 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:15",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "HEMPSTEAD, Post Office",
+    "address1": "200 Fulton Ave",
+    "address2": "",
+    "city": "Hempstead",
+    "state": "NY",
+    "zip": "11550",
+    "plus4": ""
+    },
+    "pod": "anton"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220050",
+    "id": 116393827,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739376862080,
+    "formattedTime": "11:14 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "11:14",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "SAINT JAMES, Post Office",
+    "address1": "325 Lake Ave",
+    "address2": "",
+    "city": "Saint James",
+    "state": "NY",
+    "zip": "11780",
+    "plus4": ""
+    },
+    "pod": "mery"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215039",
+    "id": 116393779,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739375910533,
+    "formattedTime": "10:58 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:58",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "ISLAND PARK, Post Office",
+    "address1": "367 Long Beach Rd",
+    "address2": "",
+    "city": "Island Park",
+    "state": "NY",
+    "zip": "11558",
+    "plus4": ""
+    },
+    "pod": "Eric"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220034",
+    "id": 116393844,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739375368630,
+    "formattedTime": "10:49 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:49",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "LAKE GROVE, Post Office",
+    "address1": "1001 Hawkins Ave",
+    "address2": "",
+    "city": "Lake Grove",
+    "state": "NY",
+    "zip": "11755",
+    "plus4": ""
+    },
+    "pod": "rosa"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215043",
+    "id": 116393776,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739375201307,
+    "formattedTime": "10:46 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:46",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "LONG BEACH, Post Office",
+    "address1": "101 E Park Ave",
+    "address2": "",
+    "city": "Long Beach",
+    "state": "NY",
+    "zip": "11561",
+    "plus4": ""
+    },
+    "pod": "Dorothy"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215042",
+    "id": 116393775,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739375196900,
+    "formattedTime": "10:46 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:46",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "LONG BEACH, Post Office",
+    "address1": "101 E Park Ave",
+    "address2": "",
+    "city": "Long Beach",
+    "state": "NY",
+    "zip": "11561",
+    "plus4": ""
+    },
+    "pod": "Dorothy"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215021",
+    "id": 116393797,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739375185150,
+    "formattedTime": "10:46 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:46",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "EAST ROCKAWAY, Post Office",
+    "address1": "10 Main St",
+    "address2": "",
+    "city": "East Rockaway",
+    "state": "NY",
+    "zip": "11518",
+    "plus4": ""
+    },
+    "pod": "Dona"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215050",
+    "id": 116393767,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739374705063,
+    "formattedTime": "10:38 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:38",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "OCEANSIDE, Post Office",
+    "address1": "80 Atlantic Ave",
+    "address2": "",
+    "city": "Oceanside",
+    "state": "NY",
+    "zip": "11572",
+    "plus4": ""
+    },
+    "pod": "Mike"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215051",
+    "id": 116393768,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739374702597,
+    "formattedTime": "10:38 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:38",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "OCEANSIDE, Post Office",
+    "address1": "80 Atlantic Ave",
+    "address2": "",
+    "city": "Oceanside",
+    "state": "NY",
+    "zip": "11572",
+    "plus4": ""
+    },
+    "pod": "Mike"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215023",
+    "id": 116393795,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739373531567,
+    "formattedTime": "10:18 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:18",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "FREEPORT, Post Office",
+    "address1": "132 W Merrick Rd",
+    "address2": "",
+    "city": "Freeport",
+    "state": "NY",
+    "zip": "11520",
+    "plus4": ""
+    },
+    "pod": "Pedro"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215022",
+    "id": 116393794,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739373529397,
+    "formattedTime": "10:18 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:18",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "FREEPORT, Post Office",
+    "address1": "132 W Merrick Rd",
+    "address2": "",
+    "city": "Freeport",
+    "state": "NY",
+    "zip": "11520",
+    "plus4": ""
+    },
+    "pod": "Pedro"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215024",
+    "id": 116393796,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739373526770,
+    "formattedTime": "10:18 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:18",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "FREEPORT, Post Office",
+    "address1": "132 W Merrick Rd",
+    "address2": "",
+    "city": "Freeport",
+    "state": "NY",
+    "zip": "11520",
+    "plus4": ""
+    },
+    "pod": "Pedro"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220038",
+    "id": 116393839,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739373472013,
+    "formattedTime": "10:17 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:17",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "MOUNT SINAI, Post Office",
+    "address1": "457 Rte 25A",
+    "address2": "",
+    "city": "Mount Sinai",
+    "state": "NY",
+    "zip": "11766",
+    "plus4": ""
+    },
+    "pod": "jose"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722216001",
+    "id": 116393756,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739373422287,
+    "formattedTime": "10:17 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:17",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "ATLANTIC BEACH, Post Office",
+    "address1": "2009 Park St",
+    "address2": "",
+    "city": "Atlantic Beach",
+    "state": "NY",
+    "zip": "11509",
+    "plus4": ""
+    },
+    "pod": "Dalia"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220031",
+    "id": 116738535,
+    "scanStatus": "Picked Up",
+    "lastScannedWhen": {
+    "timeStamp": 1739373244020,
+    "formattedTime": "10:14 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:14",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "CBA Industries",
+    "address1": "160 Raritan Center Parkway",
+    "address2": "Suite 19",
+    "city": "Edison",
+    "state": "NJ",
+    "zip": "08837",
+    "plus4": ""
+    },
+    "pod": "ray"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220023",
+    "id": 116738513,
+    "scanStatus": "Picked Up",
+    "lastScannedWhen": {
+    "timeStamp": 1739373232770,
+    "formattedTime": "10:13 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:13",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "CBA Industries",
+    "address1": "160 Raritan Center Parkway",
+    "address2": "Suite 19",
+    "city": "Edison",
+    "state": "NJ",
+    "zip": "08837",
+    "plus4": ""
+    },
+    "pod": "ray"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99g90R779118722220092",
+    "id": 116738505,
+    "scanStatus": "Picked Up",
+    "lastScannedWhen": {
+    "timeStamp": 1739373227790,
+    "formattedTime": "10:13 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:13",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "CBA Industries",
+    "address1": "160 Raritan Center Parkway",
+    "address2": "Suite 19",
+    "city": "Edison",
+    "state": "NJ",
+    "zip": "08837",
+    "plus4": ""
+    },
+    "pod": "ray"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220029",
+    "id": 116738444,
+    "scanStatus": "Picked Up",
+    "lastScannedWhen": {
+    "timeStamp": 1739373183533,
+    "formattedTime": "10:13 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:13",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "CBA Industries",
+    "address1": "160 Raritan Center Parkway",
+    "address2": "Suite 19",
+    "city": "Edison",
+    "state": "NJ",
+    "zip": "08837",
+    "plus4": ""
+    },
+    "pod": "ray"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215014",
+    "id": 116393806,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739373018877,
+    "formattedTime": "10:10 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:10",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "BALDWIN, Post Office",
+    "address1": "2260 Grand Ave",
+    "address2": "",
+    "city": "Baldwin",
+    "state": "NY",
+    "zip": "11510",
+    "plus4": ""
+    },
+    "pod": "yin"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215012",
+    "id": 116393804,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739372861307,
+    "formattedTime": "10:07 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:07",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "BALDWIN, Post Office",
+    "address1": "2260 Grand Ave",
+    "address2": "",
+    "city": "Baldwin",
+    "state": "NY",
+    "zip": "11510",
+    "plus4": ""
+    },
+    "pod": "yin"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215013",
+    "id": 116393805,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739372718837,
+    "formattedTime": "10:05 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:05",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "BALDWIN, Post Office",
+    "address1": "2260 Grand Ave",
+    "address2": "",
+    "city": "Baldwin",
+    "state": "NY",
+    "zip": "11510",
+    "plus4": ""
+    },
+    "pod": "yin"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215015",
+    "id": 116393807,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739372605120,
+    "formattedTime": "10:03 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "10:03",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "BALDWIN, Post Office",
+    "address1": "2260 Grand Ave",
+    "address2": "",
+    "city": "Baldwin",
+    "state": "NY",
+    "zip": "11510",
+    "plus4": ""
+    },
+    "pod": "yin"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215009",
+    "id": 116393812,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739372373760,
+    "formattedTime": "9:59 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "09:59",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "MANHASSET, Post Office",
+    "address1": "28 Maple Pl",
+    "address2": "",
+    "city": "Manhasset",
+    "state": "NY",
+    "zip": "11030",
+    "plus4": ""
+    },
+    "pod": "manhat"
+    },
+    {
+    "isEditable": false,
+    "barcode": "528349",
+    "id": 116737787,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739372372697,
+    "formattedTime": "9:59 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "09:59",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "MANHASSET, Post Office",
+    "address1": "28 Maple Pl",
+    "address2": "",
+    "city": "Manhasset",
+    "state": "NY",
+    "zip": "11030",
+    "plus4": ""
+    },
+    "pod": "manhat"
+    },
+    {
+    "isEditable": false,
+    "barcode": "8H9M90378+11872F2'DE&H",
+    "id": 116737778,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739372364030,
+    "formattedTime": "9:59 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "09:59",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "MANHASSET, Post Office",
+    "address1": "28 Maple Pl",
+    "address2": "",
+    "city": "Manhasset",
+    "state": "NY",
+    "zip": "11030",
+    "plus4": ""
+    },
+    "pod": "manhat"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215008",
+    "id": 116393811,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739372353897,
+    "formattedTime": "9:59 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "09:59",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "MANHASSET, Post Office",
+    "address1": "28 Maple Pl",
+    "address2": "",
+    "city": "Manhasset",
+    "state": "NY",
+    "zip": "11030",
+    "plus4": ""
+    },
+    "pod": "manhat"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215052",
+    "id": 116393766,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739371630943,
+    "formattedTime": "9:47 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "09:47",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "ROOSEVELT, Post Office",
+    "address1": "1 Babylon Turnpike",
+    "address2": "",
+    "city": "Roosevelt",
+    "state": "NY",
+    "zip": "11575",
+    "plus4": ""
+    },
+    "pod": "charmine"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220011",
+    "id": 116393863,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739371518723,
+    "formattedTime": "9:45 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "09:45",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "CENTRAL ISLIP, Post Office",
+    "address1": "110 E Suffolk Ave",
+    "address2": "",
+    "city": "Central Islip",
+    "state": "NY",
+    "zip": "11722",
+    "plus4": ""
+    },
+    "pod": "franco"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220014",
+    "id": 116393866,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739371405730,
+    "formattedTime": "9:43 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "09:43",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "CENTRAL ISLIP, Post Office",
+    "address1": "110 E Suffolk Ave",
+    "address2": "",
+    "city": "Central Islip",
+    "state": "NY",
+    "zip": "11722",
+    "plus4": ""
+    },
+    "pod": "franco"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215010",
+    "id": 116393810,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739371262120,
+    "formattedTime": "9:41 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "09:41",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "PORT WASHINGTON, Post Office",
+    "address1": "1051 Port Washington Blvd",
+    "address2": "",
+    "city": "Port Washington",
+    "state": "NY",
+    "zip": "11050",
+    "plus4": ""
+    },
+    "pod": "bryan"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220012",
+    "id": 116393864,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739371257597,
+    "formattedTime": "9:40 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "09:40",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "CENTRAL ISLIP, Post Office",
+    "address1": "110 E Suffolk Ave",
+    "address2": "",
+    "city": "Central Islip",
+    "state": "NY",
+    "zip": "11722",
+    "plus4": ""
+    },
+    "pod": "franco"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220013",
+    "id": 116393865,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739371114197,
+    "formattedTime": "9:38 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "09:38",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "CENTRAL ISLIP, Post Office",
+    "address1": "110 E Suffolk Ave",
+    "address2": "",
+    "city": "Central Islip",
+    "state": "NY",
+    "zip": "11722",
+    "plus4": ""
+    },
+    "pod": "franco"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215034",
+    "id": 116393784,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739370728917,
+    "formattedTime": "9:32 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "09:32",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "UNIONDALE, Post Office",
+    "address1": "1000 Front St",
+    "address2": "",
+    "city": "Uniondale",
+    "state": "NY",
+    "zip": "11553",
+    "plus4": ""
+    },
+    "pod": "xadierh"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220015",
+    "id": 116393861,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739369771947,
+    "formattedTime": "9:16 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "09:16",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "CORAM, Post Office",
+    "address1": "117 Pauls Path",
+    "address2": "",
+    "city": "Coram",
+    "state": "NY",
+    "zip": "11727",
+    "plus4": ""
+    },
+    "pod": "ozzie melendez"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220016",
+    "id": 116393862,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739369767617,
+    "formattedTime": "9:16 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "09:16",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "CORAM, Post Office",
+    "address1": "117 Pauls Path",
+    "address2": "",
+    "city": "Coram",
+    "state": "NY",
+    "zip": "11727",
+    "plus4": ""
+    },
+    "pod": "ozzie melendez"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220049",
+    "id": 116393830,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739369641800,
+    "formattedTime": "9:14 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "09:14",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "RONKONKOMA, Post Office",
+    "address1": "200 Hawkins Ave",
+    "address2": "",
+    "city": "Lake Ronkonkoma",
+    "state": "NY",
+    "zip": "11779",
+    "plus4": ""
+    },
+    "pod": "joe c"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220047",
+    "id": 116393828,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739369507393,
+    "formattedTime": "9:11 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "09:11",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "RONKONKOMA, Post Office",
+    "address1": "200 Hawkins Ave",
+    "address2": "",
+    "city": "Lake Ronkonkoma",
+    "state": "NY",
+    "zip": "11779",
+    "plus4": ""
+    },
+    "pod": "joe c"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220048",
+    "id": 116393829,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739369502337,
+    "formattedTime": "9:11 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "09:11",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "RONKONKOMA, Post Office",
+    "address1": "200 Hawkins Ave",
+    "address2": "",
+    "city": "Lake Ronkonkoma",
+    "state": "NY",
+    "zip": "11779",
+    "plus4": ""
+    },
+    "pod": "joe c"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215046",
+    "id": 116393772,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739369480547,
+    "formattedTime": "9:11 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "09:11",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "MALVERNE, Post Office",
+    "address1": "339 Hempstead Ave",
+    "address2": "",
+    "city": "Malverne",
+    "state": "NY",
+    "zip": "11565",
+    "plus4": ""
+    },
+    "pod": "porcha"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220020",
+    "id": 116393856,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739367985680,
+    "formattedTime": "8:46 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "08:46",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "HOLBROOK, Post Office",
+    "address1": "445 Furrows Rd",
+    "address2": "",
+    "city": "Holbrook",
+    "state": "NY",
+    "zip": "11741",
+    "plus4": ""
+    },
+    "pod": "carvalho"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220019",
+    "id": 116393855,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739367981850,
+    "formattedTime": "8:46 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "08:46",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "HOLBROOK, Post Office",
+    "address1": "445 Furrows Rd",
+    "address2": "",
+    "city": "Holbrook",
+    "state": "NY",
+    "zip": "11741",
+    "plus4": ""
+    },
+    "pod": "carvalho"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220021",
+    "id": 116393857,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739367977440,
+    "formattedTime": "8:46 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "08:46",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "HOLBROOK, Post Office",
+    "address1": "445 Furrows Rd",
+    "address2": "",
+    "city": "Holbrook",
+    "state": "NY",
+    "zip": "11741",
+    "plus4": ""
+    },
+    "pod": "carvalho"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722220022",
+    "id": 116393858,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739367970887,
+    "formattedTime": "8:46 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "08:46",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "HOLBROOK, Post Office",
+    "address1": "445 Furrows Rd",
+    "address2": "",
+    "city": "Holbrook",
+    "state": "NY",
+    "zip": "11741",
+    "plus4": ""
+    },
+    "pod": "carvalho"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215005",
+    "id": 116393817,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739367466510,
+    "formattedTime": "8:37 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "08:37",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "ELMONT, Post Office",
+    "address1": "260 Elmont Rd",
+    "address2": "",
+    "city": "Elmont",
+    "state": "NY",
+    "zip": "11003",
+    "plus4": ""
+    },
+    "pod": "n. lakeram"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215004",
+    "id": 116393816,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739367452857,
+    "formattedTime": "8:37 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "08:37",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "ELMONT, Post Office",
+    "address1": "260 Elmont Rd",
+    "address2": "",
+    "city": "Elmont",
+    "state": "NY",
+    "zip": "11003",
+    "plus4": ""
+    },
+    "pod": "n. lakeram"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215003",
+    "id": 116393815,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739367442837,
+    "formattedTime": "8:37 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "08:37",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "ELMONT, Post Office",
+    "address1": "260 Elmont Rd",
+    "address2": "",
+    "city": "Elmont",
+    "state": "NY",
+    "zip": "11003",
+    "plus4": ""
+    },
+    "pod": "n. lakeram"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215002",
+    "id": 116393819,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739366921020,
+    "formattedTime": "8:28 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "08:28",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "FLORAL PARK, Post Office",
+    "address1": "35 Tulip Ave",
+    "address2": "",
+    "city": "Floral Park",
+    "state": "NY",
+    "zip": "11001",
+    "plus4": ""
+    },
+    "pod": "ali"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215001",
+    "id": 116393818,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739366893727,
+    "formattedTime": "8:28 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "08:28",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "FLORAL PARK, Post Office",
+    "address1": "35 Tulip Ave",
+    "address2": "",
+    "city": "Floral Park",
+    "state": "NY",
+    "zip": "11001",
+    "plus4": ""
+    },
+    "pod": "ali"
+    },
+    {
+    "isEditable": false,
+    "barcode": "99M903779118722215059",
+    "id": 116393757,
+    "scanStatus": "Delivered",
+    "lastScannedWhen": {
+    "timeStamp": 1739366585867,
+    "formattedTime": "8:23 AM",
+    "formattedDate": "2025-02-12",
+    "standardizedTime": "08:23",
+    "standardizedDate": "2025-02-12",
+    "timeZone": "EST"
+    },
+    "exceptionExists": false,
+    "address": {
+    "name": "BAY SHORE, Post Office",
+    "address1": "1314 5th Ave",
+    "address2": "",
+    "city": "Bay Shore",
+    "state": "NY",
+    "zip": "11706",
+    "plus4": ""
+    },
+    "pod": "debbie"
+    }
+    ],
+    "totalCount": 100,
+    "resultTime": {
+    "timeStamp": 1739454819672,
+    "formattedTime": "8:53 AM",
+    "formattedDate": "2025-02-13",
+    "standardizedTime": "08:53",
+    "standardizedDate": "2025-02-13",
+    "timeZone": "EST"
+    }
+    }
