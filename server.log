@@ -5978,3 +5978,40 @@ fastapi.exceptions.HTTPException: 500: Database update failed: '99M9037791187222
 2025-02-19 10:12:04,766 - INFO - ✅ Update completed: 19 updated, 1 inserted, 234 unchanged.
 2025-02-19 10:12:04,766 - INFO - ✅ Database successfully updated with new parcel data.
 2025-02-19 10:12:04,766 - INFO - Job "fetch_and_update_parcels (trigger: date[2025-02-19 10:12:00 EST], next run at: 2025-02-19 10:12:00 EST)" executed successfully
+2025-02-19 12:01:55,348 - INFO - 🚀 FastAPI Server is starting...
+2025-02-19 12:01:55,350 - INFO - 📅 Dynamic API Date Range: 2025-02-15 to 2025-02-20
+2025-02-19 12:01:55,352 - INFO - 🚀 FastAPI Startup: Scheduling updates...
+2025-02-19 12:01:55,352 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-19 12:01:55,352 - INFO - 📅 Scheduled database update at 2025-02-19 12:04:00
+2025-02-19 12:01:55,352 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-19 12:01:55,352 - INFO - 📅 Scheduled database update at 2025-02-19 12:32:00
+2025-02-19 12:01:55,352 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-19 12:01:55,352 - INFO - 📅 Scheduled database update at 2025-02-19 13:00:00
+2025-02-19 12:01:55,352 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-19 12:01:55,352 - INFO - 📅 Scheduled database update at 2025-02-19 13:28:00
+2025-02-19 12:01:55,352 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-19 12:01:55,352 - INFO - 📅 Scheduled database update at 2025-02-19 13:56:00
+2025-02-19 12:01:55,352 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-19 12:01:55,352 - INFO - 📅 Scheduled database update at 2025-02-19 14:24:00
+2025-02-19 12:01:55,352 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-19 12:01:55,352 - INFO - 📅 Scheduled database update at 2025-02-19 14:52:00
+2025-02-19 12:01:55,352 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-19 12:01:55,352 - INFO - 📅 Scheduled database update at 2025-02-19 15:20:00
+2025-02-19 12:01:55,352 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-19 12:01:55,352 - INFO - 📅 Scheduled database update at 2025-02-19 15:48:00
+2025-02-19 12:01:55,352 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-19 12:01:55,352 - INFO - 📅 Scheduled database update at 2025-02-19 16:16:00
+2025-02-19 12:01:55,352 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-19 12:01:55,352 - INFO - 📅 Scheduled database update at 2025-02-19 16:44:00
+2025-02-19 12:01:55,352 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-19 12:01:55,353 - INFO - 📅 Scheduled database update at 2025-02-19 17:12:00
+2025-02-19 12:01:55,353 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-19 12:01:55,353 - INFO - 📅 Scheduled database update at 2025-02-19 17:40:00
+2025-02-19 12:01:55,353 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-19 12:01:55,353 - INFO - 📅 Scheduled database update at 2025-02-19 18:08:00
+2025-02-19 12:01:55,353 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-19 12:01:55,353 - INFO - 📅 Scheduled database update at 2025-02-19 18:36:00
+2025-02-19 12:01:55,353 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-19 12:01:55,353 - INFO - 📅 Scheduled database update at 2025-02-19 19:04:00
+2025-02-19 12:01:55,353 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-19 12:01:55,353 - INFO - 📅 Scheduled database update at 2025-02-19 19:32:00

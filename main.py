@@ -225,6 +225,7 @@ import requests
 import os
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query, Request, BackgroundTasks
+from contextlib import asynccontextmanager
 from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime, timedelta
 from slowapi import Limiter
@@ -274,29 +275,6 @@ limiter = Limiter(key_func=get_remote_address)  # ✅ Rate limiter to prevent ab
 # 🚀 FastAPI Server Start
 logger.info("🚀 FastAPI Server is starting...")
 
-def start_railway_service():
-    """Starts the Railway service on scheduled days."""
-    if RAILWAY_API_KEY and PROJECT_ID and SERVICE_ID:
-        url = f"https://backboard.railway.app/v1/projects/{PROJECT_ID}/services/{SERVICE_ID}/start"
-        headers = {"Authorization": f"Bearer {RAILWAY_API_KEY}"}
-        response = requests.post(url, headers=headers)
-
-        if response.status_code == 200:
-            logging.info("🚀 Railway service successfully started.")
-        else:
-            logging.error(f"❌ Failed to start Railway service: {response.text}")
-
-def stop_railway_service():
-    """Stops the Railway service on non-scheduler days."""
-    if RAILWAY_API_KEY and PROJECT_ID and SERVICE_ID:
-        url = f"https://backboard.railway.app/v1/projects/{PROJECT_ID}/services/{SERVICE_ID}/stop"
-        headers = {"Authorization": f"Bearer {RAILWAY_API_KEY}"}
-        response = requests.post(url, headers=headers)
-
-        if response.status_code == 200:
-            logging.info("🛑 Railway service successfully stopped.")
-        else:
-            logging.error(f"❌ Failed to stop Railway service: {response.text}")
 
 def authenticate():
     """Fetches a new authentication token."""
@@ -571,12 +549,20 @@ def schedule_updates():
                 logging.info(f"📅 Scheduled database update at {next_run.strftime('%Y-%m-%d %H:%M:%S')}")
 
 # schedule_updates() 
-@app.on_event("startup")
-def startup_event():
+# @app.on_event("startup")
+# def startup_event():
+#     logging.info("🚀 FastAPI Startup: Scheduling updates...")
+#     if not scheduler.running:  # ✅ Prevent scheduler from starting multiple times
+#         scheduler.start()
+#     schedule_updates()  # ✅ Start scheduler at FastAPI startup
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
     logging.info("🚀 FastAPI Startup: Scheduling updates...")
-    if not scheduler.running:  # ✅ Prevent scheduler from starting multiple times
-        scheduler.start()
     schedule_updates()  # ✅ Start scheduler at FastAPI startup
+    yield  # 🚀 This ensures proper cleanup when the app stops
+
+app = FastAPI(lifespan=lifespan)  # ✅ Use new lifespan method
 
 # 🔹 FastAPI Endpoints
 @app.get("/")
