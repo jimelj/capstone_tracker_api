@@ -224,6 +224,7 @@ import sys
 import requests
 import os
 from dotenv import load_dotenv
+import uvicorn
 from fastapi import FastAPI, HTTPException, Query, Request, BackgroundTasks
 from contextlib import asynccontextmanager
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -627,3 +628,5 @@ def trigger_manual_update(request: Request):
     
     # fetch_and_update_parcels()
     # return {"message": "Database update triggered"}
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8080)
