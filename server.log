@@ -5182,3 +5182,790 @@ fastapi.exceptions.HTTPException: 500: Database update failed: '99M9037791187222
 2025-02-18 16:54:49,916 - WARNING - Run time of job "fetch_and_update_parcels (trigger: date[2025-02-18 16:16:00 EST], next run at: 2025-02-18 16:16:00 EST)" was missed by 0:38:49.916416
 2025-02-18 16:54:49,917 - WARNING - Run time of job "fetch_and_update_parcels (trigger: date[2025-02-18 16:44:00 EST], next run at: 2025-02-18 16:44:00 EST)" was missed by 0:10:49.917109
 2025-02-18 16:54:49,917 - INFO - Removed job update_2025-02-18_16-44
+2025-02-18 20:33:32,786 - INFO - Removed job update_2025-02-18_17-12
+2025-02-18 20:33:32,788 - WARNING - Run time of job "fetch_and_update_parcels (trigger: date[2025-02-18 17:12:00 EST], next run at: 2025-02-18 17:12:00 EST)" was missed by 3:21:32.788451
+2025-02-18 20:33:32,789 - INFO - Removed job update_2025-02-18_17-40
+2025-02-18 20:33:32,789 - WARNING - Run time of job "fetch_and_update_parcels (trigger: date[2025-02-18 17:40:00 EST], next run at: 2025-02-18 17:40:00 EST)" was missed by 2:53:32.789765
+2025-02-18 20:33:32,790 - INFO - Removed job update_2025-02-18_18-08
+2025-02-18 20:33:32,790 - WARNING - Run time of job "fetch_and_update_parcels (trigger: date[2025-02-18 18:08:00 EST], next run at: 2025-02-18 18:08:00 EST)" was missed by 2:25:32.790261
+2025-02-18 20:33:32,790 - INFO - Removed job update_2025-02-18_18-36
+2025-02-18 20:33:32,790 - WARNING - Run time of job "fetch_and_update_parcels (trigger: date[2025-02-18 18:36:00 EST], next run at: 2025-02-18 18:36:00 EST)" was missed by 1:57:32.790632
+2025-02-18 20:33:32,790 - INFO - Removed job update_2025-02-18_19-04
+2025-02-18 20:33:32,790 - WARNING - Run time of job "fetch_and_update_parcels (trigger: date[2025-02-18 19:04:00 EST], next run at: 2025-02-18 19:04:00 EST)" was missed by 1:29:32.790774
+2025-02-18 20:33:32,790 - INFO - Removed job update_2025-02-18_19-32
+2025-02-18 20:33:32,790 - WARNING - Run time of job "fetch_and_update_parcels (trigger: date[2025-02-18 19:32:00 EST], next run at: 2025-02-18 19:32:00 EST)" was missed by 1:01:32.790935
+2025-02-19 07:52:52,693 - INFO - 🚀 FastAPI Server is starting...
+2025-02-19 07:52:52,695 - INFO - 🚀 FastAPI Startup: Scheduling updates...
+2025-02-19 07:52:52,695 - INFO - Scheduler started
+2025-02-19 07:52:52,696 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,696 - INFO - 📅 Scheduled database update at 2025-02-19 08:20:00
+2025-02-19 07:52:52,696 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,696 - INFO - 📅 Scheduled database update at 2025-02-19 08:48:00
+2025-02-19 07:52:52,696 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,696 - INFO - 📅 Scheduled database update at 2025-02-19 09:16:00
+2025-02-19 07:52:52,696 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,696 - INFO - 📅 Scheduled database update at 2025-02-19 09:44:00
+2025-02-19 07:52:52,696 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,696 - INFO - 📅 Scheduled database update at 2025-02-19 10:12:00
+2025-02-19 07:52:52,696 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,696 - INFO - 📅 Scheduled database update at 2025-02-19 10:40:00
+2025-02-19 07:52:52,696 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,696 - INFO - 📅 Scheduled database update at 2025-02-19 11:08:00
+2025-02-19 07:52:52,696 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,696 - INFO - 📅 Scheduled database update at 2025-02-19 11:36:00
+2025-02-19 07:52:52,696 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,696 - INFO - 📅 Scheduled database update at 2025-02-19 12:04:00
+2025-02-19 07:52:52,696 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,696 - INFO - 📅 Scheduled database update at 2025-02-19 12:32:00
+2025-02-19 07:52:52,696 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,696 - INFO - 📅 Scheduled database update at 2025-02-19 13:00:00
+2025-02-19 07:52:52,697 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,697 - INFO - 📅 Scheduled database update at 2025-02-19 13:28:00
+2025-02-19 07:52:52,697 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,697 - INFO - 📅 Scheduled database update at 2025-02-19 13:56:00
+2025-02-19 07:52:52,697 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,697 - INFO - 📅 Scheduled database update at 2025-02-19 14:24:00
+2025-02-19 07:52:52,697 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,697 - INFO - 📅 Scheduled database update at 2025-02-19 14:52:00
+2025-02-19 07:52:52,697 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,697 - INFO - 📅 Scheduled database update at 2025-02-19 15:20:00
+2025-02-19 07:52:52,697 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,697 - INFO - 📅 Scheduled database update at 2025-02-19 15:48:00
+2025-02-19 07:52:52,697 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,697 - INFO - 📅 Scheduled database update at 2025-02-19 16:16:00
+2025-02-19 07:52:52,697 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,697 - INFO - 📅 Scheduled database update at 2025-02-19 16:44:00
+2025-02-19 07:52:52,697 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,697 - INFO - 📅 Scheduled database update at 2025-02-19 17:12:00
+2025-02-19 07:52:52,697 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,697 - INFO - 📅 Scheduled database update at 2025-02-19 17:40:00
+2025-02-19 07:52:52,697 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,697 - INFO - 📅 Scheduled database update at 2025-02-19 18:08:00
+2025-02-19 07:52:52,697 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,697 - INFO - 📅 Scheduled database update at 2025-02-19 18:36:00
+2025-02-19 07:52:52,697 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,697 - INFO - 📅 Scheduled database update at 2025-02-19 19:04:00
+2025-02-19 07:52:52,697 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:52:52,697 - INFO - 📅 Scheduled database update at 2025-02-19 19:32:00
+2025-02-19 07:53:12,783 - INFO - 🔄 Manual database update triggered.
+2025-02-19 07:53:12,783 - INFO - 🚀 Fetching updated parcels from external source.
+2025-02-19 07:56:04,492 - INFO - 🛜 API Status Code: 200
+2025-02-19 07:56:04,493 - INFO - 📩 API Response Content: {"parcelSummaries":[{"isEditable":false,"barcode":"899M9(3: 9118722205035","id":116056133,"scanStatus":"Delivered","lastScannedWhen":{"timeStamp":1738758086717,"formattedTime":"7:21 AM","formattedDate":"2025-02-05","standardizedTime":"07:21","standardizedDate":"2025-02-05","timeZone":"EST"},"exceptionExists":false,"address":{"name":"HICKSVILLE, Post Office","address1":"185 W John St","address2":"","city":"Hicksville","state":"NY","zip":"11801","plus4":""},"pod":"woow"},{"isEditable":false,"barco
+2025-02-19 07:56:04,497 - INFO - 📩 Parsed API Response Type: <class 'dict'>
+2025-02-19 07:57:42,027 - INFO - 🚀 FastAPI Server is starting...
+2025-02-19 07:57:42,029 - INFO - 🚀 FastAPI Startup: Scheduling updates...
+2025-02-19 07:57:42,030 - INFO - Scheduler started
+2025-02-19 07:57:42,030 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,030 - INFO - 📅 Scheduled database update at 2025-02-19 08:20:00
+2025-02-19 07:57:42,030 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,030 - INFO - 📅 Scheduled database update at 2025-02-19 08:48:00
+2025-02-19 07:57:42,030 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,030 - INFO - 📅 Scheduled database update at 2025-02-19 09:16:00
+2025-02-19 07:57:42,031 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,031 - INFO - 📅 Scheduled database update at 2025-02-19 09:44:00
+2025-02-19 07:57:42,031 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,031 - INFO - 📅 Scheduled database update at 2025-02-19 10:12:00
+2025-02-19 07:57:42,031 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,031 - INFO - 📅 Scheduled database update at 2025-02-19 10:40:00
+2025-02-19 07:57:42,031 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,031 - INFO - 📅 Scheduled database update at 2025-02-19 11:08:00
+2025-02-19 07:57:42,031 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,031 - INFO - 📅 Scheduled database update at 2025-02-19 11:36:00
+2025-02-19 07:57:42,031 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,031 - INFO - 📅 Scheduled database update at 2025-02-19 12:04:00
+2025-02-19 07:57:42,031 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,031 - INFO - 📅 Scheduled database update at 2025-02-19 12:32:00
+2025-02-19 07:57:42,031 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,031 - INFO - 📅 Scheduled database update at 2025-02-19 13:00:00
+2025-02-19 07:57:42,031 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,031 - INFO - 📅 Scheduled database update at 2025-02-19 13:28:00
+2025-02-19 07:57:42,031 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,031 - INFO - 📅 Scheduled database update at 2025-02-19 13:56:00
+2025-02-19 07:57:42,031 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,031 - INFO - 📅 Scheduled database update at 2025-02-19 14:24:00
+2025-02-19 07:57:42,031 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,031 - INFO - 📅 Scheduled database update at 2025-02-19 14:52:00
+2025-02-19 07:57:42,031 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,031 - INFO - 📅 Scheduled database update at 2025-02-19 15:20:00
+2025-02-19 07:57:42,031 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,032 - INFO - 📅 Scheduled database update at 2025-02-19 15:48:00
+2025-02-19 07:57:42,032 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,032 - INFO - 📅 Scheduled database update at 2025-02-19 16:16:00
+2025-02-19 07:57:42,032 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,032 - INFO - 📅 Scheduled database update at 2025-02-19 16:44:00
+2025-02-19 07:57:42,032 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,032 - INFO - 📅 Scheduled database update at 2025-02-19 17:12:00
+2025-02-19 07:57:42,032 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,032 - INFO - 📅 Scheduled database update at 2025-02-19 17:40:00
+2025-02-19 07:57:42,032 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,032 - INFO - 📅 Scheduled database update at 2025-02-19 18:08:00
+2025-02-19 07:57:42,032 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,032 - INFO - 📅 Scheduled database update at 2025-02-19 18:36:00
+2025-02-19 07:57:42,032 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,032 - INFO - 📅 Scheduled database update at 2025-02-19 19:04:00
+2025-02-19 07:57:42,032 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 07:57:42,032 - INFO - 📅 Scheduled database update at 2025-02-19 19:32:00
+2025-02-19 07:57:48,744 - INFO - 🔄 Manual database update triggered.
+2025-02-19 07:57:48,745 - INFO - 🚀 Fetching updated parcels from external source.
+2025-02-19 07:58:14,995 - INFO - 🛜 API Status Code: 200
+2025-02-19 07:58:14,997 - INFO - 📩 API Response Content: {"parcelSummaries":[{"isEditable":false,"barcode":"899M9(3: 9118722205035","id":116056133,"scanStatus":"Delivered","lastScannedWhen":{"timeStamp":1738758086717,"formattedTime":"7:21 AM","formattedDate":"2025-02-05","standardizedTime":"07:21","standardizedDate":"2025-02-05","timeZone":"EST"},"exceptionExists":false,"address":{"name":"HICKSVILLE, Post Office","address1":"185 W John St","address2":"","city":"Hicksville","state":"NY","zip":"11801","plus4":""},"pod":"woow"},{"isEditable":false,"barco
+2025-02-19 07:58:15,005 - INFO - 📩 Parsed API Response Type: <class 'dict'>
+2025-02-19 07:58:15,745 - INFO - ✅ Update completed: 0 updated, 2324 inserted, 0 unchanged.
+2025-02-19 07:58:15,745 - INFO - ✅ Database successfully updated with new parcel data.
+2025-02-19 07:58:15,745 - INFO - ✅ Update completed: 0 updated, 2324 inserted, 0 unchanged.
+2025-02-19 08:10:15,572 - INFO - 🚀 FastAPI Server is starting...
+2025-02-19 08:10:15,574 - INFO - 🚀 FastAPI Startup: Scheduling updates...
+2025-02-19 08:10:15,575 - INFO - Scheduler started
+2025-02-19 08:10:15,575 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,575 - INFO - 📅 Scheduled database update at 2025-02-19 08:20:00
+2025-02-19 08:10:15,575 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,575 - INFO - 📅 Scheduled database update at 2025-02-19 08:48:00
+2025-02-19 08:10:15,575 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,575 - INFO - 📅 Scheduled database update at 2025-02-19 09:16:00
+2025-02-19 08:10:15,575 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,575 - INFO - 📅 Scheduled database update at 2025-02-19 09:44:00
+2025-02-19 08:10:15,575 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,576 - INFO - 📅 Scheduled database update at 2025-02-19 10:12:00
+2025-02-19 08:10:15,576 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,576 - INFO - 📅 Scheduled database update at 2025-02-19 10:40:00
+2025-02-19 08:10:15,576 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,576 - INFO - 📅 Scheduled database update at 2025-02-19 11:08:00
+2025-02-19 08:10:15,576 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,576 - INFO - 📅 Scheduled database update at 2025-02-19 11:36:00
+2025-02-19 08:10:15,576 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,576 - INFO - 📅 Scheduled database update at 2025-02-19 12:04:00
+2025-02-19 08:10:15,576 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,576 - INFO - 📅 Scheduled database update at 2025-02-19 12:32:00
+2025-02-19 08:10:15,576 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,576 - INFO - 📅 Scheduled database update at 2025-02-19 13:00:00
+2025-02-19 08:10:15,576 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,576 - INFO - 📅 Scheduled database update at 2025-02-19 13:28:00
+2025-02-19 08:10:15,576 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,576 - INFO - 📅 Scheduled database update at 2025-02-19 13:56:00
+2025-02-19 08:10:15,576 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,576 - INFO - 📅 Scheduled database update at 2025-02-19 14:24:00
+2025-02-19 08:10:15,576 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,576 - INFO - 📅 Scheduled database update at 2025-02-19 14:52:00
+2025-02-19 08:10:15,576 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,576 - INFO - 📅 Scheduled database update at 2025-02-19 15:20:00
+2025-02-19 08:10:15,576 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,576 - INFO - 📅 Scheduled database update at 2025-02-19 15:48:00
+2025-02-19 08:10:15,576 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,576 - INFO - 📅 Scheduled database update at 2025-02-19 16:16:00
+2025-02-19 08:10:15,576 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,576 - INFO - 📅 Scheduled database update at 2025-02-19 16:44:00
+2025-02-19 08:10:15,577 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,577 - INFO - 📅 Scheduled database update at 2025-02-19 17:12:00
+2025-02-19 08:10:15,577 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,577 - INFO - 📅 Scheduled database update at 2025-02-19 17:40:00
+2025-02-19 08:10:15,577 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,577 - INFO - 📅 Scheduled database update at 2025-02-19 18:08:00
+2025-02-19 08:10:15,577 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,577 - INFO - 📅 Scheduled database update at 2025-02-19 18:36:00
+2025-02-19 08:10:15,577 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,577 - INFO - 📅 Scheduled database update at 2025-02-19 19:04:00
+2025-02-19 08:10:15,577 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:10:15,577 - INFO - 📅 Scheduled database update at 2025-02-19 19:32:00
+2025-02-19 08:10:28,669 - INFO - 🔄 Manual database update triggered.
+2025-02-19 08:10:28,669 - INFO - 🚀 Fetching updated parcels from external source.
+2025-02-19 08:10:50,574 - INFO - 🛜 API Status Code: 200
+2025-02-19 08:10:50,576 - INFO - 📩 API Response Content: {"parcelSummaries":[{"isEditable":false,"barcode":"99M903779118722229001","id":117058507,"scanStatus":"Not Scanned","lastScannedWhen":null,"exceptionExists":false,"address":null,"pod":"alba"},{"isEditable":false,"barcode":"99M903779118722229002","id":117058508,"scanStatus":"Not Scanned","lastScannedWhen":null,"exceptionExists":false,"address":null,"pod":"alba"},{"isEditable":false,"barcode":"99M903779118722229003","id":117058509,"scanStatus":"Delivered","lastScannedWhen":{"timeStamp":17398942739
+2025-02-19 08:10:50,576 - INFO - 📩 Parsed API Response Type: <class 'dict'>
+2025-02-19 08:10:50,585 - INFO - ✅ Update completed: 3 updated, 0 inserted, 250 unchanged.
+2025-02-19 08:10:50,585 - INFO - ✅ Database successfully updated with new parcel data.
+2025-02-19 08:10:50,585 - INFO - ✅ Update completed: 3 updated, 0 inserted, 250 unchanged.
+2025-02-19 08:11:59,523 - INFO - 🚀 FastAPI Server is starting...
+2025-02-19 08:11:59,525 - INFO - 🚀 FastAPI Startup: Scheduling updates...
+2025-02-19 08:11:59,525 - INFO - Scheduler started
+2025-02-19 08:11:59,526 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,526 - INFO - 📅 Scheduled database update at 2025-02-19 08:20:00
+2025-02-19 08:11:59,526 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,526 - INFO - 📅 Scheduled database update at 2025-02-19 08:48:00
+2025-02-19 08:11:59,526 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,526 - INFO - 📅 Scheduled database update at 2025-02-19 09:16:00
+2025-02-19 08:11:59,526 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,526 - INFO - 📅 Scheduled database update at 2025-02-19 09:44:00
+2025-02-19 08:11:59,526 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,526 - INFO - 📅 Scheduled database update at 2025-02-19 10:12:00
+2025-02-19 08:11:59,526 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,526 - INFO - 📅 Scheduled database update at 2025-02-19 10:40:00
+2025-02-19 08:11:59,526 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,526 - INFO - 📅 Scheduled database update at 2025-02-19 11:08:00
+2025-02-19 08:11:59,526 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,526 - INFO - 📅 Scheduled database update at 2025-02-19 11:36:00
+2025-02-19 08:11:59,526 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,526 - INFO - 📅 Scheduled database update at 2025-02-19 12:04:00
+2025-02-19 08:11:59,526 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,527 - INFO - 📅 Scheduled database update at 2025-02-19 12:32:00
+2025-02-19 08:11:59,527 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,527 - INFO - 📅 Scheduled database update at 2025-02-19 13:00:00
+2025-02-19 08:11:59,527 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,527 - INFO - 📅 Scheduled database update at 2025-02-19 13:28:00
+2025-02-19 08:11:59,527 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,527 - INFO - 📅 Scheduled database update at 2025-02-19 13:56:00
+2025-02-19 08:11:59,527 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,527 - INFO - 📅 Scheduled database update at 2025-02-19 14:24:00
+2025-02-19 08:11:59,527 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,527 - INFO - 📅 Scheduled database update at 2025-02-19 14:52:00
+2025-02-19 08:11:59,527 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,527 - INFO - 📅 Scheduled database update at 2025-02-19 15:20:00
+2025-02-19 08:11:59,527 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,527 - INFO - 📅 Scheduled database update at 2025-02-19 15:48:00
+2025-02-19 08:11:59,527 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,527 - INFO - 📅 Scheduled database update at 2025-02-19 16:16:00
+2025-02-19 08:11:59,527 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,527 - INFO - 📅 Scheduled database update at 2025-02-19 16:44:00
+2025-02-19 08:11:59,527 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,527 - INFO - 📅 Scheduled database update at 2025-02-19 17:12:00
+2025-02-19 08:11:59,527 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,527 - INFO - 📅 Scheduled database update at 2025-02-19 17:40:00
+2025-02-19 08:11:59,527 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,527 - INFO - 📅 Scheduled database update at 2025-02-19 18:08:00
+2025-02-19 08:11:59,527 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,527 - INFO - 📅 Scheduled database update at 2025-02-19 18:36:00
+2025-02-19 08:11:59,527 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,527 - INFO - 📅 Scheduled database update at 2025-02-19 19:04:00
+2025-02-19 08:11:59,528 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:11:59,528 - INFO - 📅 Scheduled database update at 2025-02-19 19:32:00
+2025-02-19 08:19:42,817 - INFO - 🚀 FastAPI Server is starting...
+2025-02-19 08:19:42,820 - INFO - 🚀 FastAPI Startup: Scheduling updates...
+2025-02-19 08:19:42,820 - INFO - Scheduler started
+2025-02-19 08:19:42,821 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,821 - INFO - 📅 Scheduled database update at 2025-02-19 08:20:00
+2025-02-19 08:19:42,821 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,821 - INFO - 📅 Scheduled database update at 2025-02-19 08:48:00
+2025-02-19 08:19:42,821 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,821 - INFO - 📅 Scheduled database update at 2025-02-19 09:16:00
+2025-02-19 08:19:42,821 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,821 - INFO - 📅 Scheduled database update at 2025-02-19 09:44:00
+2025-02-19 08:19:42,821 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,821 - INFO - 📅 Scheduled database update at 2025-02-19 10:12:00
+2025-02-19 08:19:42,821 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,821 - INFO - 📅 Scheduled database update at 2025-02-19 10:40:00
+2025-02-19 08:19:42,821 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,821 - INFO - 📅 Scheduled database update at 2025-02-19 11:08:00
+2025-02-19 08:19:42,821 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,821 - INFO - 📅 Scheduled database update at 2025-02-19 11:36:00
+2025-02-19 08:19:42,821 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,821 - INFO - 📅 Scheduled database update at 2025-02-19 12:04:00
+2025-02-19 08:19:42,821 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,821 - INFO - 📅 Scheduled database update at 2025-02-19 12:32:00
+2025-02-19 08:19:42,821 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,821 - INFO - 📅 Scheduled database update at 2025-02-19 13:00:00
+2025-02-19 08:19:42,822 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,822 - INFO - 📅 Scheduled database update at 2025-02-19 13:28:00
+2025-02-19 08:19:42,822 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,822 - INFO - 📅 Scheduled database update at 2025-02-19 13:56:00
+2025-02-19 08:19:42,822 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,822 - INFO - 📅 Scheduled database update at 2025-02-19 14:24:00
+2025-02-19 08:19:42,822 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,822 - INFO - 📅 Scheduled database update at 2025-02-19 14:52:00
+2025-02-19 08:19:42,822 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,822 - INFO - 📅 Scheduled database update at 2025-02-19 15:20:00
+2025-02-19 08:19:42,822 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,822 - INFO - 📅 Scheduled database update at 2025-02-19 15:48:00
+2025-02-19 08:19:42,822 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,822 - INFO - 📅 Scheduled database update at 2025-02-19 16:16:00
+2025-02-19 08:19:42,822 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,822 - INFO - 📅 Scheduled database update at 2025-02-19 16:44:00
+2025-02-19 08:19:42,822 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,822 - INFO - 📅 Scheduled database update at 2025-02-19 17:12:00
+2025-02-19 08:19:42,822 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,822 - INFO - 📅 Scheduled database update at 2025-02-19 17:40:00
+2025-02-19 08:19:42,822 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,822 - INFO - 📅 Scheduled database update at 2025-02-19 18:08:00
+2025-02-19 08:19:42,822 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,822 - INFO - 📅 Scheduled database update at 2025-02-19 18:36:00
+2025-02-19 08:19:42,822 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,822 - INFO - 📅 Scheduled database update at 2025-02-19 19:04:00
+2025-02-19 08:19:42,822 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:19:42,822 - INFO - 📅 Scheduled database update at 2025-02-19 19:32:00
+2025-02-19 08:20:15,571 - INFO - 🚀 FastAPI Server is starting...
+2025-02-19 08:20:15,573 - INFO - 🚀 FastAPI Startup: Scheduling updates...
+2025-02-19 08:20:15,573 - INFO - Scheduler started
+2025-02-19 08:20:15,573 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,573 - INFO - 📅 Scheduled database update at 2025-02-19 08:48:00
+2025-02-19 08:20:15,574 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,574 - INFO - 📅 Scheduled database update at 2025-02-19 09:16:00
+2025-02-19 08:20:15,574 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,574 - INFO - 📅 Scheduled database update at 2025-02-19 09:44:00
+2025-02-19 08:20:15,574 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,574 - INFO - 📅 Scheduled database update at 2025-02-19 10:12:00
+2025-02-19 08:20:15,574 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,574 - INFO - 📅 Scheduled database update at 2025-02-19 10:40:00
+2025-02-19 08:20:15,574 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,574 - INFO - 📅 Scheduled database update at 2025-02-19 11:08:00
+2025-02-19 08:20:15,574 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,574 - INFO - 📅 Scheduled database update at 2025-02-19 11:36:00
+2025-02-19 08:20:15,574 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,574 - INFO - 📅 Scheduled database update at 2025-02-19 12:04:00
+2025-02-19 08:20:15,574 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,574 - INFO - 📅 Scheduled database update at 2025-02-19 12:32:00
+2025-02-19 08:20:15,574 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,574 - INFO - 📅 Scheduled database update at 2025-02-19 13:00:00
+2025-02-19 08:20:15,574 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,574 - INFO - 📅 Scheduled database update at 2025-02-19 13:28:00
+2025-02-19 08:20:15,574 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,574 - INFO - 📅 Scheduled database update at 2025-02-19 13:56:00
+2025-02-19 08:20:15,574 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,574 - INFO - 📅 Scheduled database update at 2025-02-19 14:24:00
+2025-02-19 08:20:15,574 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,574 - INFO - 📅 Scheduled database update at 2025-02-19 14:52:00
+2025-02-19 08:20:15,575 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,575 - INFO - 📅 Scheduled database update at 2025-02-19 15:20:00
+2025-02-19 08:20:15,575 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,575 - INFO - 📅 Scheduled database update at 2025-02-19 15:48:00
+2025-02-19 08:20:15,575 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,575 - INFO - 📅 Scheduled database update at 2025-02-19 16:16:00
+2025-02-19 08:20:15,575 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,575 - INFO - 📅 Scheduled database update at 2025-02-19 16:44:00
+2025-02-19 08:20:15,575 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,575 - INFO - 📅 Scheduled database update at 2025-02-19 17:12:00
+2025-02-19 08:20:15,575 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,575 - INFO - 📅 Scheduled database update at 2025-02-19 17:40:00
+2025-02-19 08:20:15,575 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,575 - INFO - 📅 Scheduled database update at 2025-02-19 18:08:00
+2025-02-19 08:20:15,575 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,575 - INFO - 📅 Scheduled database update at 2025-02-19 18:36:00
+2025-02-19 08:20:15,575 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,575 - INFO - 📅 Scheduled database update at 2025-02-19 19:04:00
+2025-02-19 08:20:15,575 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:20:15,575 - INFO - 📅 Scheduled database update at 2025-02-19 19:32:00
+2025-02-19 08:21:39,812 - INFO - 🚀 FastAPI Server is starting...
+2025-02-19 08:21:39,814 - INFO - 🚀 FastAPI Startup: Scheduling updates...
+2025-02-19 08:21:39,815 - INFO - Scheduler started
+2025-02-19 08:21:39,815 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,815 - INFO - 📅 Scheduled database update at 2025-02-19 08:48:00
+2025-02-19 08:21:39,815 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,815 - INFO - 📅 Scheduled database update at 2025-02-19 09:16:00
+2025-02-19 08:21:39,815 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,815 - INFO - 📅 Scheduled database update at 2025-02-19 09:44:00
+2025-02-19 08:21:39,815 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,815 - INFO - 📅 Scheduled database update at 2025-02-19 10:12:00
+2025-02-19 08:21:39,815 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,815 - INFO - 📅 Scheduled database update at 2025-02-19 10:40:00
+2025-02-19 08:21:39,815 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,815 - INFO - 📅 Scheduled database update at 2025-02-19 11:08:00
+2025-02-19 08:21:39,815 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,816 - INFO - 📅 Scheduled database update at 2025-02-19 11:36:00
+2025-02-19 08:21:39,816 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,816 - INFO - 📅 Scheduled database update at 2025-02-19 12:04:00
+2025-02-19 08:21:39,816 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,816 - INFO - 📅 Scheduled database update at 2025-02-19 12:32:00
+2025-02-19 08:21:39,816 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,816 - INFO - 📅 Scheduled database update at 2025-02-19 13:00:00
+2025-02-19 08:21:39,816 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,816 - INFO - 📅 Scheduled database update at 2025-02-19 13:28:00
+2025-02-19 08:21:39,816 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,816 - INFO - 📅 Scheduled database update at 2025-02-19 13:56:00
+2025-02-19 08:21:39,816 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,816 - INFO - 📅 Scheduled database update at 2025-02-19 14:24:00
+2025-02-19 08:21:39,816 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,816 - INFO - 📅 Scheduled database update at 2025-02-19 14:52:00
+2025-02-19 08:21:39,816 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,816 - INFO - 📅 Scheduled database update at 2025-02-19 15:20:00
+2025-02-19 08:21:39,816 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,816 - INFO - 📅 Scheduled database update at 2025-02-19 15:48:00
+2025-02-19 08:21:39,816 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,816 - INFO - 📅 Scheduled database update at 2025-02-19 16:16:00
+2025-02-19 08:21:39,816 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,816 - INFO - 📅 Scheduled database update at 2025-02-19 16:44:00
+2025-02-19 08:21:39,816 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,816 - INFO - 📅 Scheduled database update at 2025-02-19 17:12:00
+2025-02-19 08:21:39,816 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,816 - INFO - 📅 Scheduled database update at 2025-02-19 17:40:00
+2025-02-19 08:21:39,817 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,817 - INFO - 📅 Scheduled database update at 2025-02-19 18:08:00
+2025-02-19 08:21:39,817 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,817 - INFO - 📅 Scheduled database update at 2025-02-19 18:36:00
+2025-02-19 08:21:39,817 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,817 - INFO - 📅 Scheduled database update at 2025-02-19 19:04:00
+2025-02-19 08:21:39,817 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:21:39,817 - INFO - 📅 Scheduled database update at 2025-02-19 19:32:00
+2025-02-19 08:22:10,859 - INFO - 🚀 FastAPI Server is starting...
+2025-02-19 08:22:10,861 - INFO - 🚀 FastAPI Startup: Scheduling updates...
+2025-02-19 08:22:10,861 - INFO - Scheduler started
+2025-02-19 08:22:10,862 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,862 - INFO - 📅 Scheduled database update at 2025-02-19 08:48:00
+2025-02-19 08:22:10,862 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,862 - INFO - 📅 Scheduled database update at 2025-02-19 09:16:00
+2025-02-19 08:22:10,862 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,862 - INFO - 📅 Scheduled database update at 2025-02-19 09:44:00
+2025-02-19 08:22:10,862 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,862 - INFO - 📅 Scheduled database update at 2025-02-19 10:12:00
+2025-02-19 08:22:10,862 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,862 - INFO - 📅 Scheduled database update at 2025-02-19 10:40:00
+2025-02-19 08:22:10,862 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,862 - INFO - 📅 Scheduled database update at 2025-02-19 11:08:00
+2025-02-19 08:22:10,862 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,862 - INFO - 📅 Scheduled database update at 2025-02-19 11:36:00
+2025-02-19 08:22:10,862 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,862 - INFO - 📅 Scheduled database update at 2025-02-19 12:04:00
+2025-02-19 08:22:10,862 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,862 - INFO - 📅 Scheduled database update at 2025-02-19 12:32:00
+2025-02-19 08:22:10,862 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,862 - INFO - 📅 Scheduled database update at 2025-02-19 13:00:00
+2025-02-19 08:22:10,863 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,863 - INFO - 📅 Scheduled database update at 2025-02-19 13:28:00
+2025-02-19 08:22:10,863 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,863 - INFO - 📅 Scheduled database update at 2025-02-19 13:56:00
+2025-02-19 08:22:10,863 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,863 - INFO - 📅 Scheduled database update at 2025-02-19 14:24:00
+2025-02-19 08:22:10,863 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,863 - INFO - 📅 Scheduled database update at 2025-02-19 14:52:00
+2025-02-19 08:22:10,863 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,863 - INFO - 📅 Scheduled database update at 2025-02-19 15:20:00
+2025-02-19 08:22:10,863 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,863 - INFO - 📅 Scheduled database update at 2025-02-19 15:48:00
+2025-02-19 08:22:10,863 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,863 - INFO - 📅 Scheduled database update at 2025-02-19 16:16:00
+2025-02-19 08:22:10,863 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,863 - INFO - 📅 Scheduled database update at 2025-02-19 16:44:00
+2025-02-19 08:22:10,863 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,863 - INFO - 📅 Scheduled database update at 2025-02-19 17:12:00
+2025-02-19 08:22:10,863 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,863 - INFO - 📅 Scheduled database update at 2025-02-19 17:40:00
+2025-02-19 08:22:10,863 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,863 - INFO - 📅 Scheduled database update at 2025-02-19 18:08:00
+2025-02-19 08:22:10,863 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,863 - INFO - 📅 Scheduled database update at 2025-02-19 18:36:00
+2025-02-19 08:22:10,863 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,863 - INFO - 📅 Scheduled database update at 2025-02-19 19:04:00
+2025-02-19 08:22:10,863 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:22:10,863 - INFO - 📅 Scheduled database update at 2025-02-19 19:32:00
+2025-02-19 08:23:17,207 - INFO - 🚀 FastAPI Server is starting...
+2025-02-19 08:23:17,209 - INFO - 🚀 FastAPI Startup: Scheduling updates...
+2025-02-19 08:23:17,210 - INFO - Scheduler started
+2025-02-19 08:23:17,210 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,210 - INFO - 📅 Scheduled database update at 2025-02-19 08:48:00
+2025-02-19 08:23:17,210 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,210 - INFO - 📅 Scheduled database update at 2025-02-19 09:16:00
+2025-02-19 08:23:17,210 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,210 - INFO - 📅 Scheduled database update at 2025-02-19 09:44:00
+2025-02-19 08:23:17,211 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,211 - INFO - 📅 Scheduled database update at 2025-02-19 10:12:00
+2025-02-19 08:23:17,211 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,211 - INFO - 📅 Scheduled database update at 2025-02-19 10:40:00
+2025-02-19 08:23:17,211 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,211 - INFO - 📅 Scheduled database update at 2025-02-19 11:08:00
+2025-02-19 08:23:17,211 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,211 - INFO - 📅 Scheduled database update at 2025-02-19 11:36:00
+2025-02-19 08:23:17,211 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,211 - INFO - 📅 Scheduled database update at 2025-02-19 12:04:00
+2025-02-19 08:23:17,211 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,211 - INFO - 📅 Scheduled database update at 2025-02-19 12:32:00
+2025-02-19 08:23:17,211 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,211 - INFO - 📅 Scheduled database update at 2025-02-19 13:00:00
+2025-02-19 08:23:17,211 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,211 - INFO - 📅 Scheduled database update at 2025-02-19 13:28:00
+2025-02-19 08:23:17,211 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,211 - INFO - 📅 Scheduled database update at 2025-02-19 13:56:00
+2025-02-19 08:23:17,211 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,211 - INFO - 📅 Scheduled database update at 2025-02-19 14:24:00
+2025-02-19 08:23:17,211 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,211 - INFO - 📅 Scheduled database update at 2025-02-19 14:52:00
+2025-02-19 08:23:17,211 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,211 - INFO - 📅 Scheduled database update at 2025-02-19 15:20:00
+2025-02-19 08:23:17,211 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,211 - INFO - 📅 Scheduled database update at 2025-02-19 15:48:00
+2025-02-19 08:23:17,211 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,212 - INFO - 📅 Scheduled database update at 2025-02-19 16:16:00
+2025-02-19 08:23:17,212 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,212 - INFO - 📅 Scheduled database update at 2025-02-19 16:44:00
+2025-02-19 08:23:17,212 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,212 - INFO - 📅 Scheduled database update at 2025-02-19 17:12:00
+2025-02-19 08:23:17,212 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,212 - INFO - 📅 Scheduled database update at 2025-02-19 17:40:00
+2025-02-19 08:23:17,212 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,212 - INFO - 📅 Scheduled database update at 2025-02-19 18:08:00
+2025-02-19 08:23:17,212 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,212 - INFO - 📅 Scheduled database update at 2025-02-19 18:36:00
+2025-02-19 08:23:17,212 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,212 - INFO - 📅 Scheduled database update at 2025-02-19 19:04:00
+2025-02-19 08:23:17,212 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:17,212 - INFO - 📅 Scheduled database update at 2025-02-19 19:32:00
+2025-02-19 08:23:26,307 - INFO - 🚀 FastAPI Server is starting...
+2025-02-19 08:23:26,309 - INFO - 🚀 FastAPI Startup: Scheduling updates...
+2025-02-19 08:23:26,310 - INFO - Scheduler started
+2025-02-19 08:23:26,310 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,310 - INFO - 📅 Scheduled database update at 2025-02-19 08:48:00
+2025-02-19 08:23:26,310 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,310 - INFO - 📅 Scheduled database update at 2025-02-19 09:16:00
+2025-02-19 08:23:26,310 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,311 - INFO - 📅 Scheduled database update at 2025-02-19 09:44:00
+2025-02-19 08:23:26,311 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,311 - INFO - 📅 Scheduled database update at 2025-02-19 10:12:00
+2025-02-19 08:23:26,311 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,311 - INFO - 📅 Scheduled database update at 2025-02-19 10:40:00
+2025-02-19 08:23:26,311 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,311 - INFO - 📅 Scheduled database update at 2025-02-19 11:08:00
+2025-02-19 08:23:26,311 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,311 - INFO - 📅 Scheduled database update at 2025-02-19 11:36:00
+2025-02-19 08:23:26,311 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,311 - INFO - 📅 Scheduled database update at 2025-02-19 12:04:00
+2025-02-19 08:23:26,311 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,311 - INFO - 📅 Scheduled database update at 2025-02-19 12:32:00
+2025-02-19 08:23:26,311 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,311 - INFO - 📅 Scheduled database update at 2025-02-19 13:00:00
+2025-02-19 08:23:26,311 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,311 - INFO - 📅 Scheduled database update at 2025-02-19 13:28:00
+2025-02-19 08:23:26,311 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,311 - INFO - 📅 Scheduled database update at 2025-02-19 13:56:00
+2025-02-19 08:23:26,311 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,311 - INFO - 📅 Scheduled database update at 2025-02-19 14:24:00
+2025-02-19 08:23:26,311 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,311 - INFO - 📅 Scheduled database update at 2025-02-19 14:52:00
+2025-02-19 08:23:26,311 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,311 - INFO - 📅 Scheduled database update at 2025-02-19 15:20:00
+2025-02-19 08:23:26,311 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,311 - INFO - 📅 Scheduled database update at 2025-02-19 15:48:00
+2025-02-19 08:23:26,311 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,311 - INFO - 📅 Scheduled database update at 2025-02-19 16:16:00
+2025-02-19 08:23:26,312 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,312 - INFO - 📅 Scheduled database update at 2025-02-19 16:44:00
+2025-02-19 08:23:26,312 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,312 - INFO - 📅 Scheduled database update at 2025-02-19 17:12:00
+2025-02-19 08:23:26,312 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,312 - INFO - 📅 Scheduled database update at 2025-02-19 17:40:00
+2025-02-19 08:23:26,312 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,312 - INFO - 📅 Scheduled database update at 2025-02-19 18:08:00
+2025-02-19 08:23:26,312 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,312 - INFO - 📅 Scheduled database update at 2025-02-19 18:36:00
+2025-02-19 08:23:26,312 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,312 - INFO - 📅 Scheduled database update at 2025-02-19 19:04:00
+2025-02-19 08:23:26,312 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:23:26,312 - INFO - 📅 Scheduled database update at 2025-02-19 19:32:00
+2025-02-19 08:24:52,249 - INFO - 🚀 FastAPI Server is starting...
+2025-02-19 08:24:52,250 - INFO - 📅 Dynamic API Date Range: 2025-02-15 to 2025-02-20
+2025-02-19 08:24:52,251 - INFO - 🚀 FastAPI Startup: Scheduling updates...
+2025-02-19 08:24:52,252 - INFO - Scheduler started
+2025-02-19 08:24:52,252 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,252 - INFO - 📅 Scheduled database update at 2025-02-19 08:48:00
+2025-02-19 08:24:52,252 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,252 - INFO - 📅 Scheduled database update at 2025-02-19 09:16:00
+2025-02-19 08:24:52,252 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,252 - INFO - 📅 Scheduled database update at 2025-02-19 09:44:00
+2025-02-19 08:24:52,252 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,252 - INFO - 📅 Scheduled database update at 2025-02-19 10:12:00
+2025-02-19 08:24:52,252 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,252 - INFO - 📅 Scheduled database update at 2025-02-19 10:40:00
+2025-02-19 08:24:52,252 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,252 - INFO - 📅 Scheduled database update at 2025-02-19 11:08:00
+2025-02-19 08:24:52,252 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,253 - INFO - 📅 Scheduled database update at 2025-02-19 11:36:00
+2025-02-19 08:24:52,253 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,253 - INFO - 📅 Scheduled database update at 2025-02-19 12:04:00
+2025-02-19 08:24:52,253 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,253 - INFO - 📅 Scheduled database update at 2025-02-19 12:32:00
+2025-02-19 08:24:52,253 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,253 - INFO - 📅 Scheduled database update at 2025-02-19 13:00:00
+2025-02-19 08:24:52,253 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,253 - INFO - 📅 Scheduled database update at 2025-02-19 13:28:00
+2025-02-19 08:24:52,253 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,253 - INFO - 📅 Scheduled database update at 2025-02-19 13:56:00
+2025-02-19 08:24:52,253 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,253 - INFO - 📅 Scheduled database update at 2025-02-19 14:24:00
+2025-02-19 08:24:52,253 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,253 - INFO - 📅 Scheduled database update at 2025-02-19 14:52:00
+2025-02-19 08:24:52,253 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,253 - INFO - 📅 Scheduled database update at 2025-02-19 15:20:00
+2025-02-19 08:24:52,253 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,253 - INFO - 📅 Scheduled database update at 2025-02-19 15:48:00
+2025-02-19 08:24:52,253 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,253 - INFO - 📅 Scheduled database update at 2025-02-19 16:16:00
+2025-02-19 08:24:52,253 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,253 - INFO - 📅 Scheduled database update at 2025-02-19 16:44:00
+2025-02-19 08:24:52,253 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,253 - INFO - 📅 Scheduled database update at 2025-02-19 17:12:00
+2025-02-19 08:24:52,253 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,253 - INFO - 📅 Scheduled database update at 2025-02-19 17:40:00
+2025-02-19 08:24:52,254 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,254 - INFO - 📅 Scheduled database update at 2025-02-19 18:08:00
+2025-02-19 08:24:52,254 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,254 - INFO - 📅 Scheduled database update at 2025-02-19 18:36:00
+2025-02-19 08:24:52,254 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,254 - INFO - 📅 Scheduled database update at 2025-02-19 19:04:00
+2025-02-19 08:24:52,254 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:24:52,254 - INFO - 📅 Scheduled database update at 2025-02-19 19:32:00
+2025-02-19 08:25:07,985 - INFO - 🔄 Manual database update triggered.
+2025-02-19 08:25:07,985 - INFO - 🚀 Fetching updated parcels from external source.
+2025-02-19 08:25:10,964 - INFO - 🛜 API Status Code: 200
+2025-02-19 08:25:10,964 - INFO - 📩 API Response Content: {"parcelSummaries":[{"isEditable":false,"barcode":"99M903779118722229001","id":117058507,"scanStatus":"Not Scanned","lastScannedWhen":null,"exceptionExists":false,"address":null,"pod":"alba"},{"isEditable":false,"barcode":"99M903779118722229002","id":117058508,"scanStatus":"Not Scanned","lastScannedWhen":null,"exceptionExists":false,"address":null,"pod":"alba"},{"isEditable":false,"barcode":"99M903779118722229003","id":117058509,"scanStatus":"Delivered","lastScannedWhen":{"timeStamp":17398942739
+2025-02-19 08:25:10,964 - INFO - 📩 Parsed API Response Type: <class 'dict'>
+2025-02-19 08:25:10,973 - INFO - ✅ Update completed: 0 updated, 0 inserted, 253 unchanged.
+2025-02-19 08:25:10,973 - INFO - ✅ Database successfully updated with new parcel data.
+2025-02-19 08:25:10,974 - INFO - ✅ Update completed: 0 updated, 0 inserted, 253 unchanged.
+2025-02-19 08:26:56,915 - INFO - 🚀 FastAPI Server is starting...
+2025-02-19 08:26:56,916 - INFO - 📅 Dynamic API Date Range: 2025-02-15 to 2025-02-20
+2025-02-19 08:26:56,918 - INFO - 🚀 FastAPI Startup: Scheduling updates...
+2025-02-19 08:26:56,918 - INFO - Scheduler started
+2025-02-19 08:26:56,919 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,919 - INFO - 📅 Scheduled database update at 2025-02-19 08:48:00
+2025-02-19 08:26:56,919 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,919 - INFO - 📅 Scheduled database update at 2025-02-19 09:16:00
+2025-02-19 08:26:56,919 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,919 - INFO - 📅 Scheduled database update at 2025-02-19 09:44:00
+2025-02-19 08:26:56,919 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,919 - INFO - 📅 Scheduled database update at 2025-02-19 10:12:00
+2025-02-19 08:26:56,919 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,919 - INFO - 📅 Scheduled database update at 2025-02-19 10:40:00
+2025-02-19 08:26:56,919 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,919 - INFO - 📅 Scheduled database update at 2025-02-19 11:08:00
+2025-02-19 08:26:56,919 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,919 - INFO - 📅 Scheduled database update at 2025-02-19 11:36:00
+2025-02-19 08:26:56,919 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,919 - INFO - 📅 Scheduled database update at 2025-02-19 12:04:00
+2025-02-19 08:26:56,919 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,919 - INFO - 📅 Scheduled database update at 2025-02-19 12:32:00
+2025-02-19 08:26:56,919 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,919 - INFO - 📅 Scheduled database update at 2025-02-19 13:00:00
+2025-02-19 08:26:56,919 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,919 - INFO - 📅 Scheduled database update at 2025-02-19 13:28:00
+2025-02-19 08:26:56,919 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,919 - INFO - 📅 Scheduled database update at 2025-02-19 13:56:00
+2025-02-19 08:26:56,920 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,920 - INFO - 📅 Scheduled database update at 2025-02-19 14:24:00
+2025-02-19 08:26:56,920 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,920 - INFO - 📅 Scheduled database update at 2025-02-19 14:52:00
+2025-02-19 08:26:56,920 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,920 - INFO - 📅 Scheduled database update at 2025-02-19 15:20:00
+2025-02-19 08:26:56,920 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,920 - INFO - 📅 Scheduled database update at 2025-02-19 15:48:00
+2025-02-19 08:26:56,920 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,920 - INFO - 📅 Scheduled database update at 2025-02-19 16:16:00
+2025-02-19 08:26:56,920 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,920 - INFO - 📅 Scheduled database update at 2025-02-19 16:44:00
+2025-02-19 08:26:56,920 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,920 - INFO - 📅 Scheduled database update at 2025-02-19 17:12:00
+2025-02-19 08:26:56,920 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,920 - INFO - 📅 Scheduled database update at 2025-02-19 17:40:00
+2025-02-19 08:26:56,920 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,920 - INFO - 📅 Scheduled database update at 2025-02-19 18:08:00
+2025-02-19 08:26:56,920 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,920 - INFO - 📅 Scheduled database update at 2025-02-19 18:36:00
+2025-02-19 08:26:56,920 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,920 - INFO - 📅 Scheduled database update at 2025-02-19 19:04:00
+2025-02-19 08:26:56,920 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:26:56,920 - INFO - 📅 Scheduled database update at 2025-02-19 19:32:00
+2025-02-19 08:44:33,943 - INFO - 🚀 FastAPI Server is starting...
+2025-02-19 08:44:33,944 - INFO - 📅 Dynamic API Date Range: 2025-02-15 to 2025-02-20
+2025-02-19 08:44:33,945 - INFO - 🚀 FastAPI Startup: Scheduling updates...
+2025-02-19 08:44:33,945 - INFO - Scheduler started
+2025-02-19 08:44:33,946 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,946 - INFO - 📅 Scheduled database update at 2025-02-19 08:48:00
+2025-02-19 08:44:33,946 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,946 - INFO - 📅 Scheduled database update at 2025-02-19 09:16:00
+2025-02-19 08:44:33,946 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,946 - INFO - 📅 Scheduled database update at 2025-02-19 09:44:00
+2025-02-19 08:44:33,946 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,946 - INFO - 📅 Scheduled database update at 2025-02-19 10:12:00
+2025-02-19 08:44:33,946 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,946 - INFO - 📅 Scheduled database update at 2025-02-19 10:40:00
+2025-02-19 08:44:33,946 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,946 - INFO - 📅 Scheduled database update at 2025-02-19 11:08:00
+2025-02-19 08:44:33,946 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,946 - INFO - 📅 Scheduled database update at 2025-02-19 11:36:00
+2025-02-19 08:44:33,946 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,947 - INFO - 📅 Scheduled database update at 2025-02-19 12:04:00
+2025-02-19 08:44:33,947 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,947 - INFO - 📅 Scheduled database update at 2025-02-19 12:32:00
+2025-02-19 08:44:33,947 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,947 - INFO - 📅 Scheduled database update at 2025-02-19 13:00:00
+2025-02-19 08:44:33,947 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,947 - INFO - 📅 Scheduled database update at 2025-02-19 13:28:00
+2025-02-19 08:44:33,947 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,947 - INFO - 📅 Scheduled database update at 2025-02-19 13:56:00
+2025-02-19 08:44:33,947 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,947 - INFO - 📅 Scheduled database update at 2025-02-19 14:24:00
+2025-02-19 08:44:33,947 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,947 - INFO - 📅 Scheduled database update at 2025-02-19 14:52:00
+2025-02-19 08:44:33,947 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,947 - INFO - 📅 Scheduled database update at 2025-02-19 15:20:00
+2025-02-19 08:44:33,947 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,947 - INFO - 📅 Scheduled database update at 2025-02-19 15:48:00
+2025-02-19 08:44:33,947 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,947 - INFO - 📅 Scheduled database update at 2025-02-19 16:16:00
+2025-02-19 08:44:33,947 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,947 - INFO - 📅 Scheduled database update at 2025-02-19 16:44:00
+2025-02-19 08:44:33,947 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,947 - INFO - 📅 Scheduled database update at 2025-02-19 17:12:00
+2025-02-19 08:44:33,947 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,947 - INFO - 📅 Scheduled database update at 2025-02-19 17:40:00
+2025-02-19 08:44:33,947 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,947 - INFO - 📅 Scheduled database update at 2025-02-19 18:08:00
+2025-02-19 08:44:33,947 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,947 - INFO - 📅 Scheduled database update at 2025-02-19 18:36:00
+2025-02-19 08:44:33,947 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,947 - INFO - 📅 Scheduled database update at 2025-02-19 19:04:00
+2025-02-19 08:44:33,947 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 08:44:33,947 - INFO - 📅 Scheduled database update at 2025-02-19 19:32:00
+2025-02-19 08:48:00,007 - INFO - Running job "fetch_and_update_parcels (trigger: date[2025-02-19 08:48:00 EST], next run at: 2025-02-19 08:48:00 EST)" (scheduled at 2025-02-19 08:48:00-05:00)
+2025-02-19 08:48:00,008 - INFO - Removed job update_2025-02-19_08-48
+2025-02-19 08:48:00,009 - INFO - 🚀 Fetching updated parcels from external source.
+2025-02-19 08:48:07,855 - INFO - 🛜 API Status Code: 200
+2025-02-19 08:48:07,855 - INFO - 📩 API Response Content: {"parcelSummaries":[{"isEditable":false,"barcode":"99M903779118722229001","id":117058507,"scanStatus":"Not Scanned","lastScannedWhen":null,"exceptionExists":false,"address":null,"pod":"alba"},{"isEditable":false,"barcode":"99M903779118722229002","id":117058508,"scanStatus":"Not Scanned","lastScannedWhen":null,"exceptionExists":false,"address":null,"pod":"alba"},{"isEditable":false,"barcode":"99M903779118722229003","id":117058509,"scanStatus":"Delivered","lastScannedWhen":{"timeStamp":17398942739
+2025-02-19 08:48:07,856 - INFO - 📩 Parsed API Response Type: <class 'dict'>
+2025-02-19 08:48:07,866 - INFO - ✅ Update completed: 2 updated, 0 inserted, 251 unchanged.
+2025-02-19 08:48:07,866 - INFO - ✅ Database successfully updated with new parcel data.
+2025-02-19 08:48:07,866 - INFO - Job "fetch_and_update_parcels (trigger: date[2025-02-19 08:48:00 EST], next run at: 2025-02-19 08:48:00 EST)" executed successfully
+2025-02-19 09:16:00,003 - INFO - Removed job update_2025-02-19_09-16
+2025-02-19 09:16:00,003 - INFO - Running job "fetch_and_update_parcels (trigger: date[2025-02-19 09:16:00 EST], next run at: 2025-02-19 09:16:00 EST)" (scheduled at 2025-02-19 09:16:00-05:00)
+2025-02-19 09:16:00,004 - INFO - 🚀 Fetching updated parcels from external source.
+2025-02-19 09:16:00,098 - INFO - 🛜 API Status Code: 401
+2025-02-19 09:16:00,098 - INFO - 📩 API Response Content: {"detailedMsg":"You are not authorized to access this application.","errorCode":"90","generalMsg":"An error occurred during authentication"}
+2025-02-19 09:16:00,098 - WARNING - 🔑 Token expired. Re-authenticating...
+2025-02-19 09:16:07,670 - INFO - 🔄 Retried API call, Status Code: 200
+2025-02-19 09:16:07,673 - INFO - 📩 Parsed API Response Type: <class 'dict'>
+2025-02-19 09:16:07,692 - INFO - ✅ Update completed: 14 updated, 0 inserted, 239 unchanged.
+2025-02-19 09:16:07,692 - INFO - ✅ Database successfully updated with new parcel data.
+2025-02-19 09:16:07,692 - INFO - Job "fetch_and_update_parcels (trigger: date[2025-02-19 09:16:00 EST], next run at: 2025-02-19 09:16:00 EST)" executed successfully
+2025-02-19 09:17:26,612 - INFO - 🚀 FastAPI Server is starting...
+2025-02-19 09:17:26,613 - INFO - 📅 Dynamic API Date Range: 2025-02-15 to 2025-02-20
+2025-02-19 09:17:26,615 - INFO - 🚀 FastAPI Startup: Scheduling updates...
+2025-02-19 09:17:26,615 - INFO - Scheduler started
+2025-02-19 09:17:26,615 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,615 - INFO - 📅 Scheduled database update at 2025-02-19 09:44:00
+2025-02-19 09:17:26,615 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,615 - INFO - 📅 Scheduled database update at 2025-02-19 10:12:00
+2025-02-19 09:17:26,616 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,616 - INFO - 📅 Scheduled database update at 2025-02-19 10:40:00
+2025-02-19 09:17:26,616 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,616 - INFO - 📅 Scheduled database update at 2025-02-19 11:08:00
+2025-02-19 09:17:26,616 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,616 - INFO - 📅 Scheduled database update at 2025-02-19 11:36:00
+2025-02-19 09:17:26,616 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,616 - INFO - 📅 Scheduled database update at 2025-02-19 12:04:00
+2025-02-19 09:17:26,616 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,616 - INFO - 📅 Scheduled database update at 2025-02-19 12:32:00
+2025-02-19 09:17:26,616 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,616 - INFO - 📅 Scheduled database update at 2025-02-19 13:00:00
+2025-02-19 09:17:26,616 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,616 - INFO - 📅 Scheduled database update at 2025-02-19 13:28:00
+2025-02-19 09:17:26,616 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,616 - INFO - 📅 Scheduled database update at 2025-02-19 13:56:00
+2025-02-19 09:17:26,616 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,616 - INFO - 📅 Scheduled database update at 2025-02-19 14:24:00
+2025-02-19 09:17:26,616 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,616 - INFO - 📅 Scheduled database update at 2025-02-19 14:52:00
+2025-02-19 09:17:26,616 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,616 - INFO - 📅 Scheduled database update at 2025-02-19 15:20:00
+2025-02-19 09:17:26,616 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,616 - INFO - 📅 Scheduled database update at 2025-02-19 15:48:00
+2025-02-19 09:17:26,616 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,616 - INFO - 📅 Scheduled database update at 2025-02-19 16:16:00
+2025-02-19 09:17:26,617 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,617 - INFO - 📅 Scheduled database update at 2025-02-19 16:44:00
+2025-02-19 09:17:26,617 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,617 - INFO - 📅 Scheduled database update at 2025-02-19 17:12:00
+2025-02-19 09:17:26,617 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,617 - INFO - 📅 Scheduled database update at 2025-02-19 17:40:00
+2025-02-19 09:17:26,617 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,617 - INFO - 📅 Scheduled database update at 2025-02-19 18:08:00
+2025-02-19 09:17:26,617 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,617 - INFO - 📅 Scheduled database update at 2025-02-19 18:36:00
+2025-02-19 09:17:26,617 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,617 - INFO - 📅 Scheduled database update at 2025-02-19 19:04:00
+2025-02-19 09:17:26,617 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-02-19 09:17:26,617 - INFO - 📅 Scheduled database update at 2025-02-19 19:32:00
+2025-02-19 09:51:46,614 - WARNING - Run time of job "fetch_and_update_parcels (trigger: date[2025-02-19 09:44:00 EST], next run at: 2025-02-19 09:44:00 EST)" was missed by 0:07:46.614396
+2025-02-19 09:51:46,615 - INFO - Removed job update_2025-02-19_09-44
