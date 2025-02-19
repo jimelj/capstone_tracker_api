@@ -5969,3 +5969,12 @@ fastapi.exceptions.HTTPException: 500: Database update failed: '99M9037791187222
 2025-02-19 09:17:26,617 - INFO - 📅 Scheduled database update at 2025-02-19 19:32:00
 2025-02-19 09:51:46,614 - WARNING - Run time of job "fetch_and_update_parcels (trigger: date[2025-02-19 09:44:00 EST], next run at: 2025-02-19 09:44:00 EST)" was missed by 0:07:46.614396
 2025-02-19 09:51:46,615 - INFO - Removed job update_2025-02-19_09-44
+2025-02-19 10:12:00,003 - INFO - Removed job update_2025-02-19_10-12
+2025-02-19 10:12:00,004 - INFO - Running job "fetch_and_update_parcels (trigger: date[2025-02-19 10:12:00 EST], next run at: 2025-02-19 10:12:00 EST)" (scheduled at 2025-02-19 10:12:00-05:00)
+2025-02-19 10:12:00,005 - INFO - 🚀 Fetching updated parcels from external source.
+2025-02-19 10:12:04,749 - INFO - 🛜 API Status Code: 200
+2025-02-19 10:12:04,750 - INFO - 📩 API Response Content: {"parcelSummaries":[{"isEditable":false,"barcode":"99M903779118722229001","id":117058507,"scanStatus":"Not Scanned","lastScannedWhen":null,"exceptionExists":false,"address":null,"pod":"alba"},{"isEditable":false,"barcode":"99M903779118722229002","id":117058508,"scanStatus":"Not Scanned","lastScannedWhen":null,"exceptionExists":false,"address":null,"pod":"alba"},{"isEditable":false,"barcode":"99M903779118722229003","id":117058509,"scanStatus":"Delivered","lastScannedWhen":{"timeStamp":17398942739
+2025-02-19 10:12:04,751 - INFO - 📩 Parsed API Response Type: <class 'dict'>
+2025-02-19 10:12:04,766 - INFO - ✅ Update completed: 19 updated, 1 inserted, 234 unchanged.
+2025-02-19 10:12:04,766 - INFO - ✅ Database successfully updated with new parcel data.
+2025-02-19 10:12:04,766 - INFO - Job "fetch_and_update_parcels (trigger: date[2025-02-19 10:12:00 EST], next run at: 2025-02-19 10:12:00 EST)" executed successfully
