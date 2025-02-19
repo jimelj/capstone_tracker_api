@@ -1,0 +1,20 @@
+name: Auto Start/Stop Railway Service
+on:
+  schedule:
+    - cron: "0 6 * * 0-3"  # Start at 6 AM UTC on Sunday-Wednesday
+    - cron: "0 20 * * 3"   # Stop at 8 PM UTC on Wednesday
+
+jobs:
+  run-scheduler:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: pip install requests
+      - name: Run scheduler
+        env:
+          RAILWAY_API_KEY: ${{ secrets.RAILWAY_API_KEY }}
+          RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }}
+          RAILWAY_SERVICE_ID: ${{ secrets.RAILWAY_SERVICE_ID }}
+        run: python scheduler.py
