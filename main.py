@@ -231,7 +231,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime, timedelta
 from slowapi import Limiter
 from slowapi.util import get_remote_address
-from database import get_parcels, get_parcel_by_barcode, update_parcels
+from database import get_parcels, get_parcel_by_barcode, update_parcels, get_parcels_week
 
 # Prevent database logs from being logged in `server.log`
 logging.getLogger("database").propagate = False  
@@ -571,6 +571,17 @@ app = FastAPI(lifespan=lifespan)  # ✅ Use new lifespan method
 def home(request: Request):
     logging.info("🏠 Home endpoint accessed.")
     return {"message": "FastAPI Database Server is Running"}
+
+@app.get("/parcelsweek")
+@limiter.limit("30/minute")  # ✅ Limit queries to 30 per minute
+def get_parcels_week_api(request: Request):
+    """Fetch all parcels scanned within the dynamically calculated date range."""
+    global begin_date, end_date  # Use the previously calculated date range
+
+    logging.info(f"📦 GET /parcelsweek called for range {begin_date} to {end_date}")
+
+    # Fetch parcels from the database within the calculated date range
+    return get_parcels_week(begin_date, end_date)
 
 @app.get("/parcels")
 @limiter.limit("30/minute")  # ✅ Limit parcel queries to 30 per minute

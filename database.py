@@ -236,6 +236,30 @@ def init_db():
         conn.commit()
         logger.info("✅ Database initialized.")
 
+def get_parcels_week(begin_date, end_date):
+    """Fetch parcels within the given begin_date and end_date."""
+    try:
+        with get_db_connection() as conn:
+            cursor = conn.cursor()
+
+            # Query to fetch parcels within the date range
+            query = """
+                SELECT * FROM parcels
+                WHERE last_scanned_when BETWEEN ? AND ?
+                ORDER BY last_scanned_when ASC
+            """
+            params = (begin_date, end_date)
+
+            cursor.execute(query, params)
+            columns = [desc[0] for desc in cursor.description]
+            result = [dict(zip(columns, row)) for row in cursor.fetchall()]
+
+            logger.info(f"📦 Fetched {len(result)} parcels between {begin_date} and {end_date}.")
+            return result
+    except Exception as e:
+        logger.error(f"❌ Error fetching parcels for the week: {e}")
+        return []
+
 def get_parcels(sort_by="barcode", order="asc", limit=100, city=None, state=None, scan_status=None, parcel_id=None):
     """Fetch parcels with optional sorting, limits, and filtering by city, state, scan_status, or ID."""
     try:
