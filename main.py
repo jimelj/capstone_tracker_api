@@ -223,6 +223,7 @@ import logging
 import sys
 import requests
 import os
+import pytz
 from dotenv import load_dotenv
 import uvicorn
 from fastapi import FastAPI, HTTPException, Query, Request, BackgroundTasks
@@ -255,7 +256,12 @@ SERVICE_ID = os.getenv("RAILWAY_SERVICE_ID")    # Set this in Railway environmen
 TOKEN = None
 
 
+# Define your desired timezone (change if needed)
+LOCAL_TZ = pytz.timezone("America/New_York")  # Adjust based on your timezone
 
+def get_local_time():
+    """Returns the current time in the local timezone."""
+    return datetime.now(pytz.utc).astimezone(LOCAL_TZ)
 
 # Configure Logging
 logging.basicConfig(
@@ -538,14 +544,16 @@ def schedule_updates():
     """Schedule database updates at fixed intervals on Tuesdays & Wednesdays, preventing duplicates."""
     job_ids = {job.id for job in scheduler.get_jobs()}  # ✅ Get all existing job IDs
 
-    now = datetime.now()
-    if now.weekday() in [1, 2]:  # ✅ Only schedule on Tuesdays & Wednesdays
+    # now = datetime.now()
+    now_utc = datetime.now(pytz.utc)  # Get current UTC time
+    now_local = now_utc.astimezone(LOCAL_TZ)  # Convert to local time
+    if now_local.weekday() in [1, 2]:  # ✅ Only schedule on Tuesdays & Wednesdays
         # if now.weekday() in [0, 1, 2, 3]:  # ✅ Only schedule on Sunday, Monday, Tuesday, and Wednesday
         for i in range(30):  # ✅ SCHEDULED_CALLS is always 30
-            next_run = now.replace(hour=6, minute=0, second=0, microsecond=0) + timedelta(minutes=i * 28)
+            next_run = now_local.replace(hour=6, minute=0, second=0, microsecond=0) + timedelta(minutes=i * 28)
             job_id = f"update_{next_run.strftime('%Y-%m-%d_%H-%M')}"
 
-            if next_run > now and job_id not in job_ids:
+            if next_run > now_local and job_id not in job_ids:
                 scheduler.add_job(fetch_and_update_parcels, 'date', run_date=next_run, id=job_id)
                 logging.info(f"📅 Scheduled database update at {next_run.strftime('%Y-%m-%d %H:%M:%S')}")
 
