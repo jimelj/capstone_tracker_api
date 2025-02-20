@@ -23,9 +23,40 @@ on:
 #           RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }}
 #           RAILWAY_SERVICE_ID: ${{ secrets.RAILWAY_SERVICE_ID }}
 #         run: python scheduler.py
+# jobs:
+#   run-scheduler:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v3
+
+#       - name: Debug Current Directory
+#         run: pwd && ls -la
+
+#       - name: Setup Python
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: '3.10'
+
+#       - name: Install Dependencies
+#         run: pip install -r requirements.txt
+
+#       - name: Set execute permissions for scheduler.py
+#         run: chmod +x scheduler.py
+
+#       - name: Debug Environment Variables
+#         run: env | grep RAILWAY_
+
+#       - name: Run Scheduler
+#         run: python scheduler.py
+
 jobs:
   run-scheduler:
     runs-on: ubuntu-latest
+    env:
+      RAILWAY_API_KEY: ${{ secrets.RAILWAY_API_KEY }}
+      RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }}
+      RAILWAY_SERVICE_ID: ${{ secrets.RAILWAY_SERVICE_ID }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
