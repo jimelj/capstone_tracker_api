@@ -31,8 +31,8 @@ jobs:
 
       - name: Start Railway Service (if needed)
         if: env.action == 'start'
-        run: railway up --service=${{ secrets.RAILWAY_PROJECT_ID }}
+        run: railway up --service=${{ secrets.RAILWAY_SERVICE_ID }}
 
       - name: Stop Railway Service (if needed)
         if: env.action == 'stop'
-        run: railway down --service=${{ secrets.RAILWAY_PROJECT_ID }}
+        run: railway down --service=${{ secrets.RAILWAY_SERVICE_ID }}
