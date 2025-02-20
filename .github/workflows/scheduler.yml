@@ -1,38 +1,30 @@
-name: Manage Railway Service
+name: Auto Start/Stop Railway Environment
 
 on:
-  workflow_dispatch:  # Allows manual triggering
   schedule:
-    - cron: "0 6 * * 0-3"  # Runs at 6 AM UTC on Sunday-Wednesday
+    # Runs at 6 AM UTC (adjust as needed)
+    - cron: '0 6 * * *'
+  workflow_dispatch:  # Allows manual trigger from GitHub Actions UI
 
 jobs:
-  manage-service:
+  manage-railway:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '18'  # Ensure Railway CLI compatibility
-
-      - name: Clear npm cache
-        run: npm cache clean --force
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
       - name: Install Railway CLI
-        run: npm install -g @railway/cli@latest --force
+        run: npm install -g @railway/cli
 
-      - name: Authenticate Railway
-        env:
-          RAILWAY_API_TOKEN: ${{ secrets.RAILWAY_API_TOKEN }}
-        run: railway login --token $RAILWAY_API_TOKEN
+      - name: Set Railway Token
+        run: echo "RAILWAY_TOKEN=${{ secrets.RAILWAY_API_KEY }}" >> $GITHUB_ENV
 
       - name: Determine Action (Start or Stop)
-        id: service_action
+        id: determine-action
         run: |
-          DAY_OF_WEEK=$(date +%u)  # Get current day of the week (1=Monday, 7=Sunday)
-          if [[ "$DAY_OF_WEEK" -ge 1 && "$DAY_OF_WEEK" -le 3 ]]; then
+          DAY=$(date +%u) # Get current day (1=Monday, 7=Sunday)
+          if [[ "$DAY" -ge 1 && "$DAY" -le 4 ]]; then
             echo "action=start" >> $GITHUB_ENV
           else
             echo "action=stop" >> $GITHUB_ENV
@@ -40,8 +32,8 @@ jobs:
 
       - name: Start Railway Service (if needed)
         if: env.action == 'start'
-        run: railway up
+        run: railway up --service=${{ secrets.RAILWAY_PROJECT_ID }}
 
       - name: Stop Railway Service (if needed)
         if: env.action == 'stop'
-        run: railway down
+        run: railway down --service=${{ secrets.RAILWAY_PROJECT_ID }}
