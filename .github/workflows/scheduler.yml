@@ -1,5 +1,6 @@
 name: Auto Start/Stop Railway Service
 on:
+  workflow_dispatch:  # 👈 This allows manual runs
   schedule:
     - cron: "0 6 * * 0-3"  # Start at 6 AM UTC on Sunday-Wednesday
     - cron: "0 20 * * 3"   # Stop at 8 PM UTC on Wednesday
