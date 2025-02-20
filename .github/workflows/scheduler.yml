@@ -20,4 +20,4 @@ jobs:
           RAILWAY_API_KEY: ${{ secrets.RAILWAY_API_KEY }}
           RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }}
           RAILWAY_SERVICE_ID: ${{ secrets.RAILWAY_SERVICE_ID }}
-        run: python scheduler.py
+        run: python ./scheduler.py
