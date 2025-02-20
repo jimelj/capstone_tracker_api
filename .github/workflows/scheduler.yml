@@ -1,82 +1,44 @@
-name: Auto Start/Stop Railway Service
+name: Manage Railway Service
+
 on:
-  workflow_dispatch:  # 👈 This allows manual runs
+  workflow_dispatch:  # Allows manual triggering from GitHub Actions
   schedule:
-    - cron: "0 6 * * 0-3"  # Start at 6 AM UTC on Sunday-Wednesday
-    - cron: "0 20 * * 3"   # Stop at 8 PM UTC on Wednesday
-
-# jobs:
-#   run-scheduler:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout repo
-#         uses: actions/checkout@v3
-#       - name: Install dependencies
-#         run: pip install requests
-#       - name: Set execute permissions
-#         run: chmod +x scheduler.py
-#       - name: Debug - List files
-#         run: ls -la
-#       - name: Run scheduler
-#         env:
-#           RAILWAY_API_KEY: ${{ secrets.RAILWAY_API_KEY }}
-#           RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }}
-#           RAILWAY_SERVICE_ID: ${{ secrets.RAILWAY_SERVICE_ID }}
-#         run: python scheduler.py
-# jobs:
-#   run-scheduler:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout Repository
-#         uses: actions/checkout@v3
-
-#       - name: Debug Current Directory
-#         run: pwd && ls -la
-
-#       - name: Setup Python
-#         uses: actions/setup-python@v4
-#         with:
-#           python-version: '3.10'
-
-#       - name: Install Dependencies
-#         run: pip install -r requirements.txt
-
-#       - name: Set execute permissions for scheduler.py
-#         run: chmod +x scheduler.py
-
-#       - name: Debug Environment Variables
-#         run: env | grep RAILWAY_
-
-#       - name: Run Scheduler
-#         run: python scheduler.py
+    - cron: "0 6 * * 0-3"  # Runs every day at 6 AM UTC (adjust as needed)
 
 jobs:
-  run-scheduler:
+  manage-service:
     runs-on: ubuntu-latest
-    env:
-      RAILWAY_API_KEY: ${{ secrets.RAILWAY_API_KEY }}
-      RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }}
-      RAILWAY_SERVICE_ID: ${{ secrets.RAILWAY_SERVICE_ID }}
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Check out repository
+        uses: actions/checkout@v2
 
-      - name: Debug Current Directory
-        run: pwd && ls -la
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          python-version: '3.10'
+          node-version: '14'
 
-      - name: Install Dependencies
-        run: pip install -r requirements.txt
+      - name: Install Railway CLI
+        run: npm install -g @railway/cli
 
-      - name: Set execute permissions for scheduler.py
-        run: chmod +x scheduler.py
+      - name: Authenticate Railway
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_API_TOKEN }}
+        run: railway login --token $RAILWAY_TOKEN
 
-      - name: Debug Environment Variables
-        run: env | grep RAILWAY_
+      - name: Determine Action (Start or Stop)
+        id: service_action
+        run: |
+          DAY_OF_WEEK=$(date +%u)  # Get current day of the week (1=Monday, 7=Sunday)
+          if [[ "$DAY_OF_WEEK" -ge 1 && "$DAY_OF_WEEK" -le 3 ]]; then
+            echo "action=start" >> $GITHUB_ENV
+          else
+            echo "action=stop" >> $GITHUB_ENV
+          fi
 
-      - name: Run Scheduler
-        run: python scheduler.py
+      - name: Start Railway Service (if needed)
+        if: env.action == 'start'
+        run: railway up
+
+      - name: Stop Railway Service (if needed)
+        if: env.action == 'stop'
+        run: railway down
