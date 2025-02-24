@@ -199,7 +199,7 @@ from pathlib import Path
 # BASE_DIR = Path(__file__).resolve().parent
 # DB_FILE = BASE_DIR / "data/parcels.db"
 
-DB_FILE = Path("/data/parcels.db")
+DB_FILE = Path("/dataB/parcels.db")
 
 # Configure logging
 LOG_FILE = "database.log"
