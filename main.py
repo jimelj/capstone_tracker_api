@@ -229,7 +229,7 @@ import uvicorn
 from fastapi import FastAPI, HTTPException, Query, Request, Depends, BackgroundTasks
 from fastapi.security.api_key import APIKeyHeader
 from pathlib import Path
-
+from fastapi.responses import FileResponse
 from contextlib import asynccontextmanager
 from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime, timedelta
@@ -264,7 +264,7 @@ TOKEN = None
 LOGS_PATH = Path(__file__).parent
 SERVER_LOG_PATH = LOGS_PATH / "server.log"
 DATABASE_LOG_PATH = LOGS_PATH / "database.log"
-
+DB_FILE = Path("/data/parcels.db")
 
 # Define your desired timezone (change if needed)
 LOCAL_TZ = pytz.timezone("America/New_York")  # Adjust based on your timezone
@@ -286,7 +286,6 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
-app = FastAPI()
 limiter = Limiter(key_func=get_remote_address)  # ✅ Rate limiter to prevent abuse
 
 # 🚀 FastAPI Server Start
@@ -634,7 +633,7 @@ def get_parcels_api(
     request: Request,
     sort_by: str = Query("barcode", description="Sort key (e.g., barcode, city, state)"),
     order: str = Query("asc", description="Sort order: 'asc' or 'desc'"),
-    limit: int = Query(100, description="Max number of results"),
+    limit: int = Query(1000, description="Max number of results"),
     city: str = Query(None, description="Filter by city"),
     state: str = Query(None, description="Filter by state"),
     scan_status: str = Query(None, description="Filter by scan status"),
@@ -693,6 +692,13 @@ async def get_database_logs(api_key: str = Depends(verify_api_key)):
         "lines_requested": 100,
         "log_data": lines[-100:]
     }
+
+@app.get("/download-db", dependencies=[Depends(verify_api_key)])
+async def download_db():
+    if not os.path.exists(DB_FILE):
+        raise HTTPException(status_code=404, detail="Database file not found")
+    return FileResponse(DB_FILE, filename="parcels.db", media_type="application/octet-stream")
+
 @app.post("/reload")
 @limiter.limit("5/minute")  # ✅ Limit reloads to 5 per minute to avoid spam
 def trigger_manual_update(request: Request):

@@ -195,7 +195,10 @@ import sqlite3
 import logging
 from pathlib import Path
 
-# Paths
+# # Paths
+# BASE_DIR = Path(__file__).resolve().parent
+# DB_FILE = BASE_DIR / "data/parcels.db"
+
 DB_FILE = Path("/data/parcels.db")
 
 # Configure logging
@@ -246,8 +249,8 @@ def get_parcels_week(begin_date, end_date):
             # Query to fetch parcels within the date range
             query = """
                 SELECT * FROM parcels
-                WHERE last_scanned_when BETWEEN ? AND ?
-                ORDER BY last_scanned_when ASC
+                WHERE inserted_at BETWEEN ? AND ?
+                ORDER BY inserted_at ASC
             """
             params = (begin_date, end_date)
 
@@ -261,7 +264,7 @@ def get_parcels_week(begin_date, end_date):
         logger.error(f"❌ Error fetching parcels for the week: {e}")
         return []
 
-def get_parcels(sort_by="barcode", order="asc", limit=100, city=None, state=None, scan_status=None, parcel_id=None):
+def get_parcels(sort_by="barcode", order="asc", limit=1000, city=None, state=None, scan_status=None, parcel_id=None):
     """Fetch parcels with optional sorting, limits, and filtering by city, state, scan_status, or ID."""
     try:
         with get_db_connection() as conn:

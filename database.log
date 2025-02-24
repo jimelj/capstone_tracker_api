@@ -19104,3 +19104,11 @@
 2025-02-19 10:12:04,766 - INFO - ⚡ Parcel 117058547 skipped (no changes detected).
 2025-02-19 10:12:04,766 - INFO - 🔄 19 parcels updated, 1 new parcels inserted, 234 unchanged.
 2025-02-19 14:03:04,720 - INFO - 📦 Fetched 190 parcels between 2025-02-15 and 2025-02-20.
+2025-02-24 12:31:56,631 - INFO - ✅ Database initialized.
+2025-02-24 12:34:00,913 - INFO - ✅ Database initialized.
+2025-02-24 12:34:23,559 - INFO - Fetched 0 parcels from the database.
+2025-02-24 12:34:54,553 - INFO - Fetched 0 parcels from the database.
+2025-02-24 12:34:58,579 - INFO - 📦 Fetched 0 parcels between 2025-02-22 and 2025-02-27.
+2025-02-24 12:35:04,288 - INFO - Fetched 0 parcels from the database.
+2025-02-24 12:36:28,121 - INFO - ✅ Database initialized.
+2025-02-24 12:36:33,860 - INFO - Fetched 1000 parcels from the database.

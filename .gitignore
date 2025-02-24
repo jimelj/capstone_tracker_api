@@ -132,7 +132,7 @@ ENV/
 env.bak/
 venv.bak/
 .sAenv
-data/
+# data/
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -178,5 +178,5 @@ CSM_Report.xlsx
 *.dmg
 *.exe
 .dmg
-
+__pycache__/
 dmg_contents/
