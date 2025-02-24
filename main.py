@@ -226,13 +226,16 @@ import os
 import pytz
 from dotenv import load_dotenv
 import uvicorn
-from fastapi import FastAPI, HTTPException, Query, Request, BackgroundTasks
+from fastapi import FastAPI, HTTPException, Query, Request, Depends, BackgroundTasks
+from fastapi.security.api_key import APIKeyHeader
+from pathlib import Path
+
 from contextlib import asynccontextmanager
 from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime, timedelta
 from slowapi import Limiter
 from slowapi.util import get_remote_address
-from database import get_parcels, get_parcel_by_barcode, update_parcels, get_parcels_week
+from database import get_parcels, get_parcel_by_barcode, update_parcels, get_parcels_week, init_db
 
 # Prevent database logs from being logged in `server.log`
 logging.getLogger("database").propagate = False  
@@ -251,9 +254,16 @@ PASSWORD = os.getenv("PASSWORD")
 RAILWAY_API_KEY = os.getenv("RAILWAY_API_KEY")  # Set this in Railway environment variables
 PROJECT_ID = os.getenv("RAILWAY_PROJECT_ID")    # Set this in Railway environment variables
 SERVICE_ID = os.getenv("RAILWAY_SERVICE_ID")    # Set this in Railway environment variables
+LOGS_API_KEY = os.getenv("LOGS_API_KEY")
+API_KEY_HEADER = APIKeyHeader(name="X-API-Key")
+
 
 # Global token storage
 TOKEN = None
+
+LOGS_PATH = Path(__file__).parent
+SERVER_LOG_PATH = LOGS_PATH / "server.log"
+DATABASE_LOG_PATH = LOGS_PATH / "database.log"
 
 
 # Define your desired timezone (change if needed)
@@ -281,6 +291,20 @@ limiter = Limiter(key_func=get_remote_address)  # ✅ Rate limiter to prevent ab
 
 # 🚀 FastAPI Server Start
 logger.info("🚀 FastAPI Server is starting...")
+
+# Security check
+def verify_api_key(api_key: str = Depends(API_KEY_HEADER)):
+    if api_key != LOGS_API_KEY:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+
+# Read log file helper function
+def read_log_file(file_path: Path, lines: int = 100):
+    if not file_path.exists():
+        raise HTTPException(status_code=404, detail=f"Log file not found: {file_path.name}")
+
+    with file_path.open('r') as file:
+        log_lines = file.readlines()
+        return log_lines[-lines:]
 
 
 def authenticate():
@@ -573,6 +597,7 @@ async def lifespan(app: FastAPI):
     if not scheduler.running:  # ✅ Prevent scheduler from starting multiple times
         scheduler.start()
     schedule_updates()  # ✅ Start scheduler at FastAPI startup
+    init_db()
     yield  # 🚀 This ensures proper cleanup when the app stops
 
 app = FastAPI(lifespan=lifespan)  # ✅ Use new lifespan method
@@ -636,6 +661,38 @@ def get_parcel_by_barcode_endpoint(request: Request, barcode: str):
         logging.error(f"❌ Error fetching parcel {barcode}: {e}")
         raise HTTPException(status_code=500, detail="Internal server error. Please try again later.")
 
+@app.get("/logs/server", dependencies=[Depends(verify_api_key)])
+def get_server_logs(lines: int = Query(100, description="Number of recent lines to retrieve from the server log")):
+    return {
+        "log_file": "server.log",
+        "lines_requested": lines,
+        "log_data": read_log_file(SERVER_LOG_PATH, lines)
+    }
+
+# Endpoint for database logs
+# @app.get("/logs/database", dependencies=[Depends(verify_api_key)])
+# def get_database_logs(lines: int = Query(100, description="Number of recent lines to retrieve from the database log")):
+#     return {
+#         "log_file": "database.log",
+#         "lines_requested": lines,
+#         "log_data": read_log_file(DATABASE_LOG_PATH, lines)
+#     }
+
+@app.get("/logs/database")
+async def get_database_logs(api_key: str = Depends(verify_api_key)):
+    log_path = "database.log"
+    if not os.path.exists(log_path):
+        return {"log_file": log_path, "exists": False, "log_data": []}
+
+    with open(log_path, "r") as file:
+        lines = file.readlines()
+
+    return {
+        "log_file": log_path,
+        "exists": True,
+        "lines_requested": 100,
+        "log_data": lines[-100:]
+    }
 @app.post("/reload")
 @limiter.limit("5/minute")  # ✅ Limit reloads to 5 per minute to avoid spam
 def trigger_manual_update(request: Request):

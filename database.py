@@ -196,7 +196,7 @@ import logging
 from pathlib import Path
 
 # Paths
-DB_FILE = Path("parcels.db")
+DB_FILE = Path("/data/parcels.db")
 
 # Configure logging
 LOG_FILE = "database.log"
@@ -229,7 +229,8 @@ def init_db():
                 city TEXT,
                 state TEXT,
                 zip TEXT,
-                pod TEXT
+                pod TEXT,
+                inserted_at DATETIME DEFAULT CURRENT_TIMESTAMP
             )
         ''')
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_barcode ON parcels (barcode)")
@@ -502,8 +503,8 @@ def update_parcels(updated_parcels):
                 else:
                     # Insert new record
                     cursor.execute("""
-                        INSERT INTO parcels (id, barcode, scan_status, last_scanned_when, address_name, address1, address2, city, state, zip, pod) 
-                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        INSERT INTO parcels (id, barcode, scan_status, last_scanned_when, address_name, address1, address2, city, state, zip, pod, inserted_at) 
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
                     """, (parcel_id, barcode, new_status, new_timestamp, parcel["address"]["name"], 
                           parcel["address"]["address1"], parcel["address"]["address2"], parcel["address"]["city"], 
                           parcel["address"]["state"], parcel["address"]["zip"], parcel.get("pod")))
