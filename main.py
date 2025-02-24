@@ -376,7 +376,7 @@ def fetch_parcel_summaries():
     #     raise HTTPException(status_code=response.status_code, detail=response.text)
 
 # ✅ Create a single instance of BackgroundScheduler
-scheduler = BackgroundScheduler(daemon=True)
+# scheduler = BackgroundScheduler(daemon=True)
 
 # Scheduler Configuration
 SCHEDULED_CALLS = 30  # 30 updates per day
@@ -547,8 +547,8 @@ def schedule_updates():
     # now = datetime.now()
     now_utc = datetime.now(pytz.utc)  # Get current UTC time
     now_local = now_utc.astimezone(LOCAL_TZ)  # Convert to local time
-    if now_local.weekday() in [1, 2]:  # ✅ Only schedule on Tuesdays & Wednesdays
-    # if now.weekday() in [0, 1, 2, 3]:  # ✅ Only schedule on Sunday, Monday, Tuesday, and Wednesday
+    # if now_local.weekday() in [1, 2]:  # ✅ Only schedule on Tuesdays & Wednesdays
+    if now_local.weekday() in [0, 1, 2, 3]:  # ✅ Only schedule on Sunday, Monday, Tuesday, and Wednesday
         for i in range(30):  # ✅ SCHEDULED_CALLS is always 30
             next_run = now_local.replace(hour=6, minute=0, second=0, microsecond=0) + timedelta(minutes=i * 28)
             job_id = f"update_{next_run.strftime('%Y-%m-%d_%H-%M')}"
@@ -556,6 +556,8 @@ def schedule_updates():
             if next_run > now_local and job_id not in job_ids:
                 scheduler.add_job(fetch_and_update_parcels, 'date', run_date=next_run, id=job_id)
                 logging.info(f"📅 Scheduled database update at {next_run.strftime('%Y-%m-%d %H:%M:%S')}")
+            else:
+                logging.info(f"⏩ Skipped scheduling past job: {next_run.strftime('%Y-%m-%d %H:%M:%S')}")    
 
 # schedule_updates() 
 # @app.on_event("startup")
@@ -568,6 +570,8 @@ def schedule_updates():
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logging.info("🚀 FastAPI Startup: Scheduling updates...")
+    if not scheduler.running:  # ✅ Prevent scheduler from starting multiple times
+        scheduler.start()
     schedule_updates()  # ✅ Start scheduler at FastAPI startup
     yield  # 🚀 This ensures proper cleanup when the app stops
 
