@@ -548,7 +548,7 @@ def schedule_updates():
     now_utc = datetime.now(pytz.utc)  # Get current UTC time
     now_local = now_utc.astimezone(LOCAL_TZ)  # Convert to local time
     if now_local.weekday() in [1, 2]:  # ✅ Only schedule on Tuesdays & Wednesdays
-        # if now.weekday() in [0, 1, 2, 3]:  # ✅ Only schedule on Sunday, Monday, Tuesday, and Wednesday
+    # if now.weekday() in [0, 1, 2, 3]:  # ✅ Only schedule on Sunday, Monday, Tuesday, and Wednesday
         for i in range(30):  # ✅ SCHEDULED_CALLS is always 30
             next_run = now_local.replace(hour=6, minute=0, second=0, microsecond=0) + timedelta(minutes=i * 28)
             job_id = f"update_{next_run.strftime('%Y-%m-%d_%H-%M')}"
@@ -579,6 +579,14 @@ app = FastAPI(lifespan=lifespan)  # ✅ Use new lifespan method
 def home(request: Request):
     logging.info("🏠 Home endpoint accessed.")
     return {"message": "FastAPI Database Server is Running"}
+
+@app.get("/jobs")
+def get_scheduled_jobs():
+    return [{"id": job.id, "run_date": str(job.next_run_time)} for job in scheduler.get_jobs()]
+
+@app.get("/time")
+def get_current_time():
+    return {"server_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
 
 @app.get("/parcelsweek")
 @limiter.limit("30/minute")  # ✅ Limit queries to 30 per minute
