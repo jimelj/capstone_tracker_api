@@ -226,7 +226,8 @@ import os
 import pytz
 from dotenv import load_dotenv
 import uvicorn
-from fastapi import FastAPI, HTTPException, Query, Request, Depends, BackgroundTasks
+import shutil
+from fastapi import FastAPI, HTTPException, Query, Request, Depends, BackgroundTasks, UploadFile, File
 from fastapi.security.api_key import APIKeyHeader
 from pathlib import Path
 from fastapi.responses import FileResponse
@@ -264,7 +265,7 @@ TOKEN = None
 LOGS_PATH = Path(__file__).parent
 SERVER_LOG_PATH = LOGS_PATH / "server.log"
 DATABASE_LOG_PATH = LOGS_PATH / "database.log"
-DB_FILE = Path("/data/parcels.db")
+DB_FILE = Path("/dataB/parcels.db")
 
 # Define your desired timezone (change if needed)
 LOCAL_TZ = pytz.timezone("America/New_York")  # Adjust based on your timezone
@@ -698,6 +699,16 @@ async def download_db():
     if not os.path.exists(DB_FILE):
         raise HTTPException(status_code=404, detail="Database file not found")
     return FileResponse(DB_FILE, filename="parcels.db", media_type="application/octet-stream")
+
+@app.post("/upload-db", dependencies=[Depends(verify_api_key)])
+async def upload_database(file: UploadFile = File(...)):
+    """Upload a new database file to replace the existing one in Railway."""
+    try:
+        with open(DB_FILE, "wb") as buffer:
+            shutil.copyfileobj(file.file, buffer)
+        return {"message": "Database uploaded successfully"}
+    except Exception as e:
+        return {"error": str(e)}
 
 @app.post("/reload")
 @limiter.limit("5/minute")  # ✅ Limit reloads to 5 per minute to avoid spam
