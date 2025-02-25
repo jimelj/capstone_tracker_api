@@ -566,6 +566,7 @@ logging.info(f"📅 Dynamic API Date Range: {begin_date} to {end_date}")
 
 def schedule_updates():
     """Schedule database updates at fixed intervals on Tuesdays & Wednesdays, preventing duplicates."""
+    scheduler.remove_all_jobs()  # ✅ Ensure old jobs are removed to avoid duplication
     job_ids = {job.id for job in scheduler.get_jobs()}  # ✅ Get all existing job IDs
 
     # now = datetime.now()
