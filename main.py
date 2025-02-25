@@ -564,25 +564,46 @@ logging.info(f"📅 Dynamic API Date Range: {begin_date} to {end_date}")
 
 
 
-def schedule_updates():
-    """Schedule database updates at fixed intervals on Tuesdays & Wednesdays, preventing duplicates."""
-    scheduler.remove_all_jobs()  # ✅ Ensure old jobs are removed to avoid duplication
-    job_ids = {job.id for job in scheduler.get_jobs()}  # ✅ Get all existing job IDs
+# def schedule_updates():
+#     """Schedule database updates at fixed intervals on Tuesdays & Wednesdays, preventing duplicates."""
+#     scheduler.remove_all_jobs()  # ✅ Ensure old jobs are removed to avoid duplication
+#     job_ids = {job.id for job in scheduler.get_jobs()}  # ✅ Get all existing job IDs
 
-    # now = datetime.now()
+#     # now = datetime.now()
+#     now_utc = datetime.now(pytz.utc)  # Get current UTC time
+#     now_local = now_utc.astimezone(LOCAL_TZ)  # Convert to local time
+#     # if now_local.weekday() in [1, 2]:  # ✅ Only schedule on Tuesdays & Wednesdays
+#     if now_local.weekday() in [0, 1, 2, 3]:  # ✅ Only schedule on Sunday, Monday, Tuesday, and Wednesday
+#         for i in range(30):  # ✅ SCHEDULED_CALLS is always 30
+#             next_run = now_local.replace(hour=6, minute=0, second=0, microsecond=0) + timedelta(minutes=i * 28)
+#             job_id = f"update_{next_run.strftime('%Y-%m-%d_%H-%M')}"
+
+#             if next_run > now_local and job_id not in job_ids:
+#                 scheduler.add_job(fetch_and_update_parcels, 'date', run_date=next_run, id=job_id)
+#                 logging.info(f"📅 Scheduled database update at {next_run.strftime('%Y-%m-%d %H:%M:%S')}")
+#             else:
+#                 logging.info(f"⏩ Skipped scheduling past job: {next_run.strftime('%Y-%m-%d %H:%M:%S')}")    
+
+def schedule_updates():
+    """Schedule database updates at fixed intervals on Sunday-Wednesday, preventing duplicates."""
+    scheduler.remove_all_jobs()  # ✅ Ensure old jobs are removed to avoid duplication
+
     now_utc = datetime.now(pytz.utc)  # Get current UTC time
     now_local = now_utc.astimezone(LOCAL_TZ)  # Convert to local time
-    # if now_local.weekday() in [1, 2]:  # ✅ Only schedule on Tuesdays & Wednesdays
-    if now_local.weekday() in [0, 1, 2, 3]:  # ✅ Only schedule on Sunday, Monday, Tuesday, and Wednesday
-        for i in range(30):  # ✅ SCHEDULED_CALLS is always 30
-            next_run = now_local.replace(hour=6, minute=0, second=0, microsecond=0) + timedelta(minutes=i * 28)
-            job_id = f"update_{next_run.strftime('%Y-%m-%d_%H-%M')}"
 
-            if next_run > now_local and job_id not in job_ids:
+    # ✅ Ensure updates only run on Sunday, Monday, Tuesday, and Wednesday
+    if now_local.weekday() in [0, 1, 2, 3]:  
+        for i in range(30):  # ✅ 30 scheduled updates per day
+            next_run = now_local.replace(hour=6, minute=0, second=0, microsecond=0) + timedelta(minutes=i * 28)
+
+            # Ensure the job is scheduled **only if it's in the future**
+            if next_run > now_local:
+                job_id = f"update_{next_run.strftime('%Y-%m-%d_%H-%M')}"
                 scheduler.add_job(fetch_and_update_parcels, 'date', run_date=next_run, id=job_id)
                 logging.info(f"📅 Scheduled database update at {next_run.strftime('%Y-%m-%d %H:%M:%S')}")
-            else:
-                logging.info(f"⏩ Skipped scheduling past job: {next_run.strftime('%Y-%m-%d %H:%M:%S')}")    
+
+    else:
+        logging.info("⏩ Skipped scheduling updates (Not Sunday-Wednesday)")
 
 # schedule_updates() 
 # @app.on_event("startup")
