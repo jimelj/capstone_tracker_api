@@ -585,25 +585,27 @@ logging.info(f"📅 Dynamic API Date Range: {begin_date} to {end_date}")
 #                 logging.info(f"⏩ Skipped scheduling past job: {next_run.strftime('%Y-%m-%d %H:%M:%S')}")    
 
 def schedule_updates():
-    """Schedule database updates at fixed intervals on Sunday-Wednesday, preventing duplicates."""
-    scheduler.remove_all_jobs()  # ✅ Ensure old jobs are removed to avoid duplication
+    """Schedule database updates at fixed intervals on Sundays, Mondays, Tuesdays, and Wednesdays, preventing duplicates."""
+    job_ids = {job.id for job in scheduler.get_jobs()}  # ✅ Get all existing job IDs
 
     now_utc = datetime.now(pytz.utc)  # Get current UTC time
     now_local = now_utc.astimezone(LOCAL_TZ)  # Convert to local time
 
-    # ✅ Ensure updates only run on Sunday, Monday, Tuesday, and Wednesday
+    # ✅ Run only on Sunday, Monday, Tuesday, and Wednesday
     if now_local.weekday() in [0, 1, 2, 3]:  
-        for i in range(30):  # ✅ 30 scheduled updates per day
-            next_run = now_local.replace(hour=6, minute=0, second=0, microsecond=0) + timedelta(minutes=i * 28)
+        next_run = now_local.replace(hour=6, minute=0, second=0, microsecond=0)  # Start at 6 AM
 
-            # Ensure the job is scheduled **only if it's in the future**
-            if next_run > now_local:
-                job_id = f"update_{next_run.strftime('%Y-%m-%d_%H-%M')}"
+        for i in range(30):  # ✅ SCHEDULED_CALLS is always 30
+            next_run += timedelta(minutes=28)  # ✅ Increment for the next run
+
+            job_id = f"update_{next_run.strftime('%Y-%m-%d_%H-%M')}"
+
+            # ✅ Ensure it's scheduled for the future
+            if next_run > now_local and job_id not in job_ids:
                 scheduler.add_job(fetch_and_update_parcels, 'date', run_date=next_run, id=job_id)
                 logging.info(f"📅 Scheduled database update at {next_run.strftime('%Y-%m-%d %H:%M:%S')}")
-
-    else:
-        logging.info("⏩ Skipped scheduling updates (Not Sunday-Wednesday)")
+            else:
+                logging.info(f"⏩ Skipped scheduling past job: {next_run.strftime('%Y-%m-%d %H:%M:%S')}")    
 
 # schedule_updates() 
 # @app.on_event("startup")
