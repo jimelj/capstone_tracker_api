@@ -35,4 +35,4 @@ jobs:
 
       - name: Stop Railway Service (if needed)
         if: env.action == 'stop'
-        run: railway down --service=${{ secrets.RAILWAY_SERVICE_ID }}
+        run: railway down --service=${{ secrets.RAILWAY_SERVICE_ID }} -y
