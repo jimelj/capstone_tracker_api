@@ -223,10 +223,12 @@ import logging
 import sys
 import requests
 import os
+import asyncio
 import pytz
 from dotenv import load_dotenv
 import uvicorn
 import shutil
+import httpx
 from fastapi import FastAPI, HTTPException, Query, Request, Depends, BackgroundTasks, UploadFile, File
 from fastapi.security.api_key import APIKeyHeader
 from pathlib import Path
@@ -236,7 +238,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime, timedelta
 from slowapi import Limiter
 from slowapi.util import get_remote_address
-from database import get_parcels, get_parcel_by_barcode, update_parcels, get_parcels_week, init_db
+from database import get_parcels, get_parcel_by_barcode, update_parcels, get_parcels_week, init_db, close_db, connect_to_db
 
 # Prevent database logs from being logged in `server.log`
 logging.getLogger("database").propagate = False  
@@ -257,6 +259,7 @@ PROJECT_ID = os.getenv("RAILWAY_PROJECT_ID")    # Set this in Railway environmen
 SERVICE_ID = os.getenv("RAILWAY_SERVICE_ID")    # Set this in Railway environment variables
 LOGS_API_KEY = os.getenv("LOGS_API_KEY")
 API_KEY_HEADER = APIKeyHeader(name="X-API-Key")
+API_DETAILS = os.getenv("API_DETAILS")
 
 
 # Global token storage
@@ -326,7 +329,7 @@ def authenticate():
     else:
         raise HTTPException(status_code=response.status_code, detail="Authentication failed")
     
-def fetch_parcel_summaries():
+async def fetch_parcel_summaries():
     """Fetches parcel summaries using the latest token."""
     global TOKEN
 
@@ -358,8 +361,8 @@ def fetch_parcel_summaries():
         }
     ]
 
-
-    response = requests.post(API_URL, headers=headers, params=params, json=payload)
+    async with httpx.AsyncClient() as client:
+        response = await client.post(API_URL, headers=headers, params=params, json=payload)
 
     logging.info(f"🛜 API Status Code: {response.status_code}")
     # if response.status_code = 401
@@ -371,14 +374,15 @@ def fetch_parcel_summaries():
         logging.warning("🔑 Token expired. Re-authenticating...")
         TOKEN = authenticate()  # Refresh token
         headers["Authorization"] = f"Token {TOKEN}"  # Update with new token
-        response = requests.post(API_URL, headers=headers, params=params, json=payload)
+        async with httpx.AsyncClient() as client:
+            response = await requests.post(API_URL, headers=headers, params=params, json=payload)
         logging.info(f"🔄 Retried API call, Status Code: {response.status_code}")
 
     # Handle rate limiting
     elif response.status_code == 429:
         logging.warning("⏳ Rate limit reached. Retrying in 5 seconds...")
-        time.sleep(5)
-        return fetch_parcel_summaries()
+        await asyncio.sleep(5)
+        return await fetch_parcel_summaries()
 
     # Raise exception for unexpected errors
     if response.status_code != 200:
@@ -398,7 +402,79 @@ def fetch_parcel_summaries():
     #     return fetch_parcel_summaries()
     # else:
     #     raise HTTPException(status_code=response.status_code, detail=response.text)
+# Semaphore to limit concurrent requests (5 per second)
+RATE_LIMIT = 5  # Max API calls per second
+semaphore = asyncio.Semaphore(RATE_LIMIT)
 
+
+async def fetch_delivery_address(parcel_id, max_retries=5):
+    """Fetch the delivery address name for a given parcel ID with rate limiting and retries."""
+    global TOKEN
+
+    if not TOKEN:
+        authenticate()
+
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": f"Token {TOKEN}"
+    }
+    url = f"{API_DETAILS}/{parcel_id}"
+    
+    async with semaphore:  # Limit API call concurrency
+        async with httpx.AsyncClient() as client:
+            delay = 2  # Initial retry delay
+
+            for attempt in range(max_retries):
+                try:
+                    response = await client.get(url, headers=headers, timeout=10)
+
+                    if response.status_code == 200:
+                        data = response.json()
+                        # logging.info(f"📩 API Response for {parcel_id}: {response.json()}")
+                        return data.get("deliveryAddress", {}).get("name", "Unknown")  # Default if missing
+                    
+                    elif response.status_code == 401:
+                        logging.warning(f"🔑 Token expired! Refreshing token...")
+                        TOKEN = authenticate()  # Refresh token
+                        headers["Authorization"] = f"Token {TOKEN}"
+                        continue  # Retry immediately with new token
+                    
+                    elif response.status_code == 429:
+                        logging.warning(f"⏳ Rate limit reached. Retrying in {delay} seconds... (Attempt {attempt+1}/{max_retries})")
+                        await asyncio.sleep(delay)
+                        delay *= 2  # Exponential backoff (2, 4, 8, ...)
+
+                    else:
+                        response.raise_for_status()
+
+                except httpx.HTTPStatusError as e:
+                    logging.warning(f"⚠️ Failed to fetch delivery details for parcel {parcel_id}: {e}")
+                    return "Unknown"
+
+        logging.error(f"🚫 Failed to fetch delivery details for parcel {parcel_id} after {max_retries} attempts.")
+        return "Unknown"
+    
+async def fetch_delivery_addresses_batch(parcel_ids, batch_size=5, max_retries=5):
+    """Fetch delivery addresses for multiple parcels in batches."""
+    
+    results = {}
+
+    for i in range(0, len(parcel_ids), batch_size):
+        batch = parcel_ids[i:i + batch_size]
+        tasks = [fetch_delivery_address(pid, max_retries) for pid in batch]
+
+        # Execute batch requests concurrently
+        batch_results = await asyncio.gather(*tasks)
+
+        # Store results
+        for pid, addr in zip(batch, batch_results):
+            results[pid] = addr
+
+        # Enforce API rate limit (wait between batches)
+        await asyncio.sleep(1)
+
+    return results    
 # ✅ Create a single instance of BackgroundScheduler
 # scheduler = BackgroundScheduler(daemon=True)
 
@@ -410,78 +486,181 @@ CALL_INTERVAL = int((WINDOW_HOURS * 60) / SCHEDULED_CALLS)  # ≈ 28 minutes per
 # 🔹 Background Scheduler for Database Updates
 scheduler = BackgroundScheduler(daemon=True)
 
-def fetch_and_update_parcels():
+# async def fetch_and_update_parcels():
+#     """Fetch new data and update only modified records in the database."""
+#     logging.info("🚀 Fetching updated parcels from external source.")
+
+#     # # Temporary placeholder until real API is connected
+#     # updated_parcels = [
+#     #     {
+#     #         "id": 456456654,  # Simulated ID
+#     #         "barcode": "Bob132343443333244444333456789",
+#     #         "scanStatus": "Picked up",
+#     #         "lastScannedWhen": {
+#     #             "formattedDate": "2025-02-26",
+#     #             "formattedTime": "12:00 PM"
+#     #         },
+#     #         "address": {
+#     #             "name": "Test Location",
+#     #             "address1": "123 Test St",
+#     #             "address2": "",
+#     #             "city": "Test City",
+#     #             "state": "NY",
+#     #             "zip": "12345"
+#     #         },
+#     #         "pod": "John Doe"
+#     #     }
+#     # ]  # Simulate getting updated parcels
+
+#     # Replace this with an actual API call when switching to production
+#     # updated_parcels = get_updated_parcels_from_capstone()  # Simulated function
+
+#     try:
+#         updated_parcels = await fetch_parcel_summaries()  # Fetch real data
+#     except HTTPException as e:
+#         logging.error(f"❌ API Error: {e.detail}")
+#         return {"updated": 0, "inserted": 0, "skipped": 0}
+
+#     # ✅ Ensure response is valid
+#     if not updated_parcels or "parcelSummaries" not in updated_parcels:
+#         logging.warning("⚠️ No valid data received from API.")
+#         return {"updated": 0, "inserted": 0, "skipped": 0}
+
+#     parcels_list = updated_parcels.get("parcelSummaries", [])
+
+#     # ✅ Ensure the parcel list is valid
+#     if not isinstance(parcels_list, list):
+#         logging.error(f"❌ API returned an invalid parcel list: {parcels_list}")
+#         return {"updated": 0, "inserted": 0, "skipped": 0}
+
+#         # Extract parcel IDs for batch processing
+#     parcel_ids = [p["id"] for p in parcels_list if isinstance(p, dict) and "id" in p]
+
+#     # Fetch delivery addresses in batches
+#     address_map = await fetch_delivery_addresses_batch(parcel_ids)
+
+#     # ✅ Process all parcels, ensuring missing fields have default values
+#     processed_parcels = []
+#     # parcel_ids = [parcel["id"] for parcel in parcels_list]  # Collect all IDs for batch fetching
+
+#     for parcel in parcels_list:
+#         if not isinstance(parcel, dict):
+#             logging.error(f"❌ Invalid parcel format: {parcel}")
+#             continue  
+
+
+#     # # ✅ Fetch all delivery addresses in parallel
+#     # delivery_addresses = await asyncio.gather(
+#     #     *[fetch_delivery_address(parcel_id) for parcel_id in parcel_ids]
+#     # )
+
+#     # for parcel, destination_name in zip(parcels_list, delivery_addresses):
+#         last_scanned = parcel.get("lastScannedWhen", {}) or {}
+#         address_info = parcel.get("address", {}) or {}
+
+#         destination_name = address_map.get(parcel["id"], "Unknown")
+
+#         processed_parcels.append({
+#             "id": parcel.get("id", -1),  # Default ID to -1 if missing
+#             "barcode": parcel.get("barcode", "UNKNOWN"),  # Default barcode if missing
+#             "scanStatus": parcel.get("scanStatus", "Unknown"),  # Default scan status
+#             "lastScannedWhen": {
+#                 "formattedDate": last_scanned.get("formattedDate", "0000-00-00"),
+#                 "formattedTime": last_scanned.get("formattedTime", "00:00 AM")
+#             },
+#             "destination_name": destination_name,
+#             "address": {
+#                 "name": address_info.get("name", "Unknown Location"),
+#                 "address1": address_info.get("address1", ""),
+#                 "address2": address_info.get("address2", ""),
+#                 "city": address_info.get("city", "Unknown City"),
+#                 "state": address_info.get("state", "Unknown State"),
+#                 "zip": address_info.get("zip", "00000")
+#             },
+#             "pod": parcel.get("pod", "N/A")  # Default proof of delivery
+#         })
+
+#     if not processed_parcels:
+#         logging.warning("⚠️ No valid parcels found after processing.")
+#         return {"updated": 0, "inserted": 0, "skipped": 0}
+
+#     # ✅ Update database with all valid records
+#     result = await update_parcels(processed_parcels)
+
+#     if not isinstance(result, dict):
+#         logging.error("❌ Error: update_parcels() did not return a dictionary!")
+#         return {"updated": 0, "inserted": 0, "skipped": 0}  # Return safe default
+
+#     # ✅ Log update summary when triggered by the scheduler
+#     logging.info(f"✅ Update completed: {result['updated']} updated, {result['inserted']} inserted, {result['skipped']} unchanged.")
+#     logging.info("✅ Database successfully updated with new parcel data.")
+
+#     # ✅ Return structured update information
+#     return result
+    
+async def fetch_and_update_parcels():
     """Fetch new data and update only modified records in the database."""
     logging.info("🚀 Fetching updated parcels from external source.")
-
-    # # Temporary placeholder until real API is connected
-    # updated_parcels = [
-    #     {
-    #         "id": 456456654,  # Simulated ID
-    #         "barcode": "Bob132343443333244444333456789",
-    #         "scanStatus": "Picked up",
-    #         "lastScannedWhen": {
-    #             "formattedDate": "2025-02-26",
-    #             "formattedTime": "12:00 PM"
-    #         },
-    #         "address": {
-    #             "name": "Test Location",
-    #             "address1": "123 Test St",
-    #             "address2": "",
-    #             "city": "Test City",
-    #             "state": "NY",
-    #             "zip": "12345"
-    #         },
-    #         "pod": "John Doe"
-    #     }
-    # ]  # Simulate getting updated parcels
-
-    # Replace this with an actual API call when switching to production
-    # updated_parcels = get_updated_parcels_from_capstone()  # Simulated function
-
+    API_URL = os.getenv("RAILWAY_INTERNAL_API")
+    # ✅ Step 1: Fetch existing parcels from `/parcelsweek` (database source)
     try:
-        updated_parcels = fetch_parcel_summaries()  # Fetch real data
+        async with httpx.AsyncClient() as client:
+            response = await client.get(API_URL)  # Adjust URL as needed
+
+        if response.status_code != 200:
+            logging.error("❌ Failed to fetch existing parcels from /parcelsweek")
+            return {"updated": 0, "inserted": 0, "skipped": 0}
+
+        existing_parcels = response.json()
+    except Exception as e:
+        logging.error(f"❌ Error fetching /parcelsweek data: {e}")
+        return {"updated": 0, "inserted": 0, "skipped": 0}
+
+    # ✅ Step 2: Create a lookup dictionary {barcode: destination_name}
+    existing_destinations = {p["barcode"]: p["destination_name"] for p in existing_parcels}
+
+    # ✅ Step 3: Fetch latest parcels from external API
+    try:
+        updated_parcels = await fetch_parcel_summaries()
     except HTTPException as e:
         logging.error(f"❌ API Error: {e.detail}")
         return {"updated": 0, "inserted": 0, "skipped": 0}
 
-    # ✅ Ensure response is valid
     if not updated_parcels or "parcelSummaries" not in updated_parcels:
         logging.warning("⚠️ No valid data received from API.")
         return {"updated": 0, "inserted": 0, "skipped": 0}
 
-    parcels_list = updated_parcels.get("parcelSummaries", [])
+    parcels_list = updated_parcels["parcelSummaries"]
 
-    # ✅ Ensure the parcel list is valid
-    if not isinstance(parcels_list, list):
-        logging.error(f"❌ API returned an invalid parcel list: {parcels_list}")
-        return {"updated": 0, "inserted": 0, "skipped": 0}
-
-    # ✅ Process all parcels, ensuring missing fields have default values
+    # ✅ Step 4: Process parcels, fetch destination_name **only if missing**
     processed_parcels = []
+    missing_destinations = []  # Collect IDs that need destination lookup
+
     for parcel in parcels_list:
-        if not isinstance(parcel, dict):
-            logging.error(f"❌ Invalid parcel format: {parcel}")
-            continue  # Skip non-dictionary entries
+        barcode = parcel["barcode"]
+        last_scanned = parcel.get("lastScannedWhen", {}) or {}
+        address_info = parcel.get("address", {}) or {}
 
-        # ✅ Ensure lastScannedWhen is a dictionary before accessing keys
-        last_scanned = parcel.get("lastScannedWhen", {})
-        if not isinstance(last_scanned, dict):  
-            last_scanned = {}
+        # **Check if destination_name already exists in the database**
+        existing_dest = existing_destinations.get(barcode, None)  # Now properly handles `None` values
 
-        # ✅ Ensure address is a dictionary before accessing keys
-        address_info = parcel.get("address", {})
-        if not isinstance(address_info, dict):
-            address_info = {}
+        # If destination_name is missing, queue for lookup
+        if existing_dest is None:
+            logging.info(f"📦 Parcel {barcode} missing destination, will fetch from API.")
+            missing_destinations.append(parcel["id"])
+        else:
+            logging.info(f"✅ Parcel {barcode} already has destination: {existing_dest}")
+            parcel["destination_name"] = existing_dest  # Use stored value
 
         processed_parcels.append({
-            "id": parcel.get("id", -1),  # Default ID to -1 if missing
-            "barcode": parcel.get("barcode", "UNKNOWN"),  # Default barcode if missing
-            "scanStatus": parcel.get("scanStatus", "Unknown"),  # Default scan status
+            "id": parcel.get("id", -1),
+            "barcode": barcode,
+            "scanStatus": parcel.get("scanStatus", "Unknown"),
             "lastScannedWhen": {
                 "formattedDate": last_scanned.get("formattedDate", "0000-00-00"),
                 "formattedTime": last_scanned.get("formattedTime", "00:00 AM")
             },
+            "destination_name": existing_dest,  # Use existing value unless missing
             "address": {
                 "name": address_info.get("name", "Unknown Location"),
                 "address1": address_info.get("address1", ""),
@@ -490,28 +669,25 @@ def fetch_and_update_parcels():
                 "state": address_info.get("state", "Unknown State"),
                 "zip": address_info.get("zip", "00000")
             },
-            "pod": parcel.get("pod", "N/A")  # Default proof of delivery
+            "pod": parcel.get("pod", "N/A")
         })
+
+    # ✅ Step 5: Fetch **only missing destination names** in batch
+    if missing_destinations:
+        address_map = await fetch_delivery_addresses_batch(missing_destinations)
+        for parcel in processed_parcels:
+            if parcel["id"] in address_map:
+                parcel["destination_name"] = address_map[parcel["id"]]
 
     if not processed_parcels:
         logging.warning("⚠️ No valid parcels found after processing.")
         return {"updated": 0, "inserted": 0, "skipped": 0}
 
-    # ✅ Update database with all valid records
-    result = update_parcels(processed_parcels)
+    # ✅ Step 6: Update database
+    result = await update_parcels(processed_parcels)
 
-    if not isinstance(result, dict):
-        logging.error("❌ Error: update_parcels() did not return a dictionary!")
-        return {"updated": 0, "inserted": 0, "skipped": 0}  # Return safe default
-
-    # ✅ Log update summary when triggered by the scheduler
     logging.info(f"✅ Update completed: {result['updated']} updated, {result['inserted']} inserted, {result['skipped']} unchanged.")
-    logging.info("✅ Database successfully updated with new parcel data.")
-
-    # ✅ Return structured update information
     return result
-    
-
 # def schedule_updates():
 #     """Schedule database updates at fixed intervals on Tuesdays & Wednesdays."""
 #     scheduler.remove_all_jobs()  # Remove old jobs
@@ -564,7 +740,7 @@ logging.info(f"📅 Dynamic API Date Range: {begin_date} to {end_date}")
 
 
 
-def schedule_updates():
+async def schedule_updates():
     """Schedule database updates at fixed intervals on Tuesdays & Wednesdays, preventing duplicates."""
     scheduler.remove_all_jobs()  # ✅ Ensure old jobs are removed to avoid duplication
     job_ids = {job.id for job in scheduler.get_jobs()}  # ✅ Get all existing job IDs
@@ -574,12 +750,21 @@ def schedule_updates():
     now_local = now_utc.astimezone(LOCAL_TZ)  # Convert to local time
     # if now_local.weekday() in [1, 2]:  # ✅ Only schedule on Tuesdays & Wednesdays
     if now_local.weekday() in [0, 1, 2, 3]:  # ✅ Only schedule on Sunday, Monday, Tuesday, and Wednesday
+        loop = asyncio.get_event_loop()  # ✅ Get the main event loop
         for i in range(30):  # ✅ SCHEDULED_CALLS is always 30
             next_run = now_local.replace(hour=6, minute=0, second=0, microsecond=0) + timedelta(minutes=i * 28)
             job_id = f"update_{next_run.strftime('%Y-%m-%d_%H-%M')}"
 
             if next_run > now_local and job_id not in job_ids:
-                scheduler.add_job(fetch_and_update_parcels, 'date', run_date=next_run, id=job_id)
+                # scheduler.add_job(await fetch_and_update_parcels, 'date', run_date=next_run, id=job_id)
+                scheduler.add_job(
+                    lambda: asyncio.run_coroutine_threadsafe(fetch_and_update_parcels(), loop),  # ✅ Run safely in event loop
+                    'date',
+                    run_date=next_run,
+                    id=job_id,
+                    name="fetch_and_update_parcels",  # ✅ Explicitly name the job correctly
+                    misfire_grace_time=90 # ✅ Allows job to run if missed by 60 seconds
+                )
                 logging.info(f"📅 Scheduled database update at {next_run.strftime('%Y-%m-%d %H:%M:%S')}")
             else:
                 logging.info(f"⏩ Skipped scheduling past job: {next_run.strftime('%Y-%m-%d %H:%M:%S')}")    
@@ -620,9 +805,11 @@ async def lifespan(app: FastAPI):
     logging.info("🚀 FastAPI Startup: Scheduling updates...")
     if not scheduler.running:  # ✅ Prevent scheduler from starting multiple times
         scheduler.start()
-    schedule_updates()  # ✅ Start scheduler at FastAPI startup
-    init_db()
+    asyncio.create_task(schedule_updates())  # ✅ Start scheduler at FastAPI startup
+    await connect_to_db()
+    await init_db()
     yield  # 🚀 This ensures proper cleanup when the app stops
+    await close_db()
 
 app = FastAPI(lifespan=lifespan)  # ✅ Use new lifespan method
 
@@ -643,18 +830,18 @@ def get_current_time():
 
 @app.get("/parcelsweek")
 @limiter.limit("30/minute")  # ✅ Limit queries to 30 per minute
-def get_parcels_week_api(request: Request):
+async def get_parcels_week_api(request: Request):
     """Fetch all parcels scanned within the dynamically calculated date range."""
     global begin_date, end_date  # Use the previously calculated date range
 
     logging.info(f"📦 GET /parcelsweek called for range {begin_date} to {end_date}")
 
     # Fetch parcels from the database within the calculated date range
-    return get_parcels_week(begin_date, end_date)
+    return await get_parcels_week(begin_date, end_date)
 
 @app.get("/parcels")
 @limiter.limit("30/minute")  # ✅ Limit parcel queries to 30 per minute
-def get_parcels_api(
+async def get_parcels_api(
     request: Request,
     sort_by: str = Query("barcode", description="Sort key (e.g., barcode, city, state)"),
     order: str = Query("asc", description="Sort order: 'asc' or 'desc'"),
@@ -668,7 +855,7 @@ def get_parcels_api(
     query_params_str = request.query_params if request.query_params else "No filters applied"
     """Fetch parcels with optional sorting, limits, and filtering."""
     logging.info(f"📦 GET /parcels called with {query_params_str}")
-    return get_parcels(sort_by, order, limit, city, state, scan_status, parcel_id)
+    return await get_parcels(sort_by, order, limit, city, state, scan_status, parcel_id)
 
 @app.get("/parcels/{barcode}")
 @limiter.limit("30/minute")  # ✅ Limit barcode lookups to 30 per minute
@@ -736,11 +923,11 @@ async def upload_database(file: UploadFile = File(...)):
 
 @app.post("/reload")
 @limiter.limit("5/minute")  # ✅ Limit reloads to 5 per minute to avoid spam
-def trigger_manual_update(request: Request):
+async def trigger_manual_update(request: Request):
     """Manually trigger a database update."""
     logging.info("🔄 Manual database update triggered.")
     # Fetch and update parcels
-    updated_parcels = fetch_and_update_parcels()
+    updated_parcels = await fetch_and_update_parcels()
 
     # Logging the result
     total_updated = updated_parcels.get("updated", 0)
