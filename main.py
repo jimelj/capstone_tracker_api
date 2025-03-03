@@ -605,7 +605,7 @@ async def fetch_and_update_parcels():
     # ✅ Step 1: Fetch existing parcels from `/parcelsweek` (database source)
     try:
         async with httpx.AsyncClient() as client:
-            response = await client.get("http://capstone-api.railway.internal:8080/parcelsweek")  # Adjust URL as needed
+            response = await client.get(API_URL)  # Adjust URL as needed
 
         if response.status_code != 200:
             logging.error("❌ Failed to fetch existing parcels from /parcelsweek")
