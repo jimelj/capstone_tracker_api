@@ -476,6 +476,11 @@ def read_log_file(file_path: Path, lines: int = 100):
 
 #     return results    
 
+
+# Semaphore to limit concurrent requests (5 per second)
+RATE_LIMIT = 5  # Max API calls per second
+semaphore = asyncio.Semaphore(RATE_LIMIT)
+
 async def authenticate():
     """Authenticate and get a new token."""
     global TOKEN
