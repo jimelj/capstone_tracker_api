@@ -18768,3 +18768,316 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
 2025-03-04 09:47:59,010 - INFO - 🚀 Fetching updated parcels from external source.
 2025-03-04 09:47:59,036 - ERROR - ❌ Error fetching /parcelsweek data: Request URL is missing an 'http://' or 'https://' protocol.
 2025-03-04 09:47:59,036 - INFO - ✅ Update completed: 0 updated, 0 inserted, 0 unchanged.
+2025-03-04 10:13:31,398 - INFO - 🚀 FastAPI Server is starting...
+2025-03-04 10:13:31,399 - INFO - 📅 Dynamic API Date Range: 2025-03-01 to 2025-03-06
+2025-03-04 10:13:31,410 - INFO - 🚀 FastAPI Startup: Scheduling updates...
+2025-03-04 10:13:31,410 - INFO - Scheduler started
+2025-03-04 10:13:31,411 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 06:00:00
+2025-03-04 10:13:31,411 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 06:28:00
+2025-03-04 10:13:31,411 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 06:56:00
+2025-03-04 10:13:31,411 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 07:24:00
+2025-03-04 10:13:31,411 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 07:52:00
+2025-03-04 10:13:31,411 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 08:20:00
+2025-03-04 10:13:31,411 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 08:48:00
+2025-03-04 10:13:31,411 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 09:16:00
+2025-03-04 10:13:31,411 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 09:44:00
+2025-03-04 10:13:31,411 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 10:12:00
+2025-03-04 10:13:31,411 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,411 - INFO - 📅 Scheduled database update at 2025-03-04 10:40:00
+2025-03-04 10:13:31,411 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,411 - INFO - 📅 Scheduled database update at 2025-03-04 11:08:00
+2025-03-04 10:13:31,411 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,411 - INFO - 📅 Scheduled database update at 2025-03-04 11:36:00
+2025-03-04 10:13:31,411 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,411 - INFO - 📅 Scheduled database update at 2025-03-04 12:04:00
+2025-03-04 10:13:31,411 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,411 - INFO - 📅 Scheduled database update at 2025-03-04 12:32:00
+2025-03-04 10:13:31,412 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,412 - INFO - 📅 Scheduled database update at 2025-03-04 13:00:00
+2025-03-04 10:13:31,412 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,412 - INFO - 📅 Scheduled database update at 2025-03-04 13:28:00
+2025-03-04 10:13:31,412 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,412 - INFO - 📅 Scheduled database update at 2025-03-04 13:56:00
+2025-03-04 10:13:31,412 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,412 - INFO - 📅 Scheduled database update at 2025-03-04 14:24:00
+2025-03-04 10:13:31,412 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,412 - INFO - 📅 Scheduled database update at 2025-03-04 14:52:00
+2025-03-04 10:13:31,412 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,412 - INFO - 📅 Scheduled database update at 2025-03-04 15:20:00
+2025-03-04 10:13:31,412 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,412 - INFO - 📅 Scheduled database update at 2025-03-04 15:48:00
+2025-03-04 10:13:31,412 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,412 - INFO - 📅 Scheduled database update at 2025-03-04 16:16:00
+2025-03-04 10:13:31,412 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,412 - INFO - 📅 Scheduled database update at 2025-03-04 16:44:00
+2025-03-04 10:13:31,412 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,412 - INFO - 📅 Scheduled database update at 2025-03-04 17:12:00
+2025-03-04 10:13:31,412 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,412 - INFO - 📅 Scheduled database update at 2025-03-04 17:40:00
+2025-03-04 10:13:31,412 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,412 - INFO - 📅 Scheduled database update at 2025-03-04 18:08:00
+2025-03-04 10:13:31,412 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,412 - INFO - 📅 Scheduled database update at 2025-03-04 18:36:00
+2025-03-04 10:13:31,412 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,412 - INFO - 📅 Scheduled database update at 2025-03-04 19:04:00
+2025-03-04 10:13:31,412 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 10:13:31,413 - INFO - 📅 Scheduled database update at 2025-03-04 19:32:00
+2025-03-04 10:13:36,019 - INFO - 🔄 Manual database update triggered.
+2025-03-04 10:13:36,019 - INFO - 🚀 Fetching updated parcels from external source.
+2025-03-04 10:13:37,213 - INFO - HTTP Request: GET https://capstone-api-production-05ee.up.railway.app/parcelsweek "HTTP/1.1 200 OK"
+2025-03-04 10:13:41,574 - INFO - HTTP Request: POST https://03830.cxtsoftware.net/CxtWebService/CXTWCF.svc/v2/Parcels/Track/Summaries?includePartialMatch=true&beginDate=2025-03-01&endDate=2025-03-06&pageNum=1&pageSize=3000&sortColumn=BARCODE&sortDirection=ASCENDING&filter=ALL "HTTP/1.1 200 OK"
+2025-03-04 10:13:41,580 - INFO - 🛜 API Status Code: 200
+2025-03-04 10:13:41,580 - INFO - 📩 API Response Content: {"parcelSummaries":[{"isEditable":false,"barcode":"99M903779118765201001","id":118350061,"scanStatus":"Not Scanned","lastScannedWhen":null,"exceptionExists":false,"address":null,"pod":""},{"isEditable":false,"barcode":"99M903779118765201002","id":118350062,"scanStatus":"Not Scanned","lastScannedWhen":null,"exceptionExists":false,"address":null,"pod":""},{"isEditable":false,"barcode":"99M903779118765201003","id":118350063,"scanStatus":"Not Scanned","lastScannedWhen":null,"exceptionExists":false,"
+2025-03-04 10:13:41,581 - INFO - 📩 Parsed API Response Type: <class 'dict'>
+2025-03-04 10:13:41,582 - INFO - ✅ Parcel 99M903779118765201001 already has destination: GREAT NECK, Post Office
+2025-03-04 10:13:41,582 - INFO - ✅ Parcel 99M903779118765201002 already has destination: GREAT NECK, Post Office
+2025-03-04 10:13:41,582 - INFO - ✅ Parcel 99M903779118765201003 already has destination: GREAT NECK, Post Office
+2025-03-04 10:13:41,582 - INFO - ✅ Parcel 99M903779118765201004 already has destination: GREAT NECK, Post Office
+2025-03-04 10:13:41,582 - INFO - ✅ Parcel 99M903779118765201005 already has destination: GREAT NECK, Post Office
+2025-03-04 10:13:41,583 - INFO - ✅ Parcel 99M903779118765201006 already has destination: NEW HYDE PARK, Post Office
+2025-03-04 10:13:41,583 - INFO - ✅ Parcel 99M903779118765201007 already has destination: NEW HYDE PARK, Post Office
+2025-03-04 10:13:41,583 - INFO - ✅ Parcel 99M903779118765201008 already has destination: NEW HYDE PARK, Post Office
+2025-03-04 10:13:41,583 - INFO - ✅ Parcel 99M903779118765201009 already has destination: MINEOLA, Post Office
+2025-03-04 10:13:41,583 - INFO - ✅ Parcel 99M903779118765201010 already has destination: ALBERTSON, Post Office
+2025-03-04 10:13:41,583 - INFO - ✅ Parcel 99M903779118765201011 already has destination: GARDEN CITY, Post Office
+2025-03-04 10:13:41,583 - INFO - ✅ Parcel 99M903779118765201012 already has destination: GARDEN CITY, Post Office
+2025-03-04 10:13:41,583 - INFO - ✅ Parcel 99M903779118765201013 already has destination: MERRICK, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201014 already has destination: MERRICK, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201015 already has destination: MERRICK, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201016 already has destination: WILLISTON PARK, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201017 already has destination: AMITYVILLE, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201018 already has destination: AMITYVILLE, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201019 already has destination: WEST BABYLON, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201020 already has destination: WEST BABYLON, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201021 already has destination: WEST BABYLON, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201022 already has destination: WEST BABYLON, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201023 already has destination: NORTH BABYLON, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201024 already has destination: NORTH BABYLON, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201025 already has destination: BELLMORE, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201026 already has destination: BELLMORE, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201027 already has destination: BRENTWOOD, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201028 already has destination: BRENTWOOD, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201029 already has destination: BRENTWOOD, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201030 already has destination: CENTEREACH, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201031 already has destination: CENTEREACH, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201032 already has destination: HUNTINGTON STATION, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201033 already has destination: HUNTINGTON STATION, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201034 already has destination: HUNTINGTON, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201035 already has destination: HUNTINGTON, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201036 already has destination: HUNTINGTON, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201037 already has destination: HUNTINGTON, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201038 already has destination: HUNTINGTON, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201039 already has destination: COMMACK, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201040 already has destination: COMMACK, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201041 already has destination: COPIAGUE, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201042 already has destination: DEER PARK, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201043 already has destination: DEER PARK, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201044 already has destination: EAST ISLIP, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201045 already has destination: EAST NORTHPORT, Post Office
+2025-03-04 10:13:41,584 - INFO - ✅ Parcel 99M903779118765201046 already has destination: EAST NORTHPORT, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201047 already has destination: EAST SETAUKET, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201048 already has destination: FARMINGDALE, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201049 already has destination: FARMINGDALE, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201050 already has destination: FARMINGDALE, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201051 already has destination: ISLIP, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201052 already has destination: ISLIP TERRACE, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201053 already has destination: KINGS PARK, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201054 already has destination: KINGS PARK, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201055 already has destination: LINDENHURST, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201056 already has destination: LINDENHURST, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201057 already has destination: LINDENHURST, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201058 already has destination: MASSAPEQUA, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201059 already has destination: MASSAPEQUA, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201060 already has destination: MASSAPEQUA, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201061 already has destination: MASSAPEQUA, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201062 already has destination: MASSAPEQUA, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201063 already has destination: MASSAPEQUA, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201064 already has destination: MASSAPEQUA PARK, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201065 already has destination: MASSAPEQUA PARK, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201066 already has destination: NORTHPORT, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201067 already has destination: NORTHPORT, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201068 already has destination: PORT JEFFERSON STATION, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201069 already has destination: PORT JEFFERSON STATION, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201070 already has destination: PORT JEFFERSON STATION, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201071 already has destination: SEAFORD, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201072 already has destination: SEAFORD, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201073 already has destination: SMITHTOWN, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201074 already has destination: SMITHTOWN, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201075 already has destination: SMITHTOWN, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201076 already has destination: STONY BROOK, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201077 already has destination: WANTAGH, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201078 already has destination: WANTAGH, Post Office
+2025-03-04 10:13:41,585 - INFO - ✅ Parcel 99M903779118765201079 already has destination: WEST ISLIP, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765201080 already has destination: WEST ISLIP, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765201081 already has destination: WYANDANCH, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765201082 already has destination: PLAINVIEW, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765201083 already has destination: PLAINVIEW, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202001 already has destination: FLORAL PARK, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202002 already has destination: FLORAL PARK, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202003 already has destination: ELMONT, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202004 already has destination: ELMONT, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202005 already has destination: ELMONT, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202006 already has destination: ELMONT, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202007 already has destination: FRANKLIN SQUARE, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202008 already has destination: FRANKLIN SQUARE, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202009 already has destination: MANHASSET, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202010 already has destination: MANHASSET, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202011 already has destination: PORT WASHINGTON, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202012 already has destination: PORT WASHINGTON, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202013 already has destination: FAR ROCKAWAY, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202014 already has destination: ATLANTIC BEACH, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202015 already has destination: BALDWIN, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202016 already has destination: BALDWIN, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202017 already has destination: BALDWIN, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202018 already has destination: BALDWIN, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202019 already has destination: WESTBURY, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202020 already has destination: WESTBURY, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202021 already has destination: WESTBURY, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202022 already has destination: WESTBURY, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202023 already has destination: CEDARHURST, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202024 already has destination: EAST ROCKAWAY, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202025 already has destination: FREEPORT, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202026 already has destination: FREEPORT, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202027 already has destination: GLEN COVE, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202028 already has destination: GLEN HEAD, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202029 already has destination: HEMPSTEAD, Post Office
+2025-03-04 10:13:41,586 - INFO - ✅ Parcel 99M903779118765202030 already has destination: HEMPSTEAD, Post Office
+2025-03-04 10:13:41,587 - INFO - ✅ Parcel 99M903779118765202031 already has destination: HEMPSTEAD, Post Office
+2025-03-04 10:13:41,587 - INFO - ✅ Parcel 99M903779118765202032 already has destination: HEMPSTEAD, Post Office
+2025-03-04 10:13:41,587 - INFO - ✅ Parcel 99M903779118765202033 already has destination: HEMPSTEAD, Post Office
+2025-03-04 10:13:41,587 - INFO - ✅ Parcel 99M903779118765202034 already has destination: WEST HEMPSTEAD, Post Office
+2025-03-04 10:13:41,587 - INFO - ✅ Parcel 99M903779118765202035 already has destination: UNIONDALE, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202036 already has destination: EAST MEADOW, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202037 already has destination: EAST MEADOW, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202038 already has destination: EAST MEADOW, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202039 already has destination: HEWLETT, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202040 already has destination: ISLAND PARK, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202041 already has destination: LAWRENCE, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202042 already has destination: LOCUST VALLEY, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202043 already has destination: LONG BEACH, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202044 already has destination: LONG BEACH, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202045 already has destination: LYNBROOK, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202046 already has destination: LYNBROOK, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202047 already has destination: MALVERNE, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202048 already has destination: ROCKVILLE CENTRE, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202049 already has destination: ROCKVILLE CENTRE, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202050 already has destination: OCEANSIDE, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202051 already has destination: OCEANSIDE, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202052 already has destination: ROOSEVELT, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202053 already has destination: ROSLYN, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202054 already has destination: ROSLYN, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202055 already has destination: ROSLYN HEIGHTS, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202056 already has destination: SEA CLIFF, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202057 already has destination: WOODMERE, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202058 already has destination: BAYPORT, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202059 already has destination: BAY SHORE, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202060 already has destination: BAY SHORE, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765202061 already has destination: BAY SHORE, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765203001 already has destination: WESTBURY, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765203002 already has destination: GREENVALE, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765204001 already has destination: VALLEY STREAM, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765204002 already has destination: VALLEY STREAM, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765204003 already has destination: VALLEY STREAM, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765204004 already has destination: VALLEY STREAM, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765204005 already has destination: VALLEY STREAM, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765204006 already has destination: BAYVILLE, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765204007 already has destination: BETHPAGE, Post Office
+2025-03-04 10:13:41,588 - INFO - ✅ Parcel 99M903779118765204008 already has destination: BETHPAGE, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204009 already has destination: BLUE POINT, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204010 already has destination: BOHEMIA, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204011 already has destination: BRIGHTWATERS, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204012 already has destination: CENTRAL ISLIP, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204013 already has destination: CENTRAL ISLIP, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204014 already has destination: CENTRAL ISLIP, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204015 already has destination: CENTRAL ISLIP, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204016 already has destination: CORAM, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204017 already has destination: CORAM, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204018 already has destination: EAST NORWICH, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204019 already has destination: FARMINGVILLE, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204020 already has destination: HOLBROOK, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204021 already has destination: HOLBROOK, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204022 already has destination: HOLBROOK, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204023 already has destination: HOLBROOK, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204024 already has destination: HUNTINGTON STATION, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204025 already has destination: HUNTINGTON STATION, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204026 already has destination: HUNTINGTON STATION, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204027 already has destination: HUNTINGTON STATION, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204028 already has destination: HUNTINGTON STATION, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204029 already has destination: HUNTINGTON STATION, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204030 already has destination: HUNTINGTON STATION, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204031 already has destination: HUNTINGTON STATION, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204032 already has destination: HICKSVILLE, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204033 already has destination: HICKSVILLE, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204034 already has destination: HICKSVILLE, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204035 already has destination: HICKSVILLE, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204036 already has destination: LAKE GROVE, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204037 already has destination: LAKE GROVE, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204038 already has destination: LEVITTOWN, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204039 already has destination: LEVITTOWN, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204040 already has destination: MEDFORD, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204041 already has destination: MOUNT SINAI, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204042 already has destination: NESCONSET, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204043 already has destination: OAKDALE, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204044 already has destination: OYSTER BAY, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204045 already has destination: PATCHOGUE, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204046 already has destination: PATCHOGUE, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204047 already has destination: PATCHOGUE, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204048 already has destination: PATCHOGUE, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204049 already has destination: PATCHOGUE, Post Office
+2025-03-04 10:13:41,589 - INFO - ✅ Parcel 99M903779118765204050 already has destination: RONKONKOMA, Post Office
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765204051 already has destination: RONKONKOMA, Post Office
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765204052 already has destination: RONKONKOMA, Post Office
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765204053 already has destination: SAINT JAMES, Post Office
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765204054 already has destination: SAYVILLE, Post Office
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765204055 already has destination: SAYVILLE, Post Office
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765204056 already has destination: SELDEN, Post Office
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765204057 already has destination: SELDEN, Post Office
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765204058 already has destination: SYOSSET, Post Office
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765204059 already has destination: SYOSSET, Post Office
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765204060 already has destination: SYOSSET, Post Office
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765204061 already has destination: WEST SAYVILLE, Post Office
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765204062 already has destination: OLD BETHPAGE, Post Office
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765205001 already has destination: MILL NECK, Post Office
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765206001 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765206002 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765206003 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765206004 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765206005 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765206006 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765206007 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765206008 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765206009 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765206010 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765206011 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765206012 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765206013 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765206014 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765206015 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765206016 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,590 - INFO - ✅ Parcel 99M903779118765206017 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206018 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206019 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206020 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206021 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206022 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206023 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206024 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206025 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206026 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206027 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206028 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206029 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206030 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206031 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206032 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206033 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206034 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206035 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765206036 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765207001 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765207002 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765207003 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - ✅ Parcel 99M903779118765207004 already has destination: SCF-MID ISLAND         NY
+2025-03-04 10:13:41,591 - INFO - 🔍 Received 249 parcels for updating.
+2025-03-04 10:13:43,861 - INFO - ✅ Update completed: 97 updated, 0 inserted, 152 unchanged.
+2025-03-04 10:13:43,862 - INFO - ✅ Update completed: 97 updated, 0 inserted, 152 unchanged.

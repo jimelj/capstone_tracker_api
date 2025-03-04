@@ -310,116 +310,211 @@ def read_log_file(file_path: Path, lines: int = 100):
         return log_lines[-lines:]
 
 
-def authenticate():
-    """Fetches a new authentication token."""
-    global TOKEN
-    headers = {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-    }
-    credentials = {
-        "username": USERNAME,
-        "password": PASSWORD
-    }
-    response = requests.post(AUTH_URL, json=credentials, headers=headers)
+# def authenticate():
+#     """Fetches a new authentication token."""
+#     global TOKEN
+#     headers = {
+#         "Content-Type": "application/json",
+#         "Accept": "application/json"
+#     }
+#     credentials = {
+#         "username": USERNAME,
+#         "password": PASSWORD
+#     }
+#     response = requests.post(AUTH_URL, json=credentials, headers=headers)
 
-    if response.status_code == 200:
-        TOKEN = response.json().get("token")
-        return TOKEN
-    else:
-        raise HTTPException(status_code=response.status_code, detail="Authentication failed")
+#     if response.status_code == 200:
+#         TOKEN = response.json().get("token")
+#         return TOKEN
+#     else:
+#         raise HTTPException(status_code=response.status_code, detail="Authentication failed")
     
-async def fetch_parcel_summaries():
-    """Fetches parcel summaries using the latest token."""
+# async def fetch_parcel_summaries():
+#     """Fetches parcel summaries using the latest token."""
+#     global TOKEN
+
+#     if not TOKEN:
+#         authenticate()
+
+#     headers = {
+#         "Content-Type": "application/json",
+#         "Accept": "application/json",
+#         "Authorization": f"Token {TOKEN}"
+#     }
+
+#     params = {
+#         "includePartialMatch": "true",
+#         "beginDate": begin_date,
+#         "endDate": end_date,
+#         # "numRecentParcels": 3000,
+#         "pageNum": 1,
+#         "pageSize": 3000,
+#         "sortColumn": "BARCODE",
+#         "sortDirection": "ASCENDING",
+#         "filter" : "ALL"
+#     }
+
+#     payload = [
+#         {
+#             "searchColumn": "BARCODE",
+#             "searchValues": ["99M"]
+#         }
+#     ]
+
+#     async with httpx.AsyncClient() as client:
+#         response = await client.post(API_URL, headers=headers, params=params, json=payload)
+
+#     logging.info(f"🛜 API Status Code: {response.status_code}")
+#     # if response.status_code = 401
+#     #     authenticate()
+#     logging.info(f"📩 API Response Content: {response.text[:500]}")  # Log first 500 chars
+
+#     # Handle expired token case
+#     if response.status_code == 401:
+#         logging.warning("🔑 Token expired. Re-authenticating...")
+#         TOKEN = authenticate()  # Refresh token
+#         headers["Authorization"] = f"Token {TOKEN}"  # Update with new token
+#         async with httpx.AsyncClient() as client:
+#             response = await requests.post(API_URL, headers=headers, params=params, json=payload)
+#         logging.info(f"🔄 Retried API call, Status Code: {response.status_code}")
+
+#     # Handle rate limiting
+#     elif response.status_code == 429:
+#         logging.warning("⏳ Rate limit reached. Retrying in 5 seconds...")
+#         await asyncio.sleep(5)
+#         return await fetch_parcel_summaries()
+
+#     # Raise exception for unexpected errors
+#     if response.status_code != 200:
+#         raise HTTPException(status_code=response.status_code, detail=response.text)
+
+#     response_json = response.json()
+#     logging.info(f"📩 Parsed API Response Type: {type(response_json)}")
+#     return response_json
+
+#     # if response.status_code == 200:
+#     #     return response.json()
+#     # elif response.status_code == 401:
+#     #     TOKEN = authenticate()  # Refresh token and retry
+#     #     return fetch_parcel_summaries()
+#     # elif response.status_code == 429:
+#     #     time.sleep(5)  # Handle rate limit
+#     #     return fetch_parcel_summaries()
+#     # else:
+#     #     raise HTTPException(status_code=response.status_code, detail=response.text)
+# # Semaphore to limit concurrent requests (5 per second)
+# RATE_LIMIT = 5  # Max API calls per second
+# semaphore = asyncio.Semaphore(RATE_LIMIT)
+
+
+# async def fetch_delivery_address(parcel_id, max_retries=5):
+#     """Fetch the delivery address name for a given parcel ID with rate limiting and retries."""
+#     global TOKEN
+
+#     if not TOKEN:
+#         authenticate()
+
+#     headers = {
+#         "Content-Type": "application/json",
+#         "Accept": "application/json",
+#         "Authorization": f"Token {TOKEN}"
+#     }
+#     url = f"{API_DETAILS}/{parcel_id}"
+    
+#     async with semaphore:  # Limit API call concurrency
+#         async with httpx.AsyncClient() as client:
+#             delay = 2  # Initial retry delay
+
+#             for attempt in range(max_retries):
+#                 try:
+#                     response = await client.get(url, headers=headers, timeout=10)
+
+#                     if response.status_code == 200:
+#                         data = response.json()
+#                         # logging.info(f"📩 API Response for {parcel_id}: {response.json()}")
+#                         return data.get("deliveryAddress", {}).get("name", "Unknown")  # Default if missing
+                    
+#                     elif response.status_code == 401:
+#                         logging.warning(f"🔑 Token expired! Refreshing token...")
+#                         TOKEN = authenticate()  # Refresh token
+#                         headers["Authorization"] = f"Token {TOKEN}"
+#                         continue  # Retry immediately with new token
+                    
+#                     elif response.status_code == 429:
+#                         logging.warning(f"⏳ Rate limit reached. Retrying in {delay} seconds... (Attempt {attempt+1}/{max_retries})")
+#                         await asyncio.sleep(delay)
+#                         delay *= 2  # Exponential backoff (2, 4, 8, ...)
+
+#                     else:
+#                         response.raise_for_status()
+
+#                 except httpx.HTTPStatusError as e:
+#                     logging.warning(f"⚠️ Failed to fetch delivery details for parcel {parcel_id}: {e}")
+#                     return "Unknown"
+
+#         logging.error(f"🚫 Failed to fetch delivery details for parcel {parcel_id} after {max_retries} attempts.")
+#         return "Unknown"
+    
+# async def fetch_delivery_addresses_batch(parcel_ids, batch_size=5, max_retries=5):
+#     """Fetch delivery addresses for multiple parcels in batches."""
+    
+#     results = {}
+
+#     for i in range(0, len(parcel_ids), batch_size):
+#         batch = parcel_ids[i:i + batch_size]
+#         tasks = [fetch_delivery_address(pid, max_retries) for pid in batch]
+
+#         # Execute batch requests concurrently
+#         batch_results = await asyncio.gather(*tasks)
+
+#         # Store results
+#         for pid, addr in zip(batch, batch_results):
+#             results[pid] = addr
+
+#         # Enforce API rate limit (wait between batches)
+#         await asyncio.sleep(1)
+
+#     return results    
+
+async def authenticate():
+    """Authenticate and get a new token."""
     global TOKEN
 
-    if not TOKEN:
-        authenticate()
-
-    headers = {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-        "Authorization": f"Token {TOKEN}"
+    AUTH_URL = os.getenv("AUTH_URL")
+    AUTH_PAYLOAD = {
+        "username": os.getenv("API_USERNAME"),
+        "password": os.getenv("API_PASSWORD")
     }
 
-    params = {
-        "includePartialMatch": "true",
-        "beginDate": begin_date,
-        "endDate": end_date,
-        # "numRecentParcels": 3000,
-        "pageNum": 1,
-        "pageSize": 3000,
-        "sortColumn": "BARCODE",
-        "sortDirection": "ASCENDING",
-        "filter" : "ALL"
-    }
-
-    payload = [
-        {
-            "searchColumn": "BARCODE",
-            "searchValues": ["99M"]
-        }
-    ]
-
-    async with httpx.AsyncClient() as client:
-        response = await client.post(API_URL, headers=headers, params=params, json=payload)
-
-    logging.info(f"🛜 API Status Code: {response.status_code}")
-    # if response.status_code = 401
-    #     authenticate()
-    logging.info(f"📩 API Response Content: {response.text[:500]}")  # Log first 500 chars
-
-    # Handle expired token case
-    if response.status_code == 401:
-        logging.warning("🔑 Token expired. Re-authenticating...")
-        TOKEN = authenticate()  # Refresh token
-        headers["Authorization"] = f"Token {TOKEN}"  # Update with new token
+    try:
         async with httpx.AsyncClient() as client:
-            response = await requests.post(API_URL, headers=headers, params=params, json=payload)
-        logging.info(f"🔄 Retried API call, Status Code: {response.status_code}")
+            response = await client.post(AUTH_URL, json=AUTH_PAYLOAD, timeout=10)
 
-    # Handle rate limiting
-    elif response.status_code == 429:
-        logging.warning("⏳ Rate limit reached. Retrying in 5 seconds...")
-        await asyncio.sleep(5)
-        return await fetch_parcel_summaries()
-
-    # Raise exception for unexpected errors
-    if response.status_code != 200:
-        raise HTTPException(status_code=response.status_code, detail=response.text)
-
-    response_json = response.json()
-    logging.info(f"📩 Parsed API Response Type: {type(response_json)}")
-    return response_json
-
-    # if response.status_code == 200:
-    #     return response.json()
-    # elif response.status_code == 401:
-    #     TOKEN = authenticate()  # Refresh token and retry
-    #     return fetch_parcel_summaries()
-    # elif response.status_code == 429:
-    #     time.sleep(5)  # Handle rate limit
-    #     return fetch_parcel_summaries()
-    # else:
-    #     raise HTTPException(status_code=response.status_code, detail=response.text)
-# Semaphore to limit concurrent requests (5 per second)
-RATE_LIMIT = 5  # Max API calls per second
-semaphore = asyncio.Semaphore(RATE_LIMIT)
-
+        if response.status_code == 200:
+            TOKEN = response.json().get("token")
+            logging.info("🔑 Successfully authenticated.")
+            return TOKEN
+        else:
+            logging.error(f"❌ Authentication failed: {response.text}")
+            return None
+    except Exception as e:
+        logging.error(f"❌ Authentication error: {e}")
+        return None
 
 async def fetch_delivery_address(parcel_id, max_retries=5):
-    """Fetch the delivery address name for a given parcel ID with rate limiting and retries."""
+    """Fetch the delivery address name for a given parcel ID with retries."""
     global TOKEN
 
     if not TOKEN:
-        authenticate()
+        logging.warning("🔑 No token found. Authenticating...")
+        TOKEN = await authenticate()
 
     headers = {
         "Content-Type": "application/json",
         "Accept": "application/json",
         "Authorization": f"Token {TOKEN}"
     }
-    url = f"{API_DETAILS}/{parcel_id}"
+    url = f"{os.getenv('API_DETAILS')}/{parcel_id}"
     
     async with semaphore:  # Limit API call concurrency
         async with httpx.AsyncClient() as client:
@@ -431,12 +526,17 @@ async def fetch_delivery_address(parcel_id, max_retries=5):
 
                     if response.status_code == 200:
                         data = response.json()
-                        # logging.info(f"📩 API Response for {parcel_id}: {response.json()}")
                         return data.get("deliveryAddress", {}).get("name", "Unknown")  # Default if missing
-                    
+
                     elif response.status_code == 401:
-                        logging.warning(f"🔑 Token expired! Refreshing token...")
-                        TOKEN = authenticate()  # Refresh token
+                        logging.warning(f"🔑 Token expired! Refreshing token... (Attempt {attempt+1}/{max_retries})")
+                        new_token = await authenticate()  # Await token renewal
+
+                        if not new_token:  # Stop retrying if auth fails
+                            logging.error("❌ Authentication failed. Cannot refresh token.")
+                            return "Unknown"
+
+                        TOKEN = new_token  # Update global token
                         headers["Authorization"] = f"Token {TOKEN}"
                         continue  # Retry immediately with new token
                     
@@ -454,10 +554,9 @@ async def fetch_delivery_address(parcel_id, max_retries=5):
 
         logging.error(f"🚫 Failed to fetch delivery details for parcel {parcel_id} after {max_retries} attempts.")
         return "Unknown"
-    
+
 async def fetch_delivery_addresses_batch(parcel_ids, batch_size=5, max_retries=5):
     """Fetch delivery addresses for multiple parcels in batches."""
-    
     results = {}
 
     for i in range(0, len(parcel_ids), batch_size):
