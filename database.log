@@ -20531,3 +20531,6 @@
 2025-03-03 16:41:26,045 - INFO - 📦 Fetched 249 parcels between 2025-03-01 and 2025-03-06.
 2025-03-03 16:41:28,765 - INFO - 🔄 0 updated, 0 inserted, 249 unchanged.
 2025-03-03 16:41:55,977 - INFO - 🔌 Database connection closed
+2025-03-04 09:47:32,861 - INFO - ✅ Connected to PostgreSQL
+2025-03-04 09:47:32,901 - INFO - ✅ Database initialized.
+2025-03-04 09:48:44,407 - INFO - 🔌 Database connection closed

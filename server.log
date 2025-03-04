@@ -18709,3 +18709,62 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
 2025-03-03 16:41:27,218 - INFO - 🔍 Received 249 parcels for updating.
 2025-03-03 16:41:28,770 - INFO - ✅ Update completed: 0 updated, 0 inserted, 249 unchanged.
 2025-03-03 16:41:28,771 - INFO - ✅ Update completed: 0 updated, 0 inserted, 249 unchanged.
+2025-03-04 09:47:32,703 - INFO - 🚀 FastAPI Server is starting...
+2025-03-04 09:47:32,705 - INFO - 📅 Dynamic API Date Range: 2025-03-01 to 2025-03-06
+2025-03-04 09:47:32,716 - INFO - 🚀 FastAPI Startup: Scheduling updates...
+2025-03-04 09:47:32,716 - INFO - Scheduler started
+2025-03-04 09:47:32,717 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 06:00:00
+2025-03-04 09:47:32,717 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 06:28:00
+2025-03-04 09:47:32,717 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 06:56:00
+2025-03-04 09:47:32,717 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 07:24:00
+2025-03-04 09:47:32,717 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 07:52:00
+2025-03-04 09:47:32,717 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 08:20:00
+2025-03-04 09:47:32,717 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 08:48:00
+2025-03-04 09:47:32,717 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 09:16:00
+2025-03-04 09:47:32,717 - INFO - ⏩ Skipped scheduling past job: 2025-03-04 09:44:00
+2025-03-04 09:47:32,718 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,718 - INFO - 📅 Scheduled database update at 2025-03-04 10:12:00
+2025-03-04 09:47:32,718 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,718 - INFO - 📅 Scheduled database update at 2025-03-04 10:40:00
+2025-03-04 09:47:32,718 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,718 - INFO - 📅 Scheduled database update at 2025-03-04 11:08:00
+2025-03-04 09:47:32,718 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,718 - INFO - 📅 Scheduled database update at 2025-03-04 11:36:00
+2025-03-04 09:47:32,718 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,718 - INFO - 📅 Scheduled database update at 2025-03-04 12:04:00
+2025-03-04 09:47:32,718 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,718 - INFO - 📅 Scheduled database update at 2025-03-04 12:32:00
+2025-03-04 09:47:32,718 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,718 - INFO - 📅 Scheduled database update at 2025-03-04 13:00:00
+2025-03-04 09:47:32,718 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,718 - INFO - 📅 Scheduled database update at 2025-03-04 13:28:00
+2025-03-04 09:47:32,719 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,719 - INFO - 📅 Scheduled database update at 2025-03-04 13:56:00
+2025-03-04 09:47:32,719 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,719 - INFO - 📅 Scheduled database update at 2025-03-04 14:24:00
+2025-03-04 09:47:32,719 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,719 - INFO - 📅 Scheduled database update at 2025-03-04 14:52:00
+2025-03-04 09:47:32,719 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,719 - INFO - 📅 Scheduled database update at 2025-03-04 15:20:00
+2025-03-04 09:47:32,719 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,719 - INFO - 📅 Scheduled database update at 2025-03-04 15:48:00
+2025-03-04 09:47:32,719 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,719 - INFO - 📅 Scheduled database update at 2025-03-04 16:16:00
+2025-03-04 09:47:32,719 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,719 - INFO - 📅 Scheduled database update at 2025-03-04 16:44:00
+2025-03-04 09:47:32,719 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,719 - INFO - 📅 Scheduled database update at 2025-03-04 17:12:00
+2025-03-04 09:47:32,719 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,719 - INFO - 📅 Scheduled database update at 2025-03-04 17:40:00
+2025-03-04 09:47:32,719 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,719 - INFO - 📅 Scheduled database update at 2025-03-04 18:08:00
+2025-03-04 09:47:32,719 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,719 - INFO - 📅 Scheduled database update at 2025-03-04 18:36:00
+2025-03-04 09:47:32,719 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,719 - INFO - 📅 Scheduled database update at 2025-03-04 19:04:00
+2025-03-04 09:47:32,719 - INFO - Added job "fetch_and_update_parcels" to job store "default"
+2025-03-04 09:47:32,719 - INFO - 📅 Scheduled database update at 2025-03-04 19:32:00
+2025-03-04 09:47:59,009 - INFO - 🔄 Manual database update triggered.
+2025-03-04 09:47:59,010 - INFO - 🚀 Fetching updated parcels from external source.
+2025-03-04 09:47:59,036 - ERROR - ❌ Error fetching /parcelsweek data: Request URL is missing an 'http://' or 'https://' protocol.
+2025-03-04 09:47:59,036 - INFO - ✅ Update completed: 0 updated, 0 inserted, 0 unchanged.
