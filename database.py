@@ -440,6 +440,11 @@ async def update_parcels(updated_parcels):
 
             return {"updated": updates, "inserted": inserts, "skipped": skipped}
 
+    # except Exception as e:
+    #     logger.error(f"❌ Database error: {e}")
+    #     raise HTTPException(status_code=500, detail="Database update failed.")
     except Exception as e:
-        logger.error(f"❌ Database error: {e}")
-        raise HTTPException(status_code=500, detail="Database update failed.")
+        import traceback
+        logging.error(f"❌ Database update error: {repr(e)}")
+        logging.error(f"🔍 Traceback:\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=f"Database update failed: {repr(e)}")
