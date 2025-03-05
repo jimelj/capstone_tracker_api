@@ -397,14 +397,6 @@ async def update_parcels(updated_parcels):
                 # logging.info(f"📌 Insert Values Count: {len(values)} | Expected: 13")
                 # logging.info(f"📌 Insert Values: {values}")
                 # Check if record exists
-                values = [
-                    parcel_id, barcode, new_status, new_timestamp, destination_name, 
-                    parcel["address"]["name"], parcel["address"]["address1"], parcel.get("address2", None),
-                    parcel["address"]["city"], parcel["address"]["state"], parcel["address"]["zip"], parcel.get("pod", None)
-                ]
-
-                logging.info(f"📌 Insert Columns: 13 | Provided Values: {len(values)}")
-                logging.info(f"📌 Insert Values: {values}")
                 existing_record = await conn.fetchrow("SELECT id, scan_status, last_scanned_when, destination_name FROM parcels WHERE barcode = $1", barcode)
 
                 if existing_record:
@@ -442,17 +434,33 @@ async def update_parcels(updated_parcels):
                     else:
                         skipped += 1
                 else:
-                    await conn.execute("""
-                        INSERT INTO parcels (id, barcode, scan_status, last_scanned_when, address_name, address1, address2, city, state, zip, pod, inserted_at) 
-                        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, NOW())
-                    """, parcel_id, barcode, new_status, new_timestamp, destination_name, parcel["address"]["name"], parcel["address"]["address1"],
-                       parcel["address"]["address2"] or None, parcel["address"]["city"], parcel["address"]["state"], parcel["address"]["zip"], parcel.get("pod") or None)
-                    inserts += 1
-                    logger.info(f"🆕 New parcel inserted: {barcode}")
+                    # Collect values before insertion
+                    values = [
+                        parcel_id, barcode, new_status, new_timestamp, destination_name, 
+                        parcel["address"]["name"], parcel["address"]["address1"], 
+                        parcel["address"]["address2"] or None,  # Ensure None instead of empty
+                        parcel["address"]["city"], parcel["address"]["state"], 
+                        parcel["address"]["zip"], parcel.get("pod") or None  # Ensure None instead of empty
+                        ]
+                    # Debugging logs to check values count
+                    logging.info(f"📌 Insert Columns: 13 | Provided Values: {len(values)}")
+                    logging.info(f"📌 Insert Values: {values}")
+                    try:
+                        await conn.execute("""
+                            INSERT INTO parcels (id, barcode, scan_status, last_scanned_when, address_name, address1, address2, city, state, zip, pod, inserted_at) 
+                            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, NOW())
+                        """, parcel_id, barcode, new_status, new_timestamp, destination_name, parcel["address"]["name"], parcel["address"]["address1"],
+                        parcel["address"]["address2"] or None, parcel["address"]["city"], parcel["address"]["state"], parcel["address"]["zip"], parcel.get("pod") or None)
+                        inserts += 1
+                        logger.info(f"🆕 New parcel inserted: {barcode}")
 
-            logger.info(f"🔄 {updates} updated, {inserts} inserted, {skipped} unchanged.")
+                # logger.info(f"🔄 {updates} updated, {inserts} inserted, {skipped} unchanged.")
 
-            return {"updated": updates, "inserted": inserts, "skipped": skipped}
+                # return {"updated": updates, "inserted": inserts, "skipped": skipped}
+                    except Exception as e:
+                        logging.error(f"❌ Database insert error: {e}")
+                        logging.error(f"🚨 SQL Values Causing Issue: {values}")
+                        raise  # Re-raise for debugging
 
     # except Exception as e:
     #     logger.error(f"❌ Database error: {e}")
