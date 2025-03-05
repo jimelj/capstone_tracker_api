@@ -393,7 +393,9 @@ async def update_parcels(updated_parcels):
                 # Log the column count before insertion
                 logging.info(f"📌 Insert Columns: 13 | Provided Values: {len([parcel_id, barcode, new_status, new_timestamp, destination_name, parcel['address']['name'], parcel['address']['address1'], parcel['address']['address2'], parcel['address']['city'], parcel['address']['state'], parcel['address']['zip'], parcel.get('pod')])})")
                 logging.info(f"📌 Insert Values: {parcel_id}, {barcode}, {new_status}, {new_timestamp}, {destination_name}, {parcel['address']['name']}, {parcel['address']['address1']}, {parcel['address']['address2']}, {parcel['address']['city']}, {parcel['address']['state']}, {parcel['address']['zip']}, {parcel.get('pod')}")
-
+                logging.info(f"📌 Insert Query: {query}")  # Print SQL statement
+                logging.info(f"📌 Insert Values Count: {len(values)} | Expected: 13")
+                logging.info(f"📌 Insert Values: {values}")
                 # Check if record exists
                 existing_record = await conn.fetchrow("SELECT id, scan_status, last_scanned_when, destination_name FROM parcels WHERE barcode = $1", barcode)
 
