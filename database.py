@@ -390,6 +390,10 @@ async def update_parcels(updated_parcels):
                 destination_name = parcel.get("destination_name", "Unknown")
                 # logging.info(f"📦 Processing Parcel ID {parcel.get('id')}, Delivery Address: {destination_name}")
 
+                # Log the column count before insertion
+                logging.info(f"📌 Insert Columns: 13 | Provided Values: {len([parcel_id, barcode, new_status, new_timestamp, destination_name, parcel['address']['name'], parcel['address']['address1'], parcel['address']['address2'], parcel['address']['city'], parcel['address']['state'], parcel['address']['zip'], parcel.get('pod')])})")
+
+
                 # Check if record exists
                 existing_record = await conn.fetchrow("SELECT id, scan_status, last_scanned_when, destination_name FROM parcels WHERE barcode = $1", barcode)
 
