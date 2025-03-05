@@ -447,7 +447,7 @@ async def update_parcels(updated_parcels):
                     logging.info(f"📌 Insert Values: {values}")
                     try:
                         await conn.execute("""
-                            INSERT INTO parcels (id, barcode, scan_status, last_scanned_when, address_name, address1, address2, city, state, zip, pod, inserted_at) 
+                            INSERT INTO parcels (id, barcode, scan_status, last_scanned_when, destination_name, address_name, address1, address2, city, state, zip, pod, inserted_at) 
                             VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, NOW())
                         """, parcel_id, barcode, new_status, new_timestamp, destination_name, parcel["address"]["name"], parcel["address"]["address1"],
                         parcel["address"]["address2"] or None, parcel["address"]["city"], parcel["address"]["state"], parcel["address"]["zip"], parcel.get("pod") or None)
