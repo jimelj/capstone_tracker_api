@@ -432,6 +432,9 @@ async def update_parcels(updated_parcels):
                             WHERE barcode = $11
                         """, new_status, new_timestamp, destination_name, parcel["address"]["name"], parcel["address"]["address1"], parcel["address"]["address2"],
                            parcel["address"]["city"], parcel["address"]["state"], parcel["address"]["zip"], parcel.get("pod"), barcode)
+                        # Fetch the updated record from the DB right after updating
+                        updated_record = await conn.fetchrow("SELECT last_scanned_when, pod FROM parcels WHERE barcode = $1", barcode)
+                        logging.info(f"🔍 Post-Update Check - {barcode}: Last Scanned: {updated_record['last_scanned_when']}, POD: {updated_record['pod']}")
                         updates += 1
                         logger.info(f"📦 Parcel {barcode} updated: {', '.join(change_log)}")
                     else:
