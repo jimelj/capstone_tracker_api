@@ -390,12 +390,12 @@ async def update_parcels(updated_parcels):
                 destination_name = parcel.get("destination_name", "Unknown")
                 # logging.info(f"📦 Processing Parcel ID {parcel.get('id')}, Delivery Address: {destination_name}")
                 # 🔍 Log the extracted data from the API
-                logging.info(f"📩 Processing Parcel {barcode} - POD: {parcel.get('pod')}")
+                # logging.info(f"📩 Processing Parcel {barcode} - POD: {parcel.get('pod')}")
 
 
                 # Check if record exists
                 existing_record = await conn.fetchrow("SELECT id, scan_status, last_scanned_when, destination_name FROM parcels WHERE barcode = $1", barcode)
-
+                logging.info(f"📦 Post-Update POD for {barcode}: {existing_record['pod']}")
                 if existing_record:
                     existing_id, existing_status, existing_timestamp, existing_destination = existing_record["id"], existing_record["scan_status"], existing_record["last_scanned_when"],existing_record[
         "destination_name"]
