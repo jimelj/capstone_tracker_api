@@ -392,7 +392,7 @@ async def update_parcels(updated_parcels):
 
                 # logging.info(f"📦 Processing Parcel ID {parcel.get('id')}, Delivery Address: {destination_name}")
                 # 🔍 Log the extracted data from the API
-                logging.info(f"📩 Processing Parcel {barcode} - POD: {parcel.get('pod')}")
+                # logging.info(f"📩 Processing Parcel {barcode} - POD: {parcel.get('pod')}")
 
 
                 # Check if record exists
@@ -413,8 +413,10 @@ async def update_parcels(updated_parcels):
         )
                     if pod != existing_pod:
                             change_log.append(f"POD changed from '{existing_pod}' to '{pod}'")
+                            
 
                     if change_log:
+                        logging.info(f"🚀 Changes detected for {barcode}: {', '.join(change_log)}")
                         await conn.execute("""
                             UPDATE parcels SET 
                                 scan_status = $1, 
@@ -433,6 +435,7 @@ async def update_parcels(updated_parcels):
                         updates += 1
                         logger.info(f"📦 Parcel {barcode} updated: {', '.join(change_log)}")
                     else:
+                        logging.info(f"✅ No changes detected for {barcode}")
                         skipped += 1
                 else:
                     await conn.execute("""
