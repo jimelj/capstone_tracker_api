@@ -388,17 +388,19 @@ async def update_parcels(updated_parcels):
                 new_status = parcel["scanStatus"]
                 new_timestamp = parcel["lastScannedWhen"]["formattedDate"] + " " + parcel["lastScannedWhen"]["formattedTime"]
                 destination_name = parcel.get("destination_name", "Unknown")
+                pod = parcel.get("pod")
+
                 # logging.info(f"📦 Processing Parcel ID {parcel.get('id')}, Delivery Address: {destination_name}")
                 # 🔍 Log the extracted data from the API
-                # logging.info(f"📩 Processing Parcel {barcode} - POD: {parcel.get('pod')}")
+                logging.info(f"📩 Processing Parcel {barcode} - POD: {parcel.get('pod')}")
 
 
                 # Check if record exists
-                existing_record = await conn.fetchrow("SELECT id, scan_status, last_scanned_when, destination_name FROM parcels WHERE barcode = $1", barcode)
-                logging.info(f"📦 Post-Update POD for {barcode}: {existing_record['pod']}")
+                existing_record = await conn.fetchrow("SELECT id, scan_status, last_scanned_when, destination_name, pod FROM parcels WHERE barcode = $1", barcode)
+
                 if existing_record:
-                    existing_id, existing_status, existing_timestamp, existing_destination = existing_record["id"], existing_record["scan_status"], existing_record["last_scanned_when"],existing_record[
-        "destination_name"]
+                    existing_id, existing_status, existing_timestamp, existing_destination, existing_pod = existing_record["id"], existing_record["scan_status"], existing_record["last_scanned_when"],existing_record[
+        "destination_name"], existing_record["pod"]
 
                     change_log = []
                     if new_status != existing_status:
@@ -409,6 +411,8 @@ async def update_parcels(updated_parcels):
                         change_log.append(
                             f"destination changed from '{existing_destination}' to '{destination_name}'"
         )
+                    if pod != existing_pod:
+                            change_log.append(f"POD changed from '{existing_pod}' to '{pod}'")
 
                     if change_log:
                         await conn.execute("""
