@@ -527,8 +527,8 @@ async def fetch_parcel_summaries():
 
     params = {
         "includePartialMatch": "true",
-        "beginDate": "2025-03-01",
-        "endDate": "2025-03-06",
+        "beginDate": begin_date,
+        "endDate": end_date,
         "pageNum": 1,
         "pageSize": 3000,
         "sortColumn": "BARCODE",
