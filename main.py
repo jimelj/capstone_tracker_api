@@ -563,6 +563,7 @@ async def fetch_parcel_summaries():
         raise HTTPException(status_code=response.status_code, detail=response.text)
 
     response_json = response.json()
+    logging.info(f"External API Response: {response}")  # Log full response
     logging.info(f"📩 Parsed API Response Type: {type(response_json)}")
     return response_json
 
